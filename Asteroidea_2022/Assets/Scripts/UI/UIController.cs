@@ -1,7 +1,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
-
+using Managers;
 
 public class UIController : MonoBehaviour
 {
