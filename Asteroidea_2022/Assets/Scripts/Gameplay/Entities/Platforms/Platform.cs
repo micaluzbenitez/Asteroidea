@@ -55,7 +55,6 @@ namespace Entities.Platforms
         private void Start()
         {
             if (!horizontalMovement) horizontalSpeed = 0;
-            SetRandomX();
         }
 
         private void LateUpdate()

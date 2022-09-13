@@ -964,7 +964,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 136.6
+  m_fontSize: 119.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1132,7 +1132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453469629715405682, guid: c11c4d96eac2fbc4ea70350f96cc29f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5453469629715405682, guid: c11c4d96eac2fbc4ea70350f96cc29f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1172,7 +1172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453469629715405685, guid: c11c4d96eac2fbc4ea70350f96cc29f1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5453469629715405686, guid: c11c4d96eac2fbc4ea70350f96cc29f1, type: 3}
       propertyPath: finalJump.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1566,13 +1566,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3067895192774786044, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067895192927368760, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3127097439934591043, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3127097439934591055, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.51
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3127097439997325618, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: m_Enabled
@@ -1596,7 +1604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3127097439997325630, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.54
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3127097440092421511, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: m_Enabled
@@ -1604,7 +1612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3127097440092421515, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.53
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3127097440315685028, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: m_Enabled
@@ -1612,7 +1620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3127097440315685032, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.54
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3238700543544183156, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1678,6 +1686,10 @@ PrefabInstance:
       propertyPath: leftLimit
       value: 
       objectReference: {fileID: 742817191}
+    - target: {fileID: 3243955254839820999, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
 --- !u!1 &954708183
@@ -4079,7 +4091,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 144
+  m_fontSize: 141.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4468,7 +4480,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 91.05
+  m_fontSize: 82.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
