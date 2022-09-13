@@ -36,7 +36,7 @@ namespace Toolbox
 			while (shakeTimer > 0)
 			{
 				mainCamera.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
-				shakeTimer -= Time.deltaTime * decreaseFactor;
+				shakeTimer -= Time.unscaledDeltaTime * decreaseFactor;
 				yield return null;
 			}
 
