@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace Menu
 {
@@ -9,6 +10,7 @@ namespace Menu
     {
         [Header("Menu panel")]
         [SerializeField] private CanvasGroup startingPanel = null;
+        [SerializeField] private TMP_Text versionText = null;
         [Header("Game scene")]
         [SerializeField] private string gameSceneName = "";
 
@@ -16,6 +18,8 @@ namespace Menu
 
         private void Awake()
         {
+            SetProjectVersion();
+
             actualPanel = startingPanel;
 
             foreach (CanvasGroup canvasGroup in GetComponentsInChildren<CanvasGroup>())
@@ -34,6 +38,11 @@ namespace Menu
         private void Start()
         {
             Time.timeScale = 1;
+        }
+
+        private void SetProjectVersion()
+        {
+            versionText.text = $"v{Application.version}";
         }
 
         public void StartPanel(CanvasGroup newPanel)
