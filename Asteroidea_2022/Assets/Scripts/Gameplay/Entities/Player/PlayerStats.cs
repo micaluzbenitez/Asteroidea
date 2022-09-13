@@ -13,8 +13,11 @@ namespace Entities.Player
 
         public int life = 0;
 
+        private DeathChecker deathChecker = null;
+
         private void Awake()
         {
+            deathChecker = new DeathChecker();
             life = initialLife;
         }
 
@@ -22,6 +25,7 @@ namespace Entities.Player
         {
             life -= damage;
             OnLoseLife?.Invoke(life, 0, initialLife);
+            if (life <= 0) deathChecker.DeadPlayer();
         }
     }
 }

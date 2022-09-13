@@ -25,7 +25,10 @@ namespace Entities.Player
 
         #region METHODS
         #region PUBLIC METHODS
-
+        public void DeadPlayer()
+        {
+            OnReachLimit?.Invoke();
+        }
         #endregion
 
         #region STATIC METHODS
@@ -39,7 +42,7 @@ namespace Entities.Player
         #region PRIVATE METHODS
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag.Equals("Limit")/* || collision.tag.Equals("Enemy") || collision.tag.Equals("Shot")*/) OnReachLimit?.Invoke();
+            if (collision.tag.Equals("Limit")/* || collision.tag.Equals("Enemy") || collision.tag.Equals("Shot")*/) DeadPlayer();
         }
         #endregion
         #endregion
