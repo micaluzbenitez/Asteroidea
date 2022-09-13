@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Entities.Player;
+using Entities.Enemies;
 using UI;
 
 namespace Managers
@@ -57,9 +58,16 @@ namespace Managers
 
         private void Start()
         {
+            for (int i = 0; i < enemiesManager.transform.childCount; i++)
+            {
+                Mine mine = enemiesManager.transform.GetChild(i).GetComponent<Mine>();
+                if (mine) mine.SetTarget(playerStats.transform);
+            }
+
             gameOver = false;
             GameRunning = true;
         }
+
         private void OnEnable()
         {
             playerEnemies.OnLoseLife += playerStats.LoseLife;

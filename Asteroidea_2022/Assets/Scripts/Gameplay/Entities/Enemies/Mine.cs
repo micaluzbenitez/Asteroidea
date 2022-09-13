@@ -62,5 +62,10 @@ namespace Entities.Enemies
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, target.position);
         }
+
+        public void SetTarget(Transform target)
+        {
+            this.target = target;
+        }
     }
 }
