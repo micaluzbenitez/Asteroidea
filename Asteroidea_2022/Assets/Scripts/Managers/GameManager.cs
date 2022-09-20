@@ -10,6 +10,9 @@ namespace Managers
     {
         #region VARIABLES
         #region SERIALIZED VARIABLES
+        [Header("Score")]
+        [SerializeField] private float scoreSpeed = 0;
+
         [Header("Player")]
         [SerializeField] private PlayerStats playerStats = null;
 
@@ -18,6 +21,9 @@ namespace Managers
 
         [Header("UI")]
         [SerializeField] private UIGame uiGame = null;
+
+        private float time = 0;
+        private int score = 0;
         #endregion
 
         #region STATIC VARIABLES
@@ -51,11 +57,12 @@ namespace Managers
             DeathChecker.OnReachLimit += EndGame;
         }
 
-        private void OnDestroy()
+        private void Update()
         {
-            PlayerStats.OnUpdateLife -= uiGame.UpdateLifeBar;
-            PlayerEnemies.OnLoseLife -= playerStats.LoseLife;
-            DeathChecker.OnReachLimit -= EndGame;
+            time += Time.deltaTime * scoreSpeed;
+            score = (int)time;
+
+            uiGame.UpdateScore(score);
         }
 
         private void Start()
@@ -68,6 +75,13 @@ namespace Managers
 
             gameOver = false;
             GameRunning = true;
+        }
+
+        private void OnDestroy()
+        {
+            PlayerStats.OnUpdateLife -= uiGame.UpdateLifeBar;
+            PlayerEnemies.OnLoseLife -= playerStats.LoseLife;
+            DeathChecker.OnReachLimit -= EndGame;
         }
 
         private void EndGame()
