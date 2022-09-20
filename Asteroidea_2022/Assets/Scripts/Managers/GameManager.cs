@@ -46,14 +46,14 @@ namespace Managers
         #region PRIVATE METHODS
         private void Awake()
         {
-            PlayerStats.OnUpdateLife += uiGame.UpdateLife;
+            PlayerStats.OnUpdateLife += uiGame.UpdateLifeBar;
             PlayerEnemies.OnLoseLife += playerStats.LoseLife;
             DeathChecker.OnReachLimit += EndGame;
         }
 
         private void OnDestroy()
         {
-            PlayerStats.OnUpdateLife -= uiGame.UpdateLife;
+            PlayerStats.OnUpdateLife -= uiGame.UpdateLifeBar;
             PlayerEnemies.OnLoseLife -= playerStats.LoseLife;
             DeathChecker.OnReachLimit -= EndGame;
         }
