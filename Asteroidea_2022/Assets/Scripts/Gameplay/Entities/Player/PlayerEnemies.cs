@@ -12,7 +12,7 @@ namespace Entities.Player
         public string enemiesTag = "";
         public string bulletsTag = "";
 
-        public Action<int> OnLoseLife = null;
+        public static Action<int> OnLoseLife = null;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {

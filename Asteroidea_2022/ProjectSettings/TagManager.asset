@@ -3,17 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Floor
+  - Bullet
+  - ResetZone
+  - Limit
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - 3
   - Water
   - UI
-  - 
-  - 
-  - 
+  - 6
+  - Enemy
+  - 8
   - 
   - 
   - 

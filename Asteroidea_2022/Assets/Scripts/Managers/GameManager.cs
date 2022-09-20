@@ -12,7 +12,6 @@ namespace Managers
         #region SERIALIZED VARIABLES
         [Header("Player")]
         [SerializeField] private PlayerStats playerStats = null;
-        [SerializeField] private PlayerEnemies playerEnemies = null;
 
         [Header("Enemies")]
         [SerializeField] private EnemiesManager enemiesManager = null;
@@ -47,12 +46,15 @@ namespace Managers
         #region PRIVATE METHODS
         private void Awake()
         {
-            PlayerStats.OnLoseLife += uiGame.UpdateLifeBar;
+            PlayerStats.OnUpdateLife += uiGame.UpdateLife;
+            PlayerEnemies.OnLoseLife += playerStats.LoseLife;
             DeathChecker.OnReachLimit += EndGame;
         }
+
         private void OnDestroy()
         {
-            PlayerStats.OnLoseLife -= uiGame.UpdateLifeBar;
+            PlayerStats.OnUpdateLife -= uiGame.UpdateLife;
+            PlayerEnemies.OnLoseLife -= playerStats.LoseLife;
             DeathChecker.OnReachLimit -= EndGame;
         }
 
@@ -66,16 +68,6 @@ namespace Managers
 
             gameOver = false;
             GameRunning = true;
-        }
-
-        private void OnEnable()
-        {
-            playerEnemies.OnLoseLife += playerStats.LoseLife;
-        }
-
-        private void OnDisable()
-        {
-            playerEnemies.OnLoseLife -= playerStats.LoseLife;
         }
 
         private void EndGame()
