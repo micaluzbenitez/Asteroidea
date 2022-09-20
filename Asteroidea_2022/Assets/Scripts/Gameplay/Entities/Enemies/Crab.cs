@@ -12,8 +12,8 @@ namespace Entities.Enemies
 
         [Header("Configuration")]
         [SerializeField] private bool startMovingRight;
-        [SerializeField] private float minSpeed = 0.5f;
-        [SerializeField, Range(0.5f,2)] private float maxSpeed = 1;
+        [SerializeField] private float minSpeed = 0.1f;
+        [SerializeField, Range(0.0f,2.0f)] private float maxSpeed = 1;
 
         private bool movingRight = false;
         private float moveTime;
