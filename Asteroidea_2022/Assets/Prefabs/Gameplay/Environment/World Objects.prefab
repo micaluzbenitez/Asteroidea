@@ -185,9 +185,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1b06a6e406d64bbb843b17d360cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialYPosition: -5.5
-  timePerFish: 18
-  timePerMine: 25
+  enemy:
+  - name: Fish
+    startEnemy: 1
+    timePerEnemy: 15
+  - name: Mine
+    startEnemy: 0
+    timePerEnemy: 22
+  cameraPosition: {fileID: 0}
+  cameraYOffset: 6
 --- !u!1001 &6623344684844383842
 PrefabInstance:
   m_ObjectHideFlags: 0

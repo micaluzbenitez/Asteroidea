@@ -147,6 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  speedX: 6
-  speedY: 3
-  maxYPosition: 5.5
+  speedX: 3
+  speedY: 0.1
+  triggerTagName: ResetZone

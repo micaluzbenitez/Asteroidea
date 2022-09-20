@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Toolbox;
@@ -8,32 +8,40 @@ namespace Managers
 {
     public class EnemiesManager : MonoBehaviour
     {
+        [Serializable] public class Enemy
+        {
+            public string name = "";
+            public bool startEnemy = false;
+            public float timePerEnemy = 0;
+            [NonSerialized] public Timer timer = new Timer();
+        }
+
+        [Header("Enemies")]
+        [SerializeField] private Enemy[] enemy = null;
+
         [Header("Enemies spawn")]
-        [SerializeField] private float initialYPosition = 0;
-        [SerializeField] private float timePerFish = 0;
-        [SerializeField] private float timePerMine = 0;
+        [SerializeField] private Transform cameraPosition = null;
+        [SerializeField] private float cameraYOffset = 0;
 
         private ObjectPooler objectPooler = null;
 
-        /// Timers
-        private Timer fishTimer = new Timer();
-        private Timer mineTimer = new Timer();
-
-        private void Awake()
-        {
-            fishTimer.SetTimer(timePerFish, Timer.TIMER_MODE.DECREASE, true);
-            mineTimer.SetTimer(timePerMine, Timer.TIMER_MODE.DECREASE, true);
-        }
-
         private void Start()
         {
-            objectPooler = ObjectPooler.Instance;            
+            objectPooler = ObjectPooler.Instance;
+
+            for (int i = 0; i < enemy.Length; i++)
+            {
+                if (enemy[i].startEnemy) SpawnEnemy(enemy[i].name);
+                enemy[i].timer.SetTimer(enemy[i].timePerEnemy, Timer.TIMER_MODE.DECREASE, true);
+            }
         }
 
         private void Update()
         {
-            CheckTimer(fishTimer, "Fish");
-            CheckTimer(mineTimer, "Mine");
+            for (int i = 0; i < enemy.Length; i++)
+            {
+                CheckTimer(enemy[i].timer, enemy[i].name);
+            }
         }
 
         private void CheckTimer(Timer timer, string enemyName)
@@ -42,10 +50,15 @@ namespace Managers
 
             if (timer.ReachedTimer())
             {
-                Vector3 position = new Vector3(0, initialYPosition, 0);
-                objectPooler.SpawnFromPool(enemyName, position, Quaternion.identity);
+                SpawnEnemy(enemyName);
                 timer.ActiveTimer();
             }
+        }
+
+        private void SpawnEnemy(string enemyName)
+        {
+            Vector3 position = new Vector3(0, cameraPosition.position.y - cameraYOffset, 0);
+            objectPooler.SpawnFromPool(enemyName, position, Quaternion.identity);
         }
     }
 }

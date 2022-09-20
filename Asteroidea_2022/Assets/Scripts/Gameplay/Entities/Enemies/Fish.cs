@@ -6,18 +6,12 @@ namespace Entities.Enemies
 {
     public class Fish : Enemy
     {
-        [Header("Up movement")]
-        [SerializeField] private float maxYPosition = 0;
+        [Header("Reset trigger")]
+        [SerializeField] private string triggerTagName = "";
 
-        protected override void Update()
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            base.Update();
-            CheckUpLimit();
-        }
-
-        private void CheckUpLimit()
-        {
-            if (transform.position.y > maxYPosition) gameObject.SetActive(false);
+            if (collision.gameObject.CompareTag(triggerTagName)) gameObject.SetActive(false);
         }
     }
 }

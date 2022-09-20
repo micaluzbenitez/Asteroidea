@@ -16,8 +16,8 @@ namespace Entities.Enemies
         [Header("Shot data")]
         [SerializeField] private int timePerShot = 0;
 
-        [Header("Up movement")]
-        [SerializeField] private float maxYPosition = 0;
+        [Header("Reset trigger")]
+        [SerializeField] private string triggerTagName = "";
 
         private Timer timerPerShot = new Timer();
 
@@ -31,13 +31,7 @@ namespace Entities.Enemies
         protected override void Update()
         {
             base.Update();
-            CheckUpLimit();
             UpdateTimerPerShot();
-        }
-
-        private void CheckUpLimit()
-        {
-            if (transform.position.y > maxYPosition) gameObject.SetActive(false);
         }
 
         private void UpdateTimerPerShot()
@@ -55,6 +49,11 @@ namespace Entities.Enemies
         {
             bullet.gameObject.SetActive(true);
             bullet.Shot(target.position);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag(triggerTagName)) gameObject.SetActive(false);
         }
 
         private void OnDrawGizmos()
