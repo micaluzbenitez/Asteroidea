@@ -20,6 +20,10 @@ namespace Entities.Platforms
         [SerializeField] private float horizontalSpeed = 0;
         [SerializeField] private float maxXLimit = 0;
         [SerializeField] private float minXLimit = 0;
+
+        [Header("Platform Respawn")]
+        [SerializeField] private Transform platformRespawnPos;
+        [SerializeField] private bool isVisible;
         #endregion
 
         #region STATIC VARIABLES
@@ -29,10 +33,15 @@ namespace Entities.Platforms
         #endregion
 
         #region PRIVATE VARIABLES
-        private float resetYPos = -5.5f;
         private Rigidbody2D rb;
 
         private float distanceToObstacle = 0.0f;
+
+        private SpriteRenderer spriteRenderer;
+        private BoxCollider2D boxCollider;
+
+        private bool startsOff;
+
         #endregion
         #endregion
 
@@ -49,12 +58,15 @@ namespace Entities.Platforms
         private void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            boxCollider = GetComponent<BoxCollider2D>();
             distanceToObstacle = Vector3.Distance(obstacle.transform.position, transform.position);
         }
 
         private void Start()
         {
             if (!horizontalMovement) horizontalSpeed = 0;
+            startsOff = !isVisible;
         }
 
         private void LateUpdate()
@@ -70,9 +82,10 @@ namespace Entities.Platforms
 
         private void ResetPosition()
         {
+            if (startsOff) Enable();
             obstacle.SetActive(false);
             SetRandomX();
-            transform.position = new Vector3(transform.position.x, resetYPos);
+            transform.position = new Vector3(transform.position.x, platformRespawnPos.position.y);
             SpawnEnemy();
         }
 
@@ -82,7 +95,7 @@ namespace Entities.Platforms
             Debug.Log("Random: " + rand + "/ SpawnRate: " + PlatformController.ObstacleSpawnRate);
             if (PlatformController.ObstacleSpawnRate > 1.0f || rand < PlatformController.ObstacleSpawnRate)
             {
-                obstacle.transform.position = new Vector3(transform.position.x, resetYPos + distanceToObstacle);
+                obstacle.transform.position = new Vector3(transform.position.x, platformRespawnPos.position.y + distanceToObstacle);
                 obstacle.SetActive(true);
             }
         }
@@ -90,8 +103,8 @@ namespace Entities.Platforms
         private void Movement()
         {
             float newX = transform.position.x + horizontalSpeed * Time.deltaTime;
-            float newY = transform.position.y + PlatformController.PlatformVerticalSpeed * Time.deltaTime;
-            rb.MovePosition(new Vector2(newX, newY));
+            //float newY = transform.position.y + PlatformController.PlatformVerticalSpeed * Time.deltaTime;
+            rb.MovePosition(new Vector2(newX, transform.position.y));
 
             CheckHorizontalLimits();
         }
@@ -108,7 +121,6 @@ namespace Entities.Platforms
         private void Turn()
         {
             if (horizontalMovement) horizontalSpeed *= -1;
-
             /// Fixed turn
             float offset = 0.01f;
             if (horizontalSpeed > 0) transform.position = new Vector2(minXLimit + offset, transform.position.y);
@@ -122,6 +134,14 @@ namespace Entities.Platforms
                 ResetPosition();
             }
         }
+
+        private void Enable()
+        {
+            spriteRenderer.enabled = true;
+            boxCollider.isTrigger = false;
+            startsOff = false;
+        }
+
         #endregion
         #endregion
     }
