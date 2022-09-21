@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour
 {
     #region VARIABLES
     #region SERIALIZED VARIABLES
+    [SerializeField] private CanvasGroup startingPanel;
     [SerializeField] private CanvasGroup pausePanel;
     [SerializeField] private CanvasGroup gameOverPanel;
 
@@ -36,11 +37,13 @@ public class UIController : MonoBehaviour
     {
         PauseSystem.OnPauseStateChange += PausePanelController;
         GameManager.OnGameOver += GameOverPanelController;
+        GameManager.OnGameStart += GameStartPanelController;
     }
     private void OnDestroy()
     {
         PauseSystem.OnPauseStateChange -= PausePanelController;
         GameManager.OnGameOver -= GameOverPanelController;
+        GameManager.OnGameStart -= GameStartPanelController;
     }
     private void PausePanelController(PauseStates state)
     {
@@ -57,6 +60,11 @@ public class UIController : MonoBehaviour
     {
         ShowPanel(gameOverPanel);
     }
+    private void GameStartPanelController()
+    {
+        HidePanel(startingPanel);
+    }
+
     private void ShowPanel(CanvasGroup panel)
     {
         panel.alpha = 1;

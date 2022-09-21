@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 namespace Toolbox
 {
@@ -23,6 +24,8 @@ namespace Toolbox
         private bool wasActive = false;
         // If the timer reached or not
         private bool reached = false;
+        // Event when the timer ended
+        public Action OnReachedTime;
 
         // Properties
         public float CurrentTime { get => currentTime; }
@@ -98,10 +101,11 @@ namespace Toolbox
         /// </summary>
         private void CheckTimer(float speed, bool condition, float initialTime)
         {
-            currentTime += Time.deltaTime * speed;
+            currentTime += Time.unscaledDeltaTime * speed;
 
             if (condition)
             {
+                OnReachedTime?.Invoke();
                 active = false;
                 reached = true;
                 currentTime = initialTime;

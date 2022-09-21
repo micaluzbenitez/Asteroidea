@@ -18,7 +18,7 @@ namespace Entities.Player
 
         private void Awake()
         {
-            deathChecker = new DeathChecker();
+            deathChecker = GetComponent<DeathChecker>();
             life = initialLife;
         }
 

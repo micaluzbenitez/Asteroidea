@@ -1,7 +1,11 @@
-using System;
-using UnityEngine;
-using Entities.Player;
+using System.Collections.Generic;
+using System.Collections;
 using Entities.Enemies;
+using Entities.Player;
+using UnityEngine;
+using Toolbox;
+using System;
+using TMPro;
 using UI;
 
 namespace Managers
@@ -21,21 +25,29 @@ namespace Managers
 
         [Header("UI")]
         [SerializeField] private UIGame uiGame = null;
+        [SerializeField] private TMP_Text timerText = null;
+        [SerializeField] private int timerStartingValue = 5;
 
-        private float time = 0;
-        private int score = 0;
         #endregion
 
         #region STATIC VARIABLES
         public static bool GameRunning { get; private set; } = true;
 
         public static Action OnGameOver;
+        public static Action OnGameStart;
 
         #endregion
 
         #region PRIVATE VARIABLES
 
-        private bool gameOver = false;
+        private bool gameOver = false; 
+
+        private float time = 0;
+        private int score = 0;
+
+        private int timerTime = 0;
+
+        private Timer timer = new Timer();
 
         #endregion
         #endregion
@@ -55,17 +67,14 @@ namespace Managers
             PlayerStats.OnUpdateLife += uiGame.UpdateLifeBar;
             PlayerEnemies.OnLoseLife += playerStats.LoseLife;
             DeathChecker.OnReachLimit += EndGame;
+
+            timer.SetTimer(timerStartingValue, Timer.TIMER_MODE.DECREASE);
+
+            timer.OnReachedTime += StartGame;
+
         }
 
-        private void Update()
-        {
-            time += Time.deltaTime * scoreSpeed;
-            score = (int)time;
-
-            uiGame.UpdateScore(score);
-        }
-
-        private void Start()
+        private IEnumerator Start()
         {
             for (int i = 0; i < enemiesManager.transform.childCount; i++)
             {
@@ -75,6 +84,31 @@ namespace Managers
 
             gameOver = false;
             GameRunning = true;
+
+            PauseSystem.Pause();
+
+            yield return null;
+
+            timerTime = timerStartingValue;
+            //timerText.text = timerTime.ToString();
+
+            timer.ActiveTimer();
+        }
+
+        private void Update()
+        {
+            if (timer.Active)
+            {
+                timer.UpdateTimer();
+                ChangeTimerText();
+            }
+            
+
+
+            time += Time.deltaTime * scoreSpeed;
+            score = (int)time;
+
+            uiGame.UpdateScore(score);
         }
 
         private void OnDestroy()
@@ -82,6 +116,7 @@ namespace Managers
             PlayerStats.OnUpdateLife -= uiGame.UpdateLifeBar;
             PlayerEnemies.OnLoseLife -= playerStats.LoseLife;
             DeathChecker.OnReachLimit -= EndGame;
+            timer.OnReachedTime -= StartGame;
         }
 
         private void EndGame()
@@ -89,6 +124,23 @@ namespace Managers
             gameOver = true;
             GameRunning = false;
             OnGameOver?.Invoke();
+        }
+
+        private void ChangeTimerText()
+        {
+            int timeElapsed = Mathf.RoundToInt(timer.CurrentTime);
+            if (timeElapsed < 1)
+                timerText.text = "GO!";
+            else if (timeElapsed < 6)
+                timerText.text = timeElapsed.ToString();
+            else 
+                timerText.text = (timerStartingValue-1).ToString();
+        }
+
+        private void StartGame()
+        {
+            PauseSystem.UnPause();
+            OnGameStart?.Invoke();
         }
 
         #endregion
