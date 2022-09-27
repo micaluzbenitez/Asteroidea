@@ -16,27 +16,25 @@ namespace Entities.Enemies
         [SerializeField, Range(0.0f,2.0f)] private float maxSpeed = 1;
 
         private bool movingRight = false;
-        private float moveTime;
-        private SpriteRenderer spriteRenderer;
+        private float moveTime = 0;
+        private float speed = 0;
 
         protected override void Awake()
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
             base.Awake();
             SetMovingSide();
         }
 
-        private void OnEnable() //Hacer cuando se resetea la plataforma y no cuando se hace enable
-        {//Hacer un trigger al final de las plataformas y hacerlo girar ahí :D
+        private void OnEnable() 
+        {
             SetMovingSide();
-            speedX = Random.Range(minSpeed, maxSpeed);
-            spriteRenderer.color = Random.ColorHSV();
+            speed = Random.Range(minSpeed, maxSpeed);
         }
 
         protected override void Update()
         {
 
-            float delTime = Time.deltaTime;
+            float delTime = Time.deltaTime * speed;
 
             moveTime += movingRight ? delTime : -delTime ;
 
@@ -54,9 +52,9 @@ namespace Entities.Enemies
             }
         }
 
-        private bool SetMovingSide()
+        private void SetMovingSide()
         {
-            return Random.Range(0, 2) == 0; //Random entre 0 y 1
+            movingRight = Random.Range(0, 2) == 0; //Random entre 0 y 1
         }
 
     }
