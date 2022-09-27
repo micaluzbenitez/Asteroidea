@@ -11,8 +11,9 @@ public class UIController : MonoBehaviour
     [SerializeField] private CanvasGroup pausePanel;
     [SerializeField] private CanvasGroup gameOverPanel;
 
-    [Header("Menu scene")]
+    [Header("Scene")]
     [SerializeField] private string menuSceneName = "";
+    [SerializeField] private string gameSceneName = "";
     #endregion
 
     #region STATIC VARIABLES
@@ -25,7 +26,15 @@ public class UIController : MonoBehaviour
 
     #region METHODS
     #region PUBLIC METHODS
+    public void Replay()
+    {
+        SceneManager.LoadScene(gameSceneName);
+    } 
 
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(menuSceneName);
+    }
     #endregion
 
     #region STATIC METHODS
@@ -76,10 +85,6 @@ public class UIController : MonoBehaviour
         panel.blocksRaycasts = false;
         panel.interactable = false;
         panel.alpha = 0;
-    }
-    public void BackToMenu()
-    {
-        SceneManager.LoadScene(menuSceneName);
     }
     #endregion
     #endregion
