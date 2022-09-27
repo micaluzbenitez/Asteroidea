@@ -19,7 +19,7 @@ namespace Entities.Player
         #endregion
 
         #region PRIVATE VARIABLES
-
+        private PlayerStats playerStats = null;
         #endregion
         #endregion
 
@@ -28,6 +28,7 @@ namespace Entities.Player
         public void DeadPlayer()
         {
             OnReachLimit?.Invoke();
+            playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
         }
         #endregion
 
@@ -40,6 +41,11 @@ namespace Entities.Player
         #endregion
 
         #region PRIVATE METHODS
+        private void Awake()
+        {
+            playerStats = GetComponent<PlayerStats>();
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.tag.Equals("Limit")/* || collision.tag.Equals("Enemy") || collision.tag.Equals("Shot")*/) DeadPlayer();

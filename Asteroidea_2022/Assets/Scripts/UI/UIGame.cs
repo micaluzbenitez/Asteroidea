@@ -29,5 +29,11 @@ namespace UI
         {
             scoreText.text = value.ToString();
         }
+
+        public void SetLifeBarValue(float value)
+        {
+            lifeBar.fillAmount = value;
+            if (changeGradient) lifeBar.color = gradient.Evaluate(value);
+        }
     }
 }

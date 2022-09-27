@@ -121,6 +121,7 @@ namespace Managers
 
         private void EndGame()
         {
+            uiGame.SetLifeBarValue(0);
             gameOver = true;
             GameRunning = false;
             OnGameOver?.Invoke();

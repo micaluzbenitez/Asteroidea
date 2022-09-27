@@ -12,7 +12,14 @@ namespace Entities.Player
         public string enemiesTag = "";
         public string bulletsTag = "";
 
+        private PlayerStats playerStats = null;
+
         public static Action<int> OnLoseLife = null;
+
+        private void Awake()
+        {
+            playerStats = GetComponent<PlayerStats>();
+        }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -20,6 +27,7 @@ namespace Entities.Player
             {
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                 OnLoseLife?.Invoke(enemy.GetDamage());
+                playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
             }
         }
 
@@ -29,6 +37,7 @@ namespace Entities.Player
             {
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
                 OnLoseLife?.Invoke(bullet.Damage);
+                playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
             }
         }
     }
