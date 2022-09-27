@@ -6,6 +6,19 @@ namespace Entities.Player
 {
     public class PlayerStats : MonoBehaviour
     {
+        public enum STATE
+        {
+            IDLE,
+            WALKING,
+            FALLING,
+            DAMAGE
+        }
+
+        [Header("State")]
+        [SerializeField] private STATE playerState = STATE.IDLE;
+        [SerializeField] private SpriteRenderer expression = null;
+        [SerializeField] private Sprite[] expressions = null;
+
         [Header("Player data")]
         [SerializeField] private int initialLife = 0;
         [SerializeField] private float recuperateLifeValue = 0;
@@ -41,6 +54,12 @@ namespace Entities.Player
             life -= damage;
             OnUpdateLife?.Invoke(life, 0, initialLife);
             if (life <= 0) deathChecker.DeadPlayer();
+        }
+
+        public void ChangePlayerState(STATE state)
+        {
+            playerState = state;
+            expression.sprite = expressions[(int)state];
         }
     }
 }

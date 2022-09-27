@@ -20,16 +20,15 @@ namespace Entities.Player
         private float horizontalInput = 0;
         private bool faceRight = true;
         private bool jumpPressed = false;
-        private bool isGrounded = true;
         private int airJumpCount = 0;
 
+        private PlayerStats playerStats = null;
         private Rigidbody2D rigidBody = null;
-        private Animator animator = null;
 
         private void Awake()
         {
+            playerStats = GetComponent<PlayerStats>();
             rigidBody = GetComponent<Rigidbody2D>();
-            animator = GetComponent<Animator>();
         }
 
         private void Update()
@@ -45,7 +44,7 @@ namespace Entities.Player
         {
             Move();
             CheckJump();
-            //SwitchAnimState();
+            PlayerExpression();
         }
 
         private void Move()
@@ -89,18 +88,11 @@ namespace Entities.Player
             transform.localScale = scale;
         }
 
-        private void SwitchAnimState()
+        private void PlayerExpression()
         {
-            /// Run
-            if (horizontalInput == 0) animator.SetBool("Running", false);
-            else animator.SetBool("Running", true);
-
-            /// Jump
-            animator.SetFloat("SpeedH", Mathf.Abs(rigidBody.velocity.x));
-            animator.SetFloat("SpeedV", rigidBody.velocity.y);
-
-            /// Grounded
-            animator.SetBool("IsGrounded", isGrounded);
+            if (!isGrounded && isFalling) playerStats.ChangePlayerState(PlayerStats.STATE.FALLING);
+            else if (horizontalInput != 0) playerStats.ChangePlayerState(PlayerStats.STATE.WALKING);
+            else playerStats.ChangePlayerState(PlayerStats.STATE.IDLE);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
