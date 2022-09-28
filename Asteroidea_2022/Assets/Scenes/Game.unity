@@ -5411,86 +5411,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5971174950379548082, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174950379548093, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: hSpawnRate
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174950379548093, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174950379548093, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalMovement
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5971174950379548093, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: platformRespawnPos
       value: 
       objectReference: {fileID: 50179558}
     - target: {fileID: 5971174951079684758, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: hSpawnRate
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174951079684758, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174951079684758, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalMovement
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174951079684758, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: platformRespawnPos
       value: 
       objectReference: {fileID: 50179558}
-    - target: {fileID: 5971174951079684761, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174951777171265, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: hSpawnRate
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174951777171265, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174951777171265, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalMovement
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5971174951777171265, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: platformRespawnPos
       value: 
       objectReference: {fileID: 50179558}
-    - target: {fileID: 5971174951777171267, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174952116563509, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: hSpawnRate
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174952116563509, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971174952116563509, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalMovement
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5971174952116563509, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: platformRespawnPos
       value: 
       objectReference: {fileID: 50179558}
-    - target: {fileID: 5971174952116563514, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6623344685762035889, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: leftWall
       value: 
@@ -5499,22 +5435,6 @@ PrefabInstance:
       propertyPath: rightWall
       value: 
       objectReference: {fileID: 3238700544053209526}
-    - target: {fileID: 8581877483159784295, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581877483159784296, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: hSpawnRate
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581877483159784296, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581877483159784296, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-      propertyPath: horizontalMovement
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8581877483159784296, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
       propertyPath: platformRespawnPos
       value: 
