@@ -9,8 +9,6 @@ namespace Entities.Platforms
         #region VARIABLES
         #region SERIALIZED VARIABLES
         [Header("Lateral Limits")]
-        [SerializeField] private float minX = -2.75f;
-        [SerializeField] private float maxX = 2.75f;
 
         [Header("Obstacle Spawn")]
         [SerializeField] private GameObject obstacle;
@@ -18,8 +16,7 @@ namespace Entities.Platforms
         [Header("Horizontal movement")]
         [SerializeField] private bool horizontalMovement = false;
         [SerializeField] private float horizontalSpeed = 0;
-        [SerializeField] private float maxXLimit = 0;
-        [SerializeField] private float minXLimit = 0;
+        [SerializeField] private float hSpawnRate = 0.07f;
 
         [Header("Platform Respawn")]
         [SerializeField] private Transform platformRespawnPos;
@@ -33,7 +30,7 @@ namespace Entities.Platforms
         #endregion
 
         #region PRIVATE VARIABLES
-        private Rigidbody2D rb;
+        private Rigidbody2D rigidBody;
 
         private float distanceToObstacle = 0.0f;
 
@@ -42,6 +39,17 @@ namespace Entities.Platforms
 
         private bool startsOff;
 
+        private float minX = 0;
+        private float maxX = 0;
+
+        private float maxXLimit = 0;
+        private float minXLimit = 0;
+
+        private bool movingRight = false;
+        private float moveTime = 0;
+        private float speed = 0;
+
+    
         #endregion
         #endregion
 
@@ -57,27 +65,41 @@ namespace Entities.Platforms
         #region PRIVATE METHODS
         private void Awake()
         {
-            rb = GetComponent<Rigidbody2D>();
+            rigidBody = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             boxCollider = GetComponent<BoxCollider2D>();
             distanceToObstacle = Vector3.Distance(obstacle.transform.position, transform.position);
+
         }
 
         private void Start()
         {
-            if (!horizontalMovement) horizontalSpeed = 0;
+            speed = horizontalMovement? horizontalSpeed : 0;
             startsOff = !isVisible;
+
+            minX = PlatformController.HorizontalLimits.Left + boxCollider.bounds.size.x / 2;
+            maxX = PlatformController.HorizontalLimits.Right - boxCollider.bounds.size.x / 2;
+
+            minXLimit = PlatformController.HorizontalLimits.Left;
+            maxXLimit = PlatformController.HorizontalLimits.Right;
         }
 
-        private void LateUpdate()
+        private void Update()
         {
-            Movement();
+            if(horizontalMovement) HorizontalMove();
         }        
 
         private void SetRandomX()
         {
             float newX = minX + UnityEngine.Random.Range(0, (Mathf.Abs(minX - maxX)));
             transform.position = new Vector3(newX, transform.position.y);
+
+            float A = minX;
+            float B = maxX;
+            float C = newX;
+
+            moveTime = (Mathf.Abs(C - A) / Mathf.Abs(B - A));
+
         }
 
         private void ResetPosition()
@@ -85,6 +107,7 @@ namespace Entities.Platforms
             if (startsOff) Enable();
             obstacle.SetActive(false);
             SetRandomX();
+            CheckHorizontalMovement(); 
             transform.position = new Vector3(transform.position.x, platformRespawnPos.position.y);
             SpawnEnemy();
         }
@@ -100,32 +123,33 @@ namespace Entities.Platforms
             }
         }
 
-        private void Movement()
+        private void HorizontalMove()
         {
-            float newX = transform.position.x + horizontalSpeed * Time.deltaTime;
-            //float newY = transform.position.y + PlatformController.PlatformVerticalSpeed * Time.deltaTime;
-            rb.MovePosition(new Vector2(newX, transform.position.y));
+            float delTime = Time.deltaTime * speed;
 
-            CheckHorizontalLimits();
-        }
+            moveTime += movingRight ? delTime : -delTime;
 
-        private void CheckHorizontalLimits()
-        {
-            if (horizontalMovement)
+            float newX = Mathf.Lerp(
+                PlatformController.HorizontalLimits.Left + boxCollider.bounds.size.x / 2,
+                PlatformController.HorizontalLimits.Right - boxCollider.bounds.size.x / 2,
+                moveTime);
+            
+            rigidBody.MovePosition(new Vector2(newX,rigidBody.position.y));
+                
+               
+            if (moveTime < 0)
             {
-                if (transform.position.x < minXLimit || transform.position.x > maxXLimit)
-                    Turn();
+                movingRight = true;
+                moveTime = 0;
+            }
+            else if (moveTime > 1) //si completa el lerp
+            {
+                movingRight = false;
+                moveTime = 1;
             }
         }
 
-        private void Turn()
-        {
-            if (horizontalMovement) horizontalSpeed *= -1;
-            /// Fixed turn
-            float offset = 0.01f;
-            if (horizontalSpeed > 0) transform.position = new Vector2(minXLimit + offset, transform.position.y);
-            else transform.position = new Vector2(maxXLimit - offset, transform.position.y);
-        }
+        
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -140,6 +164,12 @@ namespace Entities.Platforms
             spriteRenderer.enabled = true;
             boxCollider.isTrigger = false;
             startsOff = false;
+        }
+
+        private void CheckHorizontalMovement()
+        {
+            horizontalMovement = Random.Range(0.0f, 1.0f) < hSpawnRate;
+            speed = horizontalMovement ? horizontalSpeed : 0;
         }
 
         #endregion

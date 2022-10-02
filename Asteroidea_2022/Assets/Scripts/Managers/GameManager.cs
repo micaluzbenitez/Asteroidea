@@ -40,7 +40,9 @@ namespace Managers
 
         #region PRIVATE VARIABLES
 
-        private bool gameOver = false; 
+        private bool gameOver = false;
+        private bool skippedTimer = false;
+        private bool gameStarted = false;
 
         private float time = 0;
         private int score = 0;
@@ -67,6 +69,7 @@ namespace Managers
             PlayerStats.OnUpdateLife += uiGame.UpdateLifeBar;
             PlayerEnemies.OnLoseLife += playerStats.LoseLife;
             DeathChecker.OnReachLimit += EndGame;
+            InputManager.OnJumpPress += SkipTimer;
 
             timer.SetTimer(timerStartingValue, Timer.TIMER_MODE.DECREASE);
 
@@ -90,7 +93,6 @@ namespace Managers
             yield return null;
 
             timerTime = timerStartingValue;
-            //timerText.text = timerTime.ToString();
 
             timer.ActiveTimer();
         }
@@ -102,8 +104,6 @@ namespace Managers
                 timer.UpdateTimer();
                 ChangeTimerText();
             }
-            
-
 
             time += Time.deltaTime * scoreSpeed;
             score = (int)time;
@@ -116,7 +116,9 @@ namespace Managers
             PlayerStats.OnUpdateLife -= uiGame.UpdateLifeBar;
             PlayerEnemies.OnLoseLife -= playerStats.LoseLife;
             DeathChecker.OnReachLimit -= EndGame;
-            timer.OnReachedTime -= StartGame;
+            //InputManager.OnJumpPress -= SkipTimer;
+            if (!skippedTimer) timer.OnReachedTime -= StartGame;
+            if (!gameStarted) InputManager.OnJumpPress -= SkipTimer;
         }
 
         private void EndGame()
@@ -142,6 +144,15 @@ namespace Managers
         {
             PauseSystem.UnPause();
             OnGameStart?.Invoke();
+            gameStarted = true;
+            InputManager.OnJumpPress -= SkipTimer;
+        }
+
+        private void SkipTimer()
+        {
+            timer.OnReachedTime -= StartGame;
+            skippedTimer = true;
+            StartGame();
         }
 
         #endregion

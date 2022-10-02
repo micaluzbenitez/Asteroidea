@@ -21,11 +21,18 @@ namespace Entities.Platforms
         [SerializeField] private float startingObstacleSpawnRate = 0.1f;
         [SerializeField] private float spawnRateAugment = 0.02f;
 
+
+        [Header("Platform Limits")]
+        [SerializeField] private GameObject leftWall = null;
+        [SerializeField] private GameObject rightWall = null;
+
+
         #endregion
 
         #region STATIC VARIABLES
 
         private static float platformVerticalSpeed;
+        private static Limits platformHorizontalLimits;
 
         #endregion
 
@@ -48,6 +55,22 @@ namespace Entities.Platforms
 
         public static float ObstacleSpawnRate { get; private set; }
 
+        public struct Limits
+        {
+            public float Left; public float Right;
+        }
+        public static Limits HorizontalLimits
+        {
+            get
+            {
+                return platformHorizontalLimits;
+            }
+            private set
+            {
+                platformHorizontalLimits = value;
+            }
+        }
+
         #endregion
 
         #endregion
@@ -62,12 +85,19 @@ namespace Entities.Platforms
         #endregion
 
         #region PRIVATE METHODS
+        private void Awake()
+        {
+            platformHorizontalLimits.Left = leftWall.transform.position.x + leftWall.GetComponent<BoxCollider2D>().bounds.size.x / 2;
+            platformHorizontalLimits.Right = rightWall.transform.position.x - rightWall.GetComponent<BoxCollider2D>().bounds.size.x / 2;
+        }
 
         private void Start()
         {
             PlatformVerticalSpeed = startingPlatformVerticalSpeed;
             ObstacleSpawnRate = startingObstacleSpawnRate;
             StartCoroutine(SecondsTimer());
+
+
         }
 
         IEnumerator SecondsTimer()

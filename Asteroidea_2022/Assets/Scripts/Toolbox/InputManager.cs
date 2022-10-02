@@ -12,6 +12,7 @@ using System;
 
         public static Action<MovementDirection> OnMovementPress;
         public static Action OnPausePress;
+        public static Action OnJumpPress;
         public static Action<Vector3> OnClicPress;
 
         #endregion
@@ -44,26 +45,14 @@ using System;
 
                 else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) OnMovementPress?.Invoke(MovementDirection.Right);
 
-                //if (Input.GetMouseButtonDown(0))
-                //{
-                //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                
 
-                //    RaycastHit[] info;
-
-                //    info = Physics.RaycastAll(ray);
-
-                //    foreach (RaycastHit item in info)
-                //    {
-                //        if (item.collider.tag == "Floor") OnClicPress?.Invoke(item.point); //Should enter only 1 time
-                //    }
-
-                //}
             }
 
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
-            {
-                OnPausePress?.Invoke();
-            }
+            if (Input.GetKey(KeyCode.Space)) OnJumpPress?.Invoke();
+
+
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) OnPausePress?.Invoke();
 
             
         }
