@@ -6,7 +6,6 @@ namespace Camera
     {
         #region VARIABLES
         #region SERIALIZED VARIABLES
-        [SerializeField] private float speed;
         #endregion
 
         #region STATIC VARIABLES
@@ -18,7 +17,7 @@ namespace Camera
         #endregion
 
         #region PRIVATE VARIABLES
-
+        private float speed;
         #endregion
         #endregion
 
@@ -38,6 +37,8 @@ namespace Camera
         #region PRIVATE METHODS
         private void Update()
         {
+            speed = Managers.GameManager.VerticalSpeed;
+
             Vector3 pos = transform.position;
             pos.y -= speed * Time.deltaTime;
             transform.position = new Vector3(pos.x,pos.y,pos.z);

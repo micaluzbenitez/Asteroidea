@@ -96,8 +96,6 @@ namespace Entities.Platforms
             PlatformVerticalSpeed = startingPlatformVerticalSpeed;
             ObstacleSpawnRate = startingObstacleSpawnRate;
             StartCoroutine(SecondsTimer());
-
-
         }
 
         IEnumerator SecondsTimer()

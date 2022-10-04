@@ -28,6 +28,13 @@ namespace Managers
         [SerializeField] private TMP_Text timerText = null;
         [SerializeField] private int timerStartingValue = 5;
 
+        [Header("Camera Movement")]
+        [SerializeField] private float startingVerticalSpeed = 1.0f;
+        [SerializeField] private float timeForNextAugment = 5;
+        [SerializeField] private float augmentDuration = 3;
+        [SerializeField] private float augmentValue = 0.001f;
+        [SerializeField] private float maxVerticalSpeed = 5;
+
         #endregion
 
         #region STATIC VARIABLES
@@ -37,6 +44,17 @@ namespace Managers
         public static Action OnGameStart;
         public static Action<int,int> OnEndGame; //Time, Score
 
+        public static float VerticalSpeed
+        {
+            get
+            {
+                return verticalSpeed;
+            }
+            private set
+            {
+                verticalSpeed = value;
+            }
+        }
         #endregion
 
         #region PRIVATE VARIABLES
@@ -52,6 +70,8 @@ namespace Managers
 
         private Timer timer = new Timer();
         private float realTimer = 0;
+
+        private static float verticalSpeed = 0;
 
         #endregion
         #endregion
@@ -97,6 +117,8 @@ namespace Managers
             timerTime = timerStartingValue;
 
             timer.ActiveTimer();
+
+            VerticalSpeed = startingVerticalSpeed;
         }
 
         private void Update()
@@ -107,12 +129,14 @@ namespace Managers
                 ChangeTimerText();
             }
 
-            time += Time.deltaTime * scoreSpeed;
+            time += Time.deltaTime * scoreSpeed; //Para hacer que el score aumente con el tiempo de caida, multiplicar por verticalSpeed
             score = (int)time;
 
             realTimer += Time.deltaTime;
 
             uiGame.UpdateScore(score);
+
+            Debug.Log("Velocidad Vertical> " + verticalSpeed);
         }
 
         private void OnDestroy()
@@ -151,6 +175,8 @@ namespace Managers
             OnGameStart?.Invoke();
             gameStarted = true;
             InputManager.OnJumpPress -= SkipTimer;
+
+            StartCoroutine(SecondsTimer());
         }
 
         private void SkipTimer()
@@ -160,6 +186,27 @@ namespace Managers
             StartGame();
         }
 
+
+        IEnumerator SecondsTimer()
+        {
+            yield return new WaitForSeconds(timeForNextAugment);
+            StartCoroutine(SpeedAugment());
+        }
+        IEnumerator SpeedAugment()
+        {
+            float t = 0;
+            while (t < augmentDuration)
+            {
+                t += Time.deltaTime;
+                verticalSpeed += augmentValue;
+                yield return null;
+            }
+            if (GameManager.GameRunning && verticalSpeed + augmentValue < maxVerticalSpeed)
+            {
+                StartCoroutine(SecondsTimer());
+            }
+
+        }
         #endregion
         #endregion
     }

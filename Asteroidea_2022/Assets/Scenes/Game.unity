@@ -1020,7 +1020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ecdf98e99442f44882cbfeaff1f6ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
 --- !u!1001 &592496841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2321,6 +2320,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 626588016}
     - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
+      propertyPath: augmentValue
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
       propertyPath: playerEnemies
       value: 
       objectReference: {fileID: 626588015}
@@ -2328,6 +2331,18 @@ PrefabInstance:
       propertyPath: enemiesManager
       value: 
       objectReference: {fileID: 2361458599268841315}
+    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
+      propertyPath: augmentDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
+      propertyPath: maxVerticalSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
+      propertyPath: timeForNextAugment
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
       propertyPath: timerStartingValue
       value: 6
