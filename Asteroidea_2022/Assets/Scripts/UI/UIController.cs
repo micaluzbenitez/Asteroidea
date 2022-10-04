@@ -10,6 +10,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private CanvasGroup startingPanel;
     [SerializeField] private CanvasGroup pausePanel;
     [SerializeField] private CanvasGroup gameOverPanel;
+    [SerializeField] private TMP_Text timeText;
+    [SerializeField] private TMP_Text scoreText;
 
     [Header("Scene")]
     [SerializeField] private string menuSceneName = "";
@@ -47,12 +49,14 @@ public class UIController : MonoBehaviour
         PauseSystem.OnPauseStateChange += PausePanelController;
         GameManager.OnGameOver += GameOverPanelController;
         GameManager.OnGameStart += GameStartPanelController;
+        GameManager.OnEndGame += ChangeEndGamePanelValues;
     }
     private void OnDestroy()
     {
         PauseSystem.OnPauseStateChange -= PausePanelController;
         GameManager.OnGameOver -= GameOverPanelController;
         GameManager.OnGameStart -= GameStartPanelController;
+        GameManager.OnEndGame -= ChangeEndGamePanelValues;
     }
     private void PausePanelController(PauseStates state)
     {
@@ -85,6 +89,11 @@ public class UIController : MonoBehaviour
         panel.blocksRaycasts = false;
         panel.interactable = false;
         panel.alpha = 0;
+    }
+    private void ChangeEndGamePanelValues(int time, int score)
+    {
+        scoreText.text = score.ToString();
+        timeText.text = time.ToString();
     }
     #endregion
     #endregion

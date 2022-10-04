@@ -35,6 +35,7 @@ namespace Managers
 
         public static Action OnGameOver;
         public static Action OnGameStart;
+        public static Action<int,int> OnEndGame; //Time, Score
 
         #endregion
 
@@ -50,6 +51,7 @@ namespace Managers
         private int timerTime = 0;
 
         private Timer timer = new Timer();
+        private float realTimer = 0;
 
         #endregion
         #endregion
@@ -108,6 +110,8 @@ namespace Managers
             time += Time.deltaTime * scoreSpeed;
             score = (int)time;
 
+            realTimer += Time.deltaTime;
+
             uiGame.UpdateScore(score);
         }
 
@@ -127,6 +131,7 @@ namespace Managers
             gameOver = true;
             GameRunning = false;
             OnGameOver?.Invoke();
+            OnEndGame?.Invoke((int)realTimer,(int)score);
         }
 
         private void ChangeTimerText()
