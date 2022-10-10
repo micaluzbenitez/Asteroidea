@@ -114,12 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6b2c49a1694d547b610e6de7413f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingPlatformVerticalSpeed: 2
-  timeForNextAugment: 5
-  augmentDuration: 1
-  augmentValue: 0.0003
+  secondsForPlatformRespawn: 1
+  startingPlatform: {fileID: 0}
   startingObstacleSpawnRate: 0.15
   spawnRateAugment: 0.007
+  timeForNextAugment: 5
+  augmentDuration: 1
   leftWall: {fileID: 0}
   rightWall: {fileID: 0}
 --- !u!1 &8705465067077065423
@@ -219,10 +219,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 664007291863717110, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 664007291863717111, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -311,10 +307,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 664007291863717110, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
       propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 664007291863717110, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
-      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 664007291863717111, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
@@ -564,10 +556,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 664007291863717110, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
       propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 664007291863717110, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
-      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 664007291863717111, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
