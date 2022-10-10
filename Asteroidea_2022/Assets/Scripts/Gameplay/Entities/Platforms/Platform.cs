@@ -155,7 +155,8 @@ namespace Entities.Platforms
         {
             if (collision.tag.Equals("ResetZone"))
             {
-                ResetPosition();
+                gameObject.active = false;
+                //ResetPosition();
             }
         }
 
@@ -171,6 +172,12 @@ namespace Entities.Platforms
             horizontalMovement = Random.Range(0.0f, 1.0f) < hSpawnRate;
             speed = horizontalMovement ? horizontalSpeed : 0;
         }
+
+        public void ResetPlatform()
+        {
+            ResetPosition();
+        }
+
 
         #endregion
         #endregion

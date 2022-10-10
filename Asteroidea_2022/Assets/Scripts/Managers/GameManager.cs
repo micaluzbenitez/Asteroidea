@@ -33,7 +33,7 @@ namespace Managers
         [SerializeField] private float timeForNextAugment = 5;
         [SerializeField] private float augmentDuration = 3;
         [SerializeField] private float augmentValue = 0.001f;
-        [SerializeField] private float maxVerticalSpeed = 5;
+        [SerializeField] private float maxVerticalSpeed = 6;
 
         #endregion
 
@@ -72,6 +72,7 @@ namespace Managers
         private float realTimer = 0;
 
         private static float verticalSpeed = 0;
+        private static float verticalMaxSpeed = 0;
 
         #endregion
         #endregion
@@ -96,7 +97,7 @@ namespace Managers
             timer.SetTimer(timerStartingValue, Timer.TIMER_MODE.DECREASE);
 
             timer.OnReachedTime += StartGame;
-
+            verticalMaxSpeed = maxVerticalSpeed;
         }
 
         private IEnumerator Start()
@@ -136,7 +137,6 @@ namespace Managers
 
             uiGame.UpdateScore(score);
 
-            Debug.Log("Velocidad Vertical> " + verticalSpeed);
         }
 
         private void OnDestroy()
@@ -154,6 +154,7 @@ namespace Managers
             uiGame.SetLifeBarValue(0);
             gameOver = true;
             GameRunning = false;
+            StopCoroutine(SpeedAugment());
             OnGameOver?.Invoke();
             OnEndGame?.Invoke((int)realTimer,(int)score);
         }
@@ -175,7 +176,6 @@ namespace Managers
             OnGameStart?.Invoke();
             gameStarted = true;
             InputManager.OnJumpPress -= SkipTimer;
-
             StartCoroutine(SecondsTimer());
         }
 
@@ -198,15 +198,21 @@ namespace Managers
             while (t < augmentDuration)
             {
                 t += Time.deltaTime;
-                verticalSpeed += augmentValue;
+                verticalSpeed += augmentValue * Time.deltaTime;
                 yield return null;
             }
-            if (GameManager.GameRunning && verticalSpeed + augmentValue < maxVerticalSpeed)
+            if (verticalSpeed + augmentValue < maxVerticalSpeed)
             {
                 StartCoroutine(SecondsTimer());
             }
 
         }
+
+        public static float GetMaxVerticalSpeed()
+        {
+            return verticalMaxSpeed;
+        }
+
         #endregion
         #endregion
     }

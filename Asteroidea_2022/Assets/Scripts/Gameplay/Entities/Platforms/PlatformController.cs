@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using Managers;
 
 namespace Entities.Platforms
@@ -10,16 +11,15 @@ namespace Entities.Platforms
         #region VARIABLES
         #region SERIALIZED VARIABLES
 
-        [Header("Platform Speed Control")]
-        [SerializeField] private float startingPlatformVerticalSpeed = 1.0f;
-        [SerializeField] private float timeForNextAugment = 5;
-        [SerializeField] private float augmentDuration = 3;
-        [SerializeField] private float augmentValue = 0.001f;
-
+        [Header("Reset Control")]
+        [SerializeField] private int secondsForPlatformRespawn = 1;
+        [SerializeField] private Platform startingPlatform = null;
 
         [Header("Obstacle Spawn")]
         [SerializeField] private float startingObstacleSpawnRate = 0.1f;
         [SerializeField] private float spawnRateAugment = 0.02f;
+        [SerializeField] private float timeForNextAugment = 5;
+        [SerializeField] private float augmentDuration = 3;
 
 
         [Header("Platform Limits")]
@@ -33,10 +33,9 @@ namespace Entities.Platforms
 
         private static float platformVerticalSpeed;
         private static Limits platformHorizontalLimits;
+        private int nextPlatformIndexToSpawn = 0;
 
-        #endregion
-
-        #region PRIVATE VARIABLES
+        public static Action OnPlatformMustSpawn;
 
         #endregion
 
@@ -71,6 +70,13 @@ namespace Entities.Platforms
             }
         }
 
+        #region PRIVATE VARIABLES
+
+        private Platform[] platformList = null;
+        private float time = 0;
+
+        #endregion
+
         #endregion
 
         #endregion
@@ -89,11 +95,17 @@ namespace Entities.Platforms
         {
             platformHorizontalLimits.Left = leftWall.transform.position.x + leftWall.GetComponent<BoxCollider2D>().bounds.size.x / 2;
             platformHorizontalLimits.Right = rightWall.transform.position.x - rightWall.GetComponent<BoxCollider2D>().bounds.size.x / 2;
+            platformList = GetComponentsInChildren<Platform>();
+            foreach (Platform platform in platformList)
+            {
+                platform.gameObject.SetActive(platform.name.Equals(startingPlatform.name));
+            }
+                
+            
         }
 
         private void Start()
         {
-            PlatformVerticalSpeed = startingPlatformVerticalSpeed;
             ObstacleSpawnRate = startingObstacleSpawnRate;
             StartCoroutine(SecondsTimer());
         }
@@ -109,7 +121,6 @@ namespace Entities.Platforms
             while (t < augmentDuration)
             {
                 t += Time.deltaTime;
-                platformVerticalSpeed += augmentValue;
                 yield return null;
             }
             if (GameManager.GameRunning)
@@ -117,6 +128,25 @@ namespace Entities.Platforms
                 StartCoroutine(SecondsTimer());
                 if (ObstacleSpawnRate < 1)
                     ObstacleSpawnRate += spawnRateAugment;
+            }
+
+        }
+
+        private void Update()
+        {
+            if (PauseSystem.Paused) return;
+            float maxSpawnTime = GameManager.GetMaxVerticalSpeed();
+            time += Time.deltaTime;
+            if (time > secondsForPlatformRespawn - (GameManager.VerticalSpeed * 2 / maxSpawnTime))
+            {
+                platformList[nextPlatformIndexToSpawn].gameObject.SetActive(true);
+                platformList[nextPlatformIndexToSpawn].ResetPlatform();
+                nextPlatformIndexToSpawn++;
+                if (nextPlatformIndexToSpawn == platformList.Length)
+                {
+                    nextPlatformIndexToSpawn = 0;
+                }
+                time = 0;
             }
 
         }
