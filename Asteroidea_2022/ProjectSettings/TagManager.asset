@@ -47,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Platforms
+    uniqueID: 500622015
+    locked: 0
   - name: Fish
     uniqueID: 2260485567
     locked: 0
@@ -55,9 +58,6 @@ TagManager:
     locked: 0
   - name: Crab
     uniqueID: 3467046443
-    locked: 0
-  - name: Platforms
-    uniqueID: 500622015
     locked: 0
   - name: Player
     uniqueID: 301779207
