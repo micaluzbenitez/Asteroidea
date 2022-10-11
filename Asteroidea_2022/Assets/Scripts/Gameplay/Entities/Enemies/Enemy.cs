@@ -17,6 +17,7 @@ namespace Entities.Enemies
         protected virtual void Awake()
         {
             rigidBody = GetComponent<Rigidbody2D>();
+            speedX *= -1;
         }
 
         protected virtual void Update()
