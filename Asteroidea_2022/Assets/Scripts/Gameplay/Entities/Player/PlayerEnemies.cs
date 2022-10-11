@@ -12,6 +12,9 @@ namespace Entities.Player
         public string enemiesTag = "";
         public string bulletsTag = "";
 
+        [Header("Enemy feedback")]
+        [SerializeField] private GameObject enemyParticles = null;
+
         [Header("Unity events")]
         [SerializeField] private UnityEvent OnCollideEnemy = null;
 
@@ -24,14 +27,20 @@ namespace Entities.Player
             playerStats = GetComponent<PlayerStats>();
         }
 
+        private void PlayerDamage(int damage)
+        {
+            Instantiate(enemyParticles, transform.position, Quaternion.identity);
+            playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
+            OnLoseLife?.Invoke(damage);
+            OnCollideEnemy?.Invoke();
+        }
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag(enemiesTag))
             {
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-                OnLoseLife?.Invoke(enemy.GetDamage());
-                OnCollideEnemy?.Invoke();
-                playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
+                PlayerDamage(enemy.GetDamage());
             }
         }
 
@@ -40,9 +49,7 @@ namespace Entities.Player
             if (collision.gameObject.CompareTag(bulletsTag))
             {
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
-                OnLoseLife?.Invoke(bullet.Damage);
-                OnCollideEnemy?.Invoke();
-                playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
+                PlayerDamage(bullet.Damage);
             }
         }
     }
