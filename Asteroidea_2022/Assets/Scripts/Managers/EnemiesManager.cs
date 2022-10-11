@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using Toolbox;
 using Toolbox.Pool;
@@ -20,15 +19,12 @@ namespace Managers
         [SerializeField] private Enemy[] enemy = null;
 
         [Header("Enemies spawn")]
+        [SerializeField] private ObjectPooler objectPooler = null;
         [SerializeField] private Transform cameraPosition = null;
         [SerializeField] private float cameraYOffset = 0;
 
-        private ObjectPooler objectPooler = null;
-
         private void Start()
         {
-            objectPooler = ObjectPooler.Instance;
-
             for (int i = 0; i < enemy.Length; i++)
             {
                 if (enemy[i].startEnemy) SpawnEnemy(enemy[i].name);

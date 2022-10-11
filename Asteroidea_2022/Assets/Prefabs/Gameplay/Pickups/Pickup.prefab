@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 480394989235441503}
   - component: {fileID: 6593336476916895231}
   - component: {fileID: 4281205866826990349}
+  - component: {fileID: -8998729971965544641}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Untagged
@@ -120,7 +121,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555144636096533491}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -133,3 +134,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8998729971965544641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555144636096533491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 276be340aa697b049a3cad76aa7ac594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerTagName: ResetZone
