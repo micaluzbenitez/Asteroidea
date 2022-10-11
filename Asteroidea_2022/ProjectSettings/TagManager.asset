@@ -10,6 +10,7 @@ TagManager:
   - ResetZone
   - Limit
   - Wall
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,9 @@ TagManager:
     locked: 0
   - name: Platforms
     uniqueID: 500622015
+    locked: 0
+  - name: Pickup
+    uniqueID: 2094355307
     locked: 0
   - name: Fish
     uniqueID: 2260485567

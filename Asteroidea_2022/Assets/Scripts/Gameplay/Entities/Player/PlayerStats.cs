@@ -24,10 +24,14 @@ namespace Entities.Player
         [SerializeField] private float recuperateLifeValue = 0;
         [SerializeField] private float recuperateLifeSpeed = 0;
 
+        [Header("Pickups points")]
+        [SerializeField] private int pickupScore = 0;
+
         private float life = 0;
         private DeathChecker deathChecker = null;
 
         public static Action<float, float, float> OnUpdateLife;
+        public static Action<int> OnAddScore;
 
         private void Awake()
         {
@@ -60,6 +64,15 @@ namespace Entities.Player
         {
             playerState = state;
             expression.sprite = expressions[(int)state];
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Pickup"))
+            {
+                OnAddScore(pickupScore);
+                Destroy(collision.gameObject);
+            }
         }
     }
 }

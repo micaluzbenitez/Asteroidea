@@ -16,9 +16,6 @@ namespace Managers
     {
         #region VARIABLES
         #region SERIALIZED VARIABLES
-        [Header("Score")]
-        [SerializeField] private float scoreSpeed = 0;
-
         [Header("Player")]
         [SerializeField] private PlayerStats playerStats = null;
 
@@ -69,12 +66,14 @@ namespace Managers
         private bool gameStarted = false;
 
         private float time = 0;
+        private int distance = 0;
+
+        private int pickupPoints = 0;
+        private float points = 0;
         private int score = 0;
 
-        private int timerTime = 0;
-
         private Timer timer = new Timer();
-        private float distance = 0;
+        private int timerTime = 0;
 
         private static float verticalSpeed = 0;
         private static float verticalMaxSpeed = 0;
@@ -97,6 +96,7 @@ namespace Managers
         private void Awake()
         {
             PlayerStats.OnUpdateLife += uiGame.UpdateLifeBar;
+            PlayerStats.OnAddScore += AddScore;
             PlayerEnemies.OnLoseLife += playerStats.LoseLife;
             DeathChecker.OnReachLimit += EndGame;
             InputManager.OnJumpPress += SkipTimer;
@@ -137,12 +137,15 @@ namespace Managers
                 ChangeTimerText();
             }
 
-            time += Time.deltaTime * scoreSpeed; //Para hacer que el score aumente con el tiempo de caida, multiplicar por verticalSpeed
-            score = (int)time;
-
-            distance += Time.deltaTime;
-
             uiGame.UpdateGameData((int)distance, score);
+
+            // Score
+            points += Time.deltaTime;
+            score = (int)points + pickupPoints;
+
+            // Distance
+            time += Time.deltaTime * verticalSpeed;
+            distance = (int)time;
 
             // Light reduction
             if (distance > 30) TurnOffLight();
@@ -152,6 +155,7 @@ namespace Managers
         private void OnDestroy()
         {
             PlayerStats.OnUpdateLife -= uiGame.UpdateLifeBar;
+            PlayerStats.OnAddScore -= AddScore;
             PlayerEnemies.OnLoseLife -= playerStats.LoseLife;
             DeathChecker.OnReachLimit -= EndGame;
             //InputManager.OnJumpPress -= SkipTimer;
@@ -214,6 +218,11 @@ namespace Managers
             }
         }
 
+        private void AddScore(int score)
+        {
+            pickupPoints += score;
+        }
+
         private void EndGame()
         {
             uiGame.SetLifeBarValue(0);
@@ -221,7 +230,7 @@ namespace Managers
             GameRunning = false;
             StopCoroutine(SpeedAugment());
             OnGameOver?.Invoke();
-            OnEndGame?.Invoke((int)distance,(int)score);
+            OnEndGame?.Invoke((int)distance, score);
         }
 
         IEnumerator SecondsTimer()
