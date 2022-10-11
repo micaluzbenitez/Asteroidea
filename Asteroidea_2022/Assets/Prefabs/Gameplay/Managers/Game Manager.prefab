@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba9745ef24cbf914fa18bd0bf08e157c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreSpeed: 1.2
   playerStats: {fileID: 0}
   enemiesManager: {fileID: 0}
   uiGame: {fileID: 0}
@@ -57,4 +56,5 @@ MonoBehaviour:
   maxVerticalSpeed: 5
   globalLight: {fileID: 0}
   playerLight: {fileID: 0}
+  distanceLightReduction: 50
   lightChangeSpeed: 2

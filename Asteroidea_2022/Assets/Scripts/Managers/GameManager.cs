@@ -37,6 +37,7 @@ namespace Managers
         [Header("Lights")]
         [SerializeField] private Light2D globalLight = null;
         [SerializeField] private Light2D playerLight = null;
+        [SerializeField] private float distanceLightReduction = 0;
         [SerializeField] private float lightChangeSpeed = 0;
         #endregion
 
@@ -111,7 +112,7 @@ namespace Managers
         {
             for (int i = 0; i < enemiesManager.transform.childCount; i++)
             {
-                Mine mine = enemiesManager.transform.GetChild(i).GetComponent<Mine>();
+                Jellyfish mine = enemiesManager.transform.GetChild(i).GetComponent<Jellyfish>();
                 if (mine) mine.SetTarget(playerStats.transform);
             }
 
@@ -148,7 +149,7 @@ namespace Managers
             distance = (int)time;
 
             // Light reduction
-            if (distance > 30) TurnOffLight();
+            if (distance > distanceLightReduction) TurnOffLight();
             ChangeLight();
         }
 

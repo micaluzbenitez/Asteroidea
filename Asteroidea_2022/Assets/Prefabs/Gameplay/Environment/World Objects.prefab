@@ -243,7 +243,7 @@ MonoBehaviour:
   - tag: Fish
     prefab: {fileID: 7927739840849598442, guid: 1bf732e10f60bc947adce533d90fa820, type: 3}
     size: 3
-  - tag: Mine
+  - tag: Jellyfish
     prefab: {fileID: 8751985775973937946, guid: 34bd14e142acd5a4da5d163cae018611, type: 3}
     size: 3
   parent: {fileID: 1791405469629939590}
@@ -268,7 +268,7 @@ MonoBehaviour:
   - name: Fish
     startEnemy: 1
     timePerEnemy: 15
-  - name: Mine
+  - name: Jellyfish
     startEnemy: 0
     timePerEnemy: 22
 --- !u!1001 &6623344684844383842
@@ -447,71 +447,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 664007291863717112, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
   m_PrefabInstance: {fileID: 6623344685276150089}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5992931123057452546 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 631053690624794443, guid: 83a4a5ca50c725747a6eeed0823c7f75, type: 3}
-  m_PrefabInstance: {fileID: 6623344685276150089}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1181920237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5992931123057452546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 667f69105c921734e83ec3bcab92d851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinR: 1
-  MaxR: 1
-  MinG: 0.2
-  MaxG: 1
-  MinB: 0.2
-  MaxB: 1
-  MinAlpha: 1
-  MaxAlpha: 1
---- !u!114 &4263791211639925258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5992931123057452546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 667f69105c921734e83ec3bcab92d851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinR: 1
-  MaxR: 1
-  MinG: 0.2
-  MaxG: 1
-  MinB: 0.2
-  MaxB: 1
-  MinAlpha: 1
-  MaxAlpha: 1
---- !u!114 &5615407262205033790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5992931123057452546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 667f69105c921734e83ec3bcab92d851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinR: 1
-  MaxR: 1
-  MinG: 0.2
-  MaxG: 1
-  MinB: 0.2
-  MaxB: 1
-  MinAlpha: 1
-  MaxAlpha: 1
 --- !u!1001 &6623344685491233717
 PrefabInstance:
   m_ObjectHideFlags: 0

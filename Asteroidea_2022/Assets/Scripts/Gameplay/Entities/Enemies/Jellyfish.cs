@@ -4,10 +4,12 @@ using Entities.Enemies.Objects;
 
 namespace Entities.Enemies
 {
-    public class Mine : Enemy
+    public class Jellyfish : Enemy
     {
-        [Header("Mine data")]
+        [Header("Jellyfish data")]
+        [SerializeField] private Animator feetsAnimator = null;
         [SerializeField] private Bullet bullet = null;
+
         [Tooltip("Target to shoot")]
         [SerializeField] private Transform target = null;
 
@@ -52,6 +54,12 @@ namespace Entities.Enemies
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag(triggerTagName)) gameObject.SetActive(false);
+        }
+
+        protected override void OnCollisionEnter2D(Collision2D collision)
+        {
+            base.OnCollisionEnter2D(collision); 
+            if (collision.gameObject.CompareTag("Player")) feetsAnimator.Play("Attack");
         }
 
         private void OnDrawGizmos()
