@@ -7,10 +7,15 @@ public class UIController : MonoBehaviour
 {
     #region VARIABLES
     #region SERIALIZED VARIABLES
+    [Header("Start panel")]
     [SerializeField] private CanvasGroup startingPanel;
+
+    [Header("Pause panel")]
     [SerializeField] private CanvasGroup pausePanel;
+
+    [Header("Game over panel")]
     [SerializeField] private CanvasGroup gameOverPanel;
-    [SerializeField] private TMP_Text timeText;
+    [SerializeField] private TMP_Text distanceText;
     [SerializeField] private TMP_Text scoreText;
 
     [Header("Scene")]
@@ -90,10 +95,10 @@ public class UIController : MonoBehaviour
         panel.interactable = false;
         panel.alpha = 0;
     }
-    private void ChangeEndGamePanelValues(int time, int score)
+    private void ChangeEndGamePanelValues(int distance, int score)
     {
         scoreText.text = score.ToString();
-        timeText.text = time.ToString();
+        distanceText.text = distance.ToString();
     }
     #endregion
     #endregion

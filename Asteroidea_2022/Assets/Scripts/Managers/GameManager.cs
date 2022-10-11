@@ -74,7 +74,7 @@ namespace Managers
         private int timerTime = 0;
 
         private Timer timer = new Timer();
-        private float realTimer = 0;
+        private float distance = 0;
 
         private static float verticalSpeed = 0;
         private static float verticalMaxSpeed = 0;
@@ -139,9 +139,9 @@ namespace Managers
             time += Time.deltaTime * scoreSpeed; //Para hacer que el score aumente con el tiempo de caida, multiplicar por verticalSpeed
             score = (int)time;
 
-            realTimer += Time.deltaTime;
+            distance += Time.deltaTime;
 
-            uiGame.UpdateScore(score);
+            uiGame.UpdateGameData((int)distance, score);
 
             // Light
             if (Input.GetKeyDown(KeyCode.N)) lightLerper.SetLerperValues(0, 1, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
@@ -203,7 +203,7 @@ namespace Managers
             GameRunning = false;
             StopCoroutine(SpeedAugment());
             OnGameOver?.Invoke();
-            OnEndGame?.Invoke((int)realTimer,(int)score);
+            OnEndGame?.Invoke((int)distance,(int)score);
         }
 
         IEnumerator SecondsTimer()
