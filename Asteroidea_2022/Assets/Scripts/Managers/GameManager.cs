@@ -80,6 +80,7 @@ namespace Managers
         private static float verticalMaxSpeed = 0;
 
         private FloatLerper lightLerper = new FloatLerper();
+        private bool lightOn = true;
         #endregion
         #endregion
 
@@ -143,9 +144,8 @@ namespace Managers
 
             uiGame.UpdateGameData((int)distance, score);
 
-            // Light
-            if (Input.GetKeyDown(KeyCode.N)) lightLerper.SetLerperValues(0, 1, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
-            if (Input.GetKeyDown(KeyCode.M)) lightLerper.SetLerperValues(1, 0, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
+            // Light reduction
+            if (distance > 30) TurnOffLight();
             ChangeLight();
         }
 
@@ -184,6 +184,24 @@ namespace Managers
                 timerText.text = timeElapsed.ToString();
             else
                 timerText.text = (timerStartingValue - 1).ToString();
+        }
+
+        private void TurnOffLight()
+        {
+            if (lightOn)
+            {
+                lightLerper.SetLerperValues(0, 1, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
+                lightOn = false;
+            }
+        }
+
+        private void TurnOnLight()
+        {
+            if (!lightOn)
+            {
+                lightLerper.SetLerperValues(1, 0, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
+                lightOn = true;
+            }
         }
 
         private void ChangeLight()
