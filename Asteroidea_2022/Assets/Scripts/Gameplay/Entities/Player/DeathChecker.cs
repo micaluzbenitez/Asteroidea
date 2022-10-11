@@ -11,6 +11,10 @@ namespace Entities.Player
         [Header("Death feedback")]
         [SerializeField] private GameObject deathParticles = null;
         [SerializeField] private float deathParticlesDuration = 0;
+        [SerializeField] private float xMaxPosition = 0;
+        [SerializeField] private float yMaxPosition = 0;
+        [SerializeField] private float xMinPosition = 0;
+        [SerializeField] private float yMinPosition = 0;
         #endregion
 
         #region STATIC VARIABLES
@@ -32,7 +36,9 @@ namespace Entities.Player
         #region PUBLIC METHODS
         public void DeadPlayer()
         {
+
             Instantiate(deathParticles, transform.position, Quaternion.identity);
+
             playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
             endGameTimer.ActiveTimer();
             Time.timeScale = 0;
