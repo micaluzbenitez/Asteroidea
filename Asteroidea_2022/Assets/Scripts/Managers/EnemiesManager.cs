@@ -5,7 +5,7 @@ using Toolbox.Pool;
 
 namespace Managers
 {
-    public class EnemiesManager : MonoBehaviour
+    public class EnemiesManager : SpawnManager
     {
         [Serializable] public class Enemy
         {
@@ -18,16 +18,11 @@ namespace Managers
         [Header("Enemies")]
         [SerializeField] private Enemy[] enemy = null;
 
-        [Header("Enemies spawn")]
-        [SerializeField] private ObjectPooler objectPooler = null;
-        [SerializeField] private Transform cameraPosition = null;
-        [SerializeField] private float cameraYOffset = 0;
-
         private void Start()
         {
             for (int i = 0; i < enemy.Length; i++)
             {
-                if (enemy[i].startEnemy) SpawnEnemy(enemy[i].name);
+                if (enemy[i].startEnemy) SpawnObject(enemy[i].name);
                 enemy[i].timer.SetTimer(enemy[i].timePerEnemy, Timer.TIMER_MODE.DECREASE, true);
             }
         }
@@ -38,23 +33,6 @@ namespace Managers
             {
                 CheckTimer(enemy[i].timer, enemy[i].name);
             }
-        }
-
-        private void CheckTimer(Timer timer, string enemyName)
-        {
-            if (timer.Active) timer.UpdateTimer();
-
-            if (timer.ReachedTimer())
-            {
-                SpawnEnemy(enemyName);
-                timer.ActiveTimer();
-            }
-        }
-
-        private void SpawnEnemy(string enemyName)
-        {
-            Vector3 position = new Vector3(0, cameraPosition.position.y - cameraYOffset, 0);
-            objectPooler.SpawnFromPool(enemyName, position, Quaternion.identity);
         }
     }
 }

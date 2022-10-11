@@ -5,7 +5,7 @@ using Toolbox.Pool;
 
 namespace Managers
 {
-    public class PickupsManager : MonoBehaviour
+    public class PickupsManager : SpawnManager
     {
         [Serializable]
         public class Pickup
@@ -19,16 +19,11 @@ namespace Managers
         [Header("Pickups")]
         [SerializeField] private Pickup[] pickup = null;
 
-        [Header("Pickups spawn")]
-        [SerializeField] private ObjectPooler objectPooler = null;
-        [SerializeField] private Transform cameraPosition = null;
-        [SerializeField] private float cameraYOffset = 0;
-
         private void Start()
         {
             for (int i = 0; i < pickup.Length; i++)
             {
-                if (pickup[i].startPickup) SpawnEnemy(pickup[i].name);
+                if (pickup[i].startPickup) SpawnObject(pickup[i].name);
                 pickup[i].timer.SetTimer(pickup[i].timePerPickup, Timer.TIMER_MODE.DECREASE, true);
             }
         }
@@ -39,23 +34,6 @@ namespace Managers
             {
                 CheckTimer(pickup[i].timer, pickup[i].name);
             }
-        }
-
-        private void CheckTimer(Timer timer, string pickupName)
-        {
-            if (timer.Active) timer.UpdateTimer();
-
-            if (timer.ReachedTimer())
-            {
-                SpawnEnemy(pickupName);
-                timer.ActiveTimer();
-            }
-        }
-
-        private void SpawnEnemy(string pickupName)
-        {
-            Vector3 position = new Vector3(0, cameraPosition.position.y - cameraYOffset, 0);
-            objectPooler.SpawnFromPool(pickupName, position, Quaternion.identity);
         }
     }
 }
