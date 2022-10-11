@@ -48,3 +48,13 @@ MonoBehaviour:
   playerStats: {fileID: 0}
   enemiesManager: {fileID: 0}
   uiGame: {fileID: 0}
+  timerText: {fileID: 0}
+  timerStartingValue: 6
+  startingVerticalSpeed: 1
+  timeForNextAugment: 5
+  augmentDuration: 2
+  augmentValue: 0.5
+  maxVerticalSpeed: 5
+  globalLight: {fileID: 0}
+  playerLight: {fileID: 0}
+  lightChangeSpeed: 2

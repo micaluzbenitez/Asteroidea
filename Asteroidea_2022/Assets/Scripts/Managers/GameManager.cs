@@ -3,7 +3,9 @@ using System.Collections;
 using Entities.Enemies;
 using Entities.Player;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using Toolbox;
+using Toolbox.Lerpers;
 using System;
 using TMPro;
 using UI;
@@ -35,6 +37,10 @@ namespace Managers
         [SerializeField] private float augmentValue = 0.001f;
         [SerializeField] private float maxVerticalSpeed = 6;
 
+        [Header("Lights")]
+        [SerializeField] private Light2D globalLight = null;
+        [SerializeField] private Light2D playerLight = null;
+        [SerializeField] private float lightChangeSpeed = 0;
         #endregion
 
         #region STATIC VARIABLES
@@ -58,7 +64,6 @@ namespace Managers
         #endregion
 
         #region PRIVATE VARIABLES
-
         private bool gameOver = false;
         private bool skippedTimer = false;
         private bool gameStarted = false;
@@ -74,6 +79,7 @@ namespace Managers
         private static float verticalSpeed = 0;
         private static float verticalMaxSpeed = 0;
 
+        private FloatLerper lightLerper = new FloatLerper();
         #endregion
         #endregion
 
@@ -137,6 +143,10 @@ namespace Managers
 
             uiGame.UpdateScore(score);
 
+            // Light
+            if (Input.GetKeyDown(KeyCode.N)) lightLerper.SetLerperValues(0, 1, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
+            if (Input.GetKeyDown(KeyCode.M)) lightLerper.SetLerperValues(1, 0, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
+            ChangeLight();
         }
 
         private void OnDestroy()
@@ -147,27 +157,6 @@ namespace Managers
             //InputManager.OnJumpPress -= SkipTimer;
             if (!skippedTimer) timer.OnReachedTime -= StartGame;
             if (!gameStarted) InputManager.OnJumpPress -= SkipTimer;
-        }
-
-        private void EndGame()
-        {
-            uiGame.SetLifeBarValue(0);
-            gameOver = true;
-            GameRunning = false;
-            StopCoroutine(SpeedAugment());
-            OnGameOver?.Invoke();
-            OnEndGame?.Invoke((int)realTimer,(int)score);
-        }
-
-        private void ChangeTimerText()
-        {
-            int timeElapsed = Mathf.RoundToInt(timer.CurrentTime);
-            if (timeElapsed < 1)
-                timerText.text = "GO!";
-            else if (timeElapsed < 6)
-                timerText.text = timeElapsed.ToString();
-            else 
-                timerText.text = (timerStartingValue-1).ToString();
         }
 
         private void StartGame()
@@ -186,12 +175,43 @@ namespace Managers
             StartGame();
         }
 
+        private void ChangeTimerText()
+        {
+            int timeElapsed = Mathf.RoundToInt(timer.CurrentTime);
+            if (timeElapsed < 1)
+                timerText.text = "GO!";
+            else if (timeElapsed < 6)
+                timerText.text = timeElapsed.ToString();
+            else
+                timerText.text = (timerStartingValue - 1).ToString();
+        }
+
+        private void ChangeLight()
+        {
+            if (lightLerper.Active)
+            {
+                lightLerper.UpdateLerper();
+                globalLight.intensity = 1 - lightLerper.GetValue();
+                playerLight.intensity = lightLerper.GetValue();
+            }
+        }
+
+        private void EndGame()
+        {
+            uiGame.SetLifeBarValue(0);
+            gameOver = true;
+            GameRunning = false;
+            StopCoroutine(SpeedAugment());
+            OnGameOver?.Invoke();
+            OnEndGame?.Invoke((int)realTimer,(int)score);
+        }
 
         IEnumerator SecondsTimer()
         {
             yield return new WaitForSeconds(timeForNextAugment);
             StartCoroutine(SpeedAugment());
         }
+
         IEnumerator SpeedAugment()
         {
             float t = 0;
@@ -205,7 +225,6 @@ namespace Managers
             {
                 StartCoroutine(SecondsTimer());
             }
-
         }
 
         public static float GetMaxVerticalSpeed()

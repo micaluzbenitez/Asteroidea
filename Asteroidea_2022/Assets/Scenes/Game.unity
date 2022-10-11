@@ -1342,7 +1342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824037706018851792, guid: c11c4d96eac2fbc4ea70350f96cc29f1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c11c4d96eac2fbc4ea70350f96cc29f1, type: 3}
@@ -2658,13 +2658,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1757996611}
     - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
+      propertyPath: globalLight
+      value: 
+      objectReference: {fileID: 936391144}
+    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
+      propertyPath: playerLight
+      value: 
+      objectReference: {fileID: 2095774091}
+    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
       propertyPath: playerStats
       value: 
       objectReference: {fileID: 626588016}
-    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
-      propertyPath: augmentValue
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
       propertyPath: playerEnemies
       value: 
@@ -2673,22 +2677,6 @@ PrefabInstance:
       propertyPath: enemiesManager
       value: 
       objectReference: {fileID: 2361458599268841315}
-    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
-      propertyPath: augmentDuration
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
-      propertyPath: maxVerticalSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
-      propertyPath: timeForNextAugment
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
-      propertyPath: timerStartingValue
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6578806359591545769, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -3958,6 +3946,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074428500}
   m_CullTransparentMesh: 1
+--- !u!114 &2095774091 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 127462195952336722, guid: c11c4d96eac2fbc4ea70350f96cc29f1, type: 3}
+  m_PrefabInstance: {fileID: 626588014}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &9867163632715708
 CanvasRenderer:
   m_ObjectHideFlags: 0
