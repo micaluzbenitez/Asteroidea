@@ -307,21 +307,6 @@ MonoBehaviour:
   moveSpeed: 2
   jumpUpSpeed: 5
   allowJumpTimesOnAir: 1
-  finalJump:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Toolbox.CameraShake, Assembly-CSharp
-        m_MethodName: StartShake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &3440416414492260881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +321,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesTag: Enemy
   bulletsTag: Bullet
+  OnCollideEnemy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2530445984071921328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f085c89be8f804e8d80513cf402985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticles: {fileID: 5985634496115995773, guid: 463cf9f7af4680240898f6aeba3fe3e6, type: 3}
+  deathParticlesDuration: 1
 --- !u!60 &1812442743
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Toolbox;
 
 namespace Entities.Player
 {
@@ -7,7 +8,9 @@ namespace Entities.Player
     {
         #region VARIABLES
         #region SERIALIZED VARIABLES
-
+        [Header("Death feedback")]
+        [SerializeField] private GameObject deathParticles = null;
+        [SerializeField] private float deathParticlesDuration = 0;
         #endregion
 
         #region STATIC VARIABLES
@@ -20,6 +23,8 @@ namespace Entities.Player
 
         #region PRIVATE VARIABLES
         private PlayerStats playerStats = null;
+
+        private Timer endGameTimer = new Timer();
         #endregion
         #endregion
 
@@ -27,8 +32,10 @@ namespace Entities.Player
         #region PUBLIC METHODS
         public void DeadPlayer()
         {
-            OnReachLimit?.Invoke();
+            Instantiate(deathParticles, transform.position, Quaternion.identity);
             playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
+            endGameTimer.ActiveTimer();
+            Time.timeScale = 0;
         }
         #endregion
 
@@ -44,6 +51,13 @@ namespace Entities.Player
         private void Awake()
         {
             playerStats = GetComponent<PlayerStats>();
+            endGameTimer.SetTimer(deathParticlesDuration, Timer.TIMER_MODE.DECREASE);
+        }
+
+        private void Update()
+        {
+            if (endGameTimer.Active) endGameTimer.UpdateTimer();
+            if (endGameTimer.ReachedTimer()) OnReachLimit?.Invoke();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
