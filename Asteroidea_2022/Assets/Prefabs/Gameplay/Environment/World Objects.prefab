@@ -62,13 +62,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68dedbf15f06ef942a1e82ea5ce707a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPooler: {fileID: 7977987417730100077}
+  cameraPosition: {fileID: 0}
+  yPosition: 6
+  xMinPosition: -3
+  xMaxPosition: 3
   pickup:
   - name: Pickup
     startPickup: 0
     timePerPickup: 9
-  objectPooler: {fileID: 7977987417730100077}
-  cameraPosition: {fileID: 0}
-  cameraYOffset: 6
 --- !u!1 &8581877483468719579
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +259,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1b06a6e406d64bbb843b17d360cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPooler: {fileID: 4612105277900989779}
+  cameraPosition: {fileID: 0}
+  yPosition: 6
+  xMinPosition: 0
+  xMaxPosition: 0
   enemy:
   - name: Fish
     startEnemy: 1
@@ -264,9 +271,6 @@ MonoBehaviour:
   - name: Mine
     startEnemy: 0
     timePerEnemy: 22
-  objectPooler: {fileID: 4612105277900989779}
-  cameraPosition: {fileID: 0}
-  cameraYOffset: 6
 --- !u!1001 &6623344684844383842
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,16 +1,21 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Toolbox;
 using Toolbox.Pool;
+using Random = UnityEngine.Random;
 
 namespace Managers
 {
     public class SpawnManager : MonoBehaviour
     {
-        [Header("Pickups spawn")]
+        [Header("Objects spawn data")]
         [SerializeField] protected ObjectPooler objectPooler = null;
         [SerializeField] protected Transform cameraPosition = null;
-        [SerializeField] protected float cameraYOffset = 0;
+        [SerializeField] protected float yPosition = 0;
+        [SerializeField] protected float xMinPosition = 0;
+        [SerializeField] protected float xMaxPosition = 0;
 
         protected void CheckTimer(Timer timer, string objectName)
         {
@@ -25,7 +30,9 @@ namespace Managers
 
         protected void SpawnObject(string objectName)
         {
-            Vector3 position = new Vector3(0, cameraPosition.position.y - cameraYOffset, 0);
+            float xPosition = Random.Range(xMinPosition, xMaxPosition);
+            Vector3 position = new Vector3(xPosition, cameraPosition.position.y - yPosition, 0);
+
             objectPooler.SpawnFromPool(objectName, position, Quaternion.identity);
         }
     }
