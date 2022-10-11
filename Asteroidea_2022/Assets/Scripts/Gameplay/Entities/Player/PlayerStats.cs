@@ -37,7 +37,7 @@ namespace Entities.Player
 
         private void Update()
         {
-            RecuperateLife();
+            if (Time.timeScale == 1) RecuperateLife();
         }
 
         private void RecuperateLife()
