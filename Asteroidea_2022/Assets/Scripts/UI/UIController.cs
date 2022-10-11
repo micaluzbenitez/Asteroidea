@@ -98,7 +98,7 @@ public class UIController : MonoBehaviour
     private void ChangeEndGamePanelValues(int distance, int score)
     {
         scoreText.text = score.ToString();
-        distanceText.text = distance.ToString();
+        distanceText.text = distance.ToString() + " m";
     }
     #endregion
     #endregion

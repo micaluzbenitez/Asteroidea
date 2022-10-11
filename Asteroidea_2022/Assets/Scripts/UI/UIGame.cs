@@ -28,8 +28,8 @@ namespace UI
 
         public void UpdateGameData(int distance, int score)
         {
-            distanceText.text = "Distance: " + distance;
-            scoreText.text = "Points: " + score;
+            distanceText.text = distance.ToString() + " m";
+            scoreText.text = score.ToString();
         }
 
         public void SetLifeBarValue(float value)
