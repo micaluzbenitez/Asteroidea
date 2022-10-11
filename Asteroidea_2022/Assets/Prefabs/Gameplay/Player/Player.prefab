@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesTag: Enemy
   bulletsTag: Bullet
-  enemyParticles: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+  enemiesParticles: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
   OnCollideEnemy:
     m_PersistentCalls:
       m_Calls:

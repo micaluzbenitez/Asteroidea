@@ -13,7 +13,7 @@ namespace Entities.Player
         public string bulletsTag = "";
 
         [Header("Enemy feedback")]
-        [SerializeField] private GameObject enemyParticles = null;
+        [SerializeField] private GameObject enemiesParticles = null;
 
         [Header("Unity events")]
         [SerializeField] private UnityEvent OnCollideEnemy = null;
@@ -29,7 +29,7 @@ namespace Entities.Player
 
         private void PlayerDamage(int damage)
         {
-            Instantiate(enemyParticles, transform.position, Quaternion.identity);
+            Instantiate(enemiesParticles, transform.position, Quaternion.identity);
             playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
             OnLoseLife?.Invoke(damage);
             OnCollideEnemy?.Invoke();
