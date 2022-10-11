@@ -34,7 +34,6 @@ namespace Entities.Platforms
 
         private float distanceToObstacle = 0.0f;
 
-        private SpriteRenderer spriteRenderer;
         private BoxCollider2D boxCollider;
 
         private bool startsOff;
@@ -66,7 +65,6 @@ namespace Entities.Platforms
         private void Awake()
         {
             rigidBody = GetComponent<Rigidbody2D>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
             boxCollider = GetComponent<BoxCollider2D>();
             distanceToObstacle = Vector3.Distance(obstacle.transform.position, transform.position);
 
@@ -162,7 +160,6 @@ namespace Entities.Platforms
 
         private void Enable()
         {
-            spriteRenderer.enabled = true;
             boxCollider.isTrigger = false;
             startsOff = false;
         }
