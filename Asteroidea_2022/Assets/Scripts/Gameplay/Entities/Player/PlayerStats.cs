@@ -71,7 +71,7 @@ namespace Entities.Player
             if (collision.gameObject.CompareTag("Pickup"))
             {
                 OnAddScore(pickupScore);
-                Destroy(collision.gameObject);
+                collision.gameObject.SetActive(false);
             }
         }
     }

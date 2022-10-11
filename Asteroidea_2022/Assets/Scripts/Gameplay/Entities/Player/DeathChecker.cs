@@ -11,6 +11,10 @@ namespace Entities.Player
         [Header("Death feedback")]
         [SerializeField] private GameObject deathParticles = null;
         [SerializeField] private float deathParticlesDuration = 0;
+        [SerializeField] private float xMaxPosition = 0;
+        [SerializeField] private float yMaxPosition = 0;
+        [SerializeField] private float xMinPosition = 0;
+        [SerializeField] private float yMinPosition = 0;
         #endregion
 
         #region STATIC VARIABLES
@@ -31,8 +35,8 @@ namespace Entities.Player
         #region METHODS
         #region PUBLIC METHODS
         public void DeadPlayer()
-        {
-            Instantiate(deathParticles, transform.position, Quaternion.identity);
+        {            
+            GameObject particles = Instantiate(deathParticles, transform.position, Quaternion.identity);
             playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
             endGameTimer.ActiveTimer();
             Time.timeScale = 0;
@@ -63,6 +67,21 @@ namespace Entities.Player
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.tag.Equals("Limit")/* || collision.tag.Equals("Enemy") || collision.tag.Equals("Shot")*/) DeadPlayer();
+        }
+
+        private Vector2 CalculateDeathParticlesPosition()
+        {
+            float xPosition = transform.position.x;
+            float yPosition = transform.position.y;
+
+            if (transform.position.x > xMaxPosition) xPosition = xMaxPosition;
+            else if (transform.position.x < xMinPosition) xPosition = xMinPosition;
+
+            if (transform.position.y > yMaxPosition) xPosition = yMaxPosition;
+            else if (transform.position.y > yMinPosition) xPosition = yMinPosition;
+
+            Vector2 position = new Vector2(xPosition, yPosition);
+            return position;
         }
         #endregion
         #endregion
