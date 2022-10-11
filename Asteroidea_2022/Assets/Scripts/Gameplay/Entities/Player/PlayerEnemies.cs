@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Entities.Enemies;
 using Entities.Enemies.Objects;
 
@@ -11,6 +11,9 @@ namespace Entities.Player
         [Header("Obstacles tags")]
         public string enemiesTag = "";
         public string bulletsTag = "";
+
+        [Header("Unity events")]
+        [SerializeField] private UnityEvent OnCollideEnemy = null;
 
         private PlayerStats playerStats = null;
 
@@ -27,6 +30,7 @@ namespace Entities.Player
             {
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                 OnLoseLife?.Invoke(enemy.GetDamage());
+                OnCollideEnemy?.Invoke();
                 playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
             }
         }
@@ -37,6 +41,7 @@ namespace Entities.Player
             {
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
                 OnLoseLife?.Invoke(bullet.Damage);
+                OnCollideEnemy?.Invoke();
                 playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
             }
         }

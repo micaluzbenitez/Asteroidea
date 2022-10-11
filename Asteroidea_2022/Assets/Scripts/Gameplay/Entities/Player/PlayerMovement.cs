@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Entities.Player
 {
@@ -13,9 +12,6 @@ namespace Entities.Player
         [SerializeField] private float jumpUpSpeed = 5f;
         [Tooltip("Number of jumps allowed in the air")]
         [SerializeField] private int allowJumpTimesOnAir = 0;
-
-        [Header("Unity events"), Tooltip("final jump events")]
-        [SerializeField] private UnityEvent finalJump = null;
 
         private float horizontalInput = 0;
         private bool faceRight = true;
@@ -101,13 +97,7 @@ namespace Entities.Player
             {
                 isGrounded = true;
                 airJumpCount = 0;
-
-                /// Camera shake
-                if (isFalling)
-                {
-                    finalJump?.Invoke();
-                    isFalling = false;
-                }
+                isFalling = false;
             }
         }
     }
