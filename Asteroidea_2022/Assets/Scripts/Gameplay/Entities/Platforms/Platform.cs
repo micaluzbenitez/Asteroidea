@@ -25,6 +25,7 @@ namespace Entities.Platforms
         [SerializeField] private float breakableSpeed = 0;
         [SerializeField] private GameObject breakableModel = null;
         [SerializeField] private Animator[] breakableAnimator = null;
+        [SerializeField] private float bSpawnRate = 0.07f;
 
         [Header("Platform Respawn")]
         [SerializeField] private Transform platformRespawnPos;
@@ -76,19 +77,6 @@ namespace Entities.Platforms
             boxCollider = GetComponent<BoxCollider2D>();
             distanceToObstacle = Vector3.Distance(obstacle.transform.position, transform.position);
             breakablePlatformTimer.SetTimer(breakableSpeed, Timer.TIMER_MODE.DECREASE);
-
-            boxCollider.enabled = true;
-            if (breakablePlatform)
-            {
-                model.SetActive(false);
-                breakableModel.SetActive(true);
-                for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", false);
-            }
-            else
-            {
-                model.SetActive(true);
-                breakableModel.SetActive(false);
-            }
         }
 
         private void Start()
@@ -127,7 +115,8 @@ namespace Entities.Platforms
             if (startsOff) Enable();
             obstacle.SetActive(false);
             SetRandomX();
-            CheckHorizontalMovement(); 
+            CheckHorizontalMovement();
+            CheckBreakablePlatform();
             transform.position = new Vector3(transform.position.x, platformRespawnPos.position.y);
             SpawnEnemy();
         }
@@ -209,6 +198,27 @@ namespace Entities.Platforms
         {
             horizontalMovement = Random.Range(0.0f, 1.0f) < hSpawnRate;
             speed = horizontalMovement ? horizontalSpeed : 0;
+        }
+
+        private void CheckBreakablePlatform()
+        {
+            bool breakable = Random.Range(0.0f, 1.0f) < hSpawnRate;
+            if (breakable) breakablePlatform = true;
+            else breakablePlatform = false;
+
+            boxCollider.enabled = true;
+
+            if (breakablePlatform)
+            {
+                model.SetActive(false);
+                breakableModel.SetActive(true);
+                for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", false);
+            }
+            else
+            {
+                model.SetActive(true);
+                breakableModel.SetActive(false);
+            }
         }
 
         public void ResetPlatform()

@@ -136,7 +136,7 @@ MonoBehaviour:
   model: {fileID: 311592338589530406}
   horizontalMovement: 0
   horizontalSpeed: 1
-  hSpawnRate: 0.07
+  hSpawnRate: 0.2
   breakablePlatform: 0
   breakableSpeed: 1
   breakableModel: {fileID: 6183586705927454033}
@@ -145,6 +145,7 @@ MonoBehaviour:
   - {fileID: 6283395695393466441}
   - {fileID: 2538548767116807105}
   - {fileID: 3072853121316140447}
+  bSpawnRate: 0.2
   platformRespawnPos: {fileID: 0}
   isVisible: 0
 --- !u!1 &944751041353641963
