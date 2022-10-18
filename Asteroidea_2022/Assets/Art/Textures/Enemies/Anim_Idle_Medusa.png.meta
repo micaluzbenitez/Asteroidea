@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a0bfbc6d23e212a48bdd75223e289c14
+guid: 58074ccfe42a2a54794de06f9a7a2997
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Anim_Atack_Medusa_0
+      name: Anim_Idle_Medusa_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 185
-        height: 221
+        width: 125
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4923c616bc80b0e4bba857b0d3b20988
-      internalID: -1569676571
+      spriteID: 76355bc7561eba24e8ddcaedd4f0fc6a
+      internalID: -1429335195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Atack_Medusa_1
+      name: Anim_Idle_Medusa_1
       rect:
         serializedVersion: 2
-        x: 185
+        x: 125
         y: 0
-        width: 185
-        height: 221
+        width: 125
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30c0474d314f0b64991281bef3690eb6
-      internalID: 1884537126
+      spriteID: 6dd9dbb178076b944a76c553e29a51ff
+      internalID: 1257179011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Atack_Medusa_2
+      name: Anim_Idle_Medusa_2
       rect:
         serializedVersion: 2
-        x: 370
+        x: 250
         y: 0
-        width: 185
-        height: 221
+        width: 125
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcd2e43b393a5f7469be24c2858fe6ad
-      internalID: -2122934516
+      spriteID: 593e0fe8571af554596d36c6d62f8ec6
+      internalID: -1043922336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Atack_Medusa_3
+      name: Anim_Idle_Medusa_3
       rect:
         serializedVersion: 2
-        x: 555
+        x: 375
         y: 0
-        width: 185
-        height: 221
+        width: 125
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,8 +193,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01900291693dfc04a98e72d343ec1642
-      internalID: 56917808
+      spriteID: 3d25f5160ef62db47865f7a89076a130
+      internalID: 1110231541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Idle_Medusa_4
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 125
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10389dadc18033a42b130cda5959db46
+      internalID: -2029667146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Idle_Medusa_5
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 0
+        width: 125
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37601c36186775f4ba002bb5c02b914d
+      internalID: -34973571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Idle_Medusa_6
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 125
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b5a0300f2dd9e45ba088144c35e7d6
+      internalID: -1116043958
       vertices: []
       indices: 
       edges: []
@@ -210,10 +273,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Anim_Atack_Medusa_3: 56917808
-      Anim_Atack_Medusa_0: -1569676571
-      Anim_Atack_Medusa_2: -2122934516
-      Anim_Atack_Medusa_1: 1884537126
+      Anim_Idle_Medusa_3: 1110231541
+      Anim_Idle_Medusa_2: -1043922336
+      Anim_Idle_Medusa_4: -2029667146
+      Anim_Idle_Medusa_5: -34973571
+      Anim_Idle_Medusa_1: 1257179011
+      Anim_Idle_Medusa_0: -1429335195
+      Anim_Idle_Medusa_6: -1116043958
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
