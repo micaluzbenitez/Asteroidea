@@ -21,6 +21,9 @@ namespace Entities.Player
         private PlayerStats playerStats = null;
         private Rigidbody2D rigidBody = null;
 
+        // Properties
+        public float HorizontalInput { get => horizontalInput; }
+
         private void Awake()
         {
             playerStats = GetComponent<PlayerStats>();
