@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Toolbox;
 
 namespace Entities.Platforms
 {
@@ -12,11 +13,18 @@ namespace Entities.Platforms
 
         [Header("Obstacle Spawn")]
         [SerializeField] private GameObject obstacle;
+        [SerializeField] private GameObject model = null;
 
         [Header("Horizontal movement")]
         [SerializeField] private bool horizontalMovement = false;
         [SerializeField] private float horizontalSpeed = 0;
         [SerializeField] private float hSpawnRate = 0.07f;
+
+        [Header("Breakable platform")]
+        [SerializeField] private bool breakablePlatform = false;
+        [SerializeField] private float breakableSpeed = 0;
+        [SerializeField] private GameObject breakableModel = null;
+        [SerializeField] private Animator[] breakableAnimator = null;
 
         [Header("Platform Respawn")]
         [SerializeField] private Transform platformRespawnPos;
@@ -48,7 +56,7 @@ namespace Entities.Platforms
         private float moveTime = 0;
         private float speed = 0;
 
-    
+        private Timer breakablePlatformTimer = new Timer();
         #endregion
         #endregion
 
@@ -67,7 +75,20 @@ namespace Entities.Platforms
             rigidBody = GetComponent<Rigidbody2D>();
             boxCollider = GetComponent<BoxCollider2D>();
             distanceToObstacle = Vector3.Distance(obstacle.transform.position, transform.position);
+            breakablePlatformTimer.SetTimer(breakableSpeed, Timer.TIMER_MODE.DECREASE);
 
+            boxCollider.enabled = true;
+            if (breakablePlatform)
+            {
+                model.SetActive(false);
+                breakableModel.SetActive(true);
+                for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", false);
+            }
+            else
+            {
+                model.SetActive(true);
+                breakableModel.SetActive(false);
+            }
         }
 
         private void Start()
@@ -85,6 +106,7 @@ namespace Entities.Platforms
         private void Update()
         {
             if(horizontalMovement) HorizontalMove();
+            BreakPlatform();
         }        
 
         private void SetRandomX()
@@ -147,7 +169,17 @@ namespace Entities.Platforms
             }
         }
 
-        
+        private void BreakPlatform()
+        {
+            if (breakablePlatformTimer.Active) breakablePlatformTimer.UpdateTimer();
+
+            if (breakablePlatformTimer.ReachedTimer())
+            {
+                boxCollider.enabled = false;
+                model.SetActive(false);
+                breakableModel.SetActive(false);
+            }
+        }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -155,6 +187,15 @@ namespace Entities.Platforms
             {
                 gameObject.active = false;
                 //ResetPosition();
+            }
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player") && breakablePlatform)
+            {
+                for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", true);
+                breakablePlatformTimer.ActiveTimer();
             }
         }
 
