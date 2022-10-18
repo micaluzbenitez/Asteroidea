@@ -49,6 +49,9 @@ MonoBehaviour:
   - tag: Pickup
     prefab: {fileID: 555144636096533491, guid: c9ed1171ab584ef4bbdb89853e5639e3, type: 3}
     size: 3
+  - tag: Coin
+    prefab: {fileID: 555144636096533491, guid: 6ea921ef4c57b0943bfdb432fe5eb3cf, type: 3}
+    size: 3
   parent: {fileID: 7298789539026064739}
 --- !u!114 &3318372916390638712
 MonoBehaviour:
@@ -70,7 +73,10 @@ MonoBehaviour:
   pickup:
   - name: Pickup
     startPickup: 0
-    timePerPickup: 9
+    timePerPickup: 7
+  - name: Coin
+    startPickup: 0
+    timePerPickup: 13
 --- !u!1 &8581877483468719579
 GameObject:
   m_ObjectHideFlags: 0
