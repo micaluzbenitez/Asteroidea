@@ -28,9 +28,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 156304849357828514}
-  - {fileID: 6700885387527348447}
   - {fileID: 5075793719661837973}
+  - {fileID: 6700885387527348447}
+  - {fileID: 156304849357828514}
   m_Father: {fileID: 664007291863717112}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,7 +96,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.45, y: 0.3}
+  m_Size: {x: 1.8, y: 0.3}
   m_EdgeRadius: 0
 --- !u!50 &664007291863717113
 Rigidbody2D:
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 6700885387527348447}
   - component: {fileID: 4228581728992603940}
   m_Layer: 0
-  m_Name: SpriteRenderer (1)
+  m_Name: SpriteRenderer2
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,7 +172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944751041353641963}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.31, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 156304849357828514}
   - component: {fileID: 4878969231137769506}
   m_Layer: 0
-  m_Name: SpriteRenderer
+  m_Name: SpriteRenderer3
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,12 +425,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4114756037839321471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.93, y: 0, z: 0}
+  m_LocalPosition: {x: 0.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2591750455182667053}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4878969231137769506
 SpriteRenderer:
@@ -739,7 +739,7 @@ GameObject:
   - component: {fileID: 5075793719661837973}
   - component: {fileID: 7485128334610145775}
   m_Layer: 0
-  m_Name: SpriteRenderer (2)
+  m_Name: SpriteRenderer1
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -753,12 +753,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8883952085969146494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.31, y: 0, z: 0}
+  m_LocalPosition: {x: -0.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2591750455182667053}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7485128334610145775
 SpriteRenderer:
