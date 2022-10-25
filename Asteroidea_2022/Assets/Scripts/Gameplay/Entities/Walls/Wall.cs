@@ -10,6 +10,9 @@ namespace Entities.Walls
         [SerializeField] private SpriteRenderer sprite = null;
         [SerializeField] private float maxPosition = 10.7f;
         [SerializeField] private float resetPosition = -10.7f;
+        [SerializeField] private int lavaDamage = 0;
+        [SerializeField] private string wallTag = "";
+        [SerializeField] private string lavaWallTag = "";
 
         [Header("Assets")]
         [SerializeField] private Sprite[] commonWalls = null;
@@ -50,12 +53,19 @@ namespace Entities.Walls
             {
                 int index = Random.Range(0, lavaWalls.Length);
                 sprite.sprite = lavaWalls[index];
+                tag = lavaWallTag;
             }
             else
             {
                 int index = Random.Range(0, commonWalls.Length);
                 sprite.sprite = commonWalls[index];
+                tag = wallTag;
             }
+        }
+
+        public int GetDamage()
+        {
+            return lavaDamage;
         }
     }
 }

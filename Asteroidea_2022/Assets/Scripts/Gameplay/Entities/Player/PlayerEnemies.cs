@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Entities.Enemies;
 using Entities.Enemies.Objects;
+using Entities.Walls;
 
 namespace Entities.Player
 {
@@ -11,6 +12,7 @@ namespace Entities.Player
         [Header("Obstacles tags")]
         public string enemiesTag = "";
         public string bulletsTag = "";
+        public string lavaTag = "";
 
         [Header("Enemy feedback")]
         [SerializeField] private GameObject enemiesParticles = null;
@@ -41,6 +43,12 @@ namespace Entities.Player
             {
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                 PlayerDamage(enemy.GetDamage());
+            }
+
+            if (collision.gameObject.CompareTag(lavaTag))
+            {
+                Wall wall = collision.gameObject.GetComponent<Wall>();
+                PlayerDamage(wall.GetDamage());
             }
         }
 
