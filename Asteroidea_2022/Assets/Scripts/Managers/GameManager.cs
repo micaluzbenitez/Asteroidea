@@ -236,7 +236,6 @@ namespace Managers
         {
             if (lightLerper.Active)
             {
-                Debug.Log(lightLerper.GetValue());
                 lightLerper.UpdateLerper();
                 globalLight.intensity = lightLerper.GetValue();
                 playerLight.intensity = 1 - lightLerper.GetValue();
