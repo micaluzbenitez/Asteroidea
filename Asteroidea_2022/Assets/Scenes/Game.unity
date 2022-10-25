@@ -1373,9 +1373,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -1.0802469
+    x: -1.0787728
     y: 0
-    width: 3.1604939
+    width: 3.1575456
     height: 1
   near clip plane: 0.3
   far clip plane: 100
@@ -2551,6 +2551,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08dca2f0fb450a24987a1c39827d23e4, type: 3}
+--- !u!1001 &883935315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1856362634}
+    m_Modifications:
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372474, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372474, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_Color.g
+      value: 0.06464233
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372474, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401078760722372475, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: m_Name
+      value: Background (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731301992220713727, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
 --- !u!1 &932499002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,9 +3030,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -1.0802469
+    x: -1.0787728
     y: 0
-    width: 3.1604939
+    width: 3.1575456
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -4565,9 +4638,15 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 272356370}
+  - {fileID: 1882333558}
   m_Father: {fileID: 519420032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1882333558 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8401078760722372473, guid: 5dbc06e82c6189c4486560fbcd948209, type: 3}
+  m_PrefabInstance: {fileID: 883935315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1903504364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5289,7 +5368,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.8
+  m_fontSize: 61.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5404,7 +5483,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 125.05
+  m_fontSize: 125.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5884,7 +5963,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.7
+  m_fontSize: 66.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6138,7 +6217,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.7
+  m_fontSize: 66.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6227,7 +6306,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.7
+  m_fontSize: 66.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6375,7 +6454,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 50.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

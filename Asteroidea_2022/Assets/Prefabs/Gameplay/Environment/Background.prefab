@@ -97,5 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e28a885bddb8eb4eadd40d63e6e78e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPosition: 15
-  resetPosition: -25
+  maxPosition: 5
+  resetPosition: -5
+  speed: 1
