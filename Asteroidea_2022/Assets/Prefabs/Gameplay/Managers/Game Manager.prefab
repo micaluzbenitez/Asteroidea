@@ -54,6 +54,10 @@ MonoBehaviour:
   augmentDuration: 2
   augmentValue: 0.5
   maxVerticalSpeed: 5
+  background: {fileID: 0}
+  initColor: {r: 0, g: 0.5882353, b: 1, a: 1}
+  finalColor: {r: 0, g: 0.011921406, b: 1, a: 1}
+  colorChangeSpeed: 500
   globalLight: {fileID: 0}
   playerLight: {fileID: 0}
   distanceLightReduction: 50

@@ -34,6 +34,12 @@ namespace Managers
         [SerializeField] private float augmentValue = 0.001f;
         [SerializeField] private float maxVerticalSpeed = 6;
 
+        [Header("Background")]
+        [SerializeField] private SpriteRenderer background = null;
+        [SerializeField] private Color initColor = Color.white;
+        [SerializeField] private Color finalColor = Color.white;
+        [SerializeField] private float colorChangeSpeed = 0;
+
         [Header("Lights")]
         [SerializeField] private Light2D globalLight = null;
         [SerializeField] private Light2D playerLight = null;
@@ -47,7 +53,7 @@ namespace Managers
 
         public static Action OnGameOver;
         public static Action OnGameStart;
-        public static Action<int,int> OnEndGame; //Time, Score
+        public static Action<int, int> OnEndGame; //Time, Score
 
         public static float VerticalSpeed
         {
@@ -80,6 +86,7 @@ namespace Managers
         private static float verticalSpeed = 0;
         private static float verticalMaxSpeed = 0;
 
+        private ColorLerper backgroundLerper = new ColorLerper();
         private FloatLerper lightLerper = new FloatLerper();
         private bool lightOn = true;
         #endregion
@@ -104,6 +111,7 @@ namespace Managers
             InputManager.OnJumpPress += SkipTimer;
 
             timer.SetTimer(timerStartingValue, Timer.TIMER_MODE.DECREASE);
+            backgroundLerper.SetValues(initColor, finalColor, colorChangeSpeed, Lerper<Color>.LERPER_TYPE.STEP_SMOOTH, true);
 
             timer.OnReachedTime += StartGame;
             verticalMaxSpeed = maxVerticalSpeed;
@@ -133,12 +141,14 @@ namespace Managers
 
         private void Update()
         {
+            // Init game
             if (timer.Active)
             {
                 timer.UpdateTimer();
                 ChangeTimerText();
             }
 
+            // Game
             uiGame.UpdateGameData((int)distance, score);
 
             // Score
@@ -148,6 +158,9 @@ namespace Managers
             // Distance
             time += Time.deltaTime * verticalSpeed;
             distance = (int)time;
+
+            // Background color
+            UpdateBackgroundColor();
 
             // Light reduction
             if (distance > distanceLightReduction) TurnOffLight();
@@ -190,6 +203,15 @@ namespace Managers
                 timerText.text = timeElapsed.ToString();
             else
                 timerText.text = (timerStartingValue - 1).ToString();
+        }
+
+        private void UpdateBackgroundColor()
+        {
+            if (backgroundLerper.Active)
+            {
+                backgroundLerper.UpdateLerper();
+                background.color = backgroundLerper.GetValue();
+            }
         }
 
         private void TurnOnfLight()
