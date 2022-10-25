@@ -12,7 +12,9 @@ namespace Entities.Walls
         [SerializeField] private float resetPosition = -10.7f;
 
         [Header("Assets")]
-        [SerializeField] private Sprite[] assets = null;
+        [SerializeField] private Sprite[] commonWalls = null;
+        [SerializeField] private Sprite[] lavaWalls = null;
+        [SerializeField] private float lavaSpawnRate = 0.07f;
 
         private void Start()
         {
@@ -42,8 +44,18 @@ namespace Entities.Walls
 
         private void RandomAsset()
         {
-            int index = Random.Range(0, assets.Length);
-            sprite.sprite = assets[index];
+            bool lavaWall = Random.Range(0.0f, 1.0f) < lavaSpawnRate;
+
+            if (lavaWall)
+            {
+                int index = Random.Range(0, lavaWalls.Length);
+                sprite.sprite = lavaWalls[index];
+            }
+            else
+            {
+                int index = Random.Range(0, commonWalls.Length);
+                sprite.sprite = commonWalls[index];
+            }
         }
     }
 }

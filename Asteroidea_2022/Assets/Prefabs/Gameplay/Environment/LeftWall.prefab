@@ -147,12 +147,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 8699687911749349458}
-  assets:
+  maxPosition: 10.7
+  resetPosition: -10.7
+  commonWalls:
   - {fileID: 21300000, guid: b99151ce88ca7694793f6ffd8457c059, type: 3}
   - {fileID: 21300000, guid: 38e5fb0dee6bfab44a851b34ed4d4aa8, type: 3}
   - {fileID: 21300000, guid: 8e5b9a25570fe7f49bce2179ca6f0426, type: 3}
   - {fileID: 21300000, guid: d592584d92c89614f9f1085dcf1a70cf, type: 3}
   - {fileID: 21300000, guid: a6f29e2dce965304a8354427285f2f6d, type: 3}
   - {fileID: 21300000, guid: 838c77bf693ba6040a05c001155cffc7, type: 3}
+  lavaWalls:
   - {fileID: 21300000, guid: 68391dc9f143b8b47897db4a62d1a6bd, type: 3}
   - {fileID: 21300000, guid: 2b5eaf81022991f4e8db98c2c54f3164, type: 3}
+  lavaSpawnRate: 0.05
