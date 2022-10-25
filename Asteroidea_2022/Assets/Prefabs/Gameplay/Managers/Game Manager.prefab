@@ -57,4 +57,5 @@ MonoBehaviour:
   globalLight: {fileID: 0}
   playerLight: {fileID: 0}
   distanceLightReduction: 50
-  lightChangeSpeed: 2
+  lightChangeSpeed: 100
+  lightReductionValue: 0.1

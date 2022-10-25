@@ -39,6 +39,7 @@ namespace Managers
         [SerializeField] private Light2D playerLight = null;
         [SerializeField] private float distanceLightReduction = 0;
         [SerializeField] private float lightChangeSpeed = 0;
+        [SerializeField] private float lightReductionValue = 0;
         #endregion
 
         #region STATIC VARIABLES
@@ -191,21 +192,21 @@ namespace Managers
                 timerText.text = (timerStartingValue - 1).ToString();
         }
 
+        private void TurnOnfLight()
+        {
+            if (!lightOn)
+            {
+                lightLerper.SetLerperValues(lightReductionValue, 1, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
+                lightOn = true;
+            }
+        }
+
         private void TurnOffLight()
         {
             if (lightOn)
             {
-                lightLerper.SetLerperValues(0, 1, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
+                lightLerper.SetLerperValues(1, lightReductionValue, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
                 lightOn = false;
-            }
-        }
-
-        private void TurnOnLight()
-        {
-            if (!lightOn)
-            {
-                lightLerper.SetLerperValues(1, 0, lightChangeSpeed, Lerper<float>.LERPER_TYPE.STEP_SMOOTH, true);
-                lightOn = true;
             }
         }
 
@@ -213,9 +214,10 @@ namespace Managers
         {
             if (lightLerper.Active)
             {
+                Debug.Log(lightLerper.GetValue());
                 lightLerper.UpdateLerper();
-                globalLight.intensity = 1 - lightLerper.GetValue();
-                playerLight.intensity = lightLerper.GetValue();
+                globalLight.intensity = lightLerper.GetValue();
+                playerLight.intensity = 1 - lightLerper.GetValue();
             }
         }
 
