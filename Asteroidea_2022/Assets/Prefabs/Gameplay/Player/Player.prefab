@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 5453469629715405686}
+  collidingFloor: 0
 --- !u!1 &3881176078997398117
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 5453469629715405686}
+  collidingFloor: 0
 --- !u!1 &4182228420616089439
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 5453469629715405686}
+  collidingFloor: 0
 --- !u!1 &5453469629715405685
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesTag: Enemy
   bulletsTag: Bullet
+  lavaTag: LavaWall
   enemiesParticles: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
   OnCollideEnemy:
     m_PersistentCalls:
@@ -974,6 +978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 5453469629715405686}
+  collidingFloor: 0
 --- !u!1 &5824037706018851792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 5453469629715405686}
+  collidingFloor: 0
 --- !u!1 &8426692482335809980
 GameObject:
   m_ObjectHideFlags: 0
