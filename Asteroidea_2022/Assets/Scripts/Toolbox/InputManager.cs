@@ -45,14 +45,11 @@ using System;
 
                 else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) OnMovementPress?.Invoke(MovementDirection.Right);
 
-                
-
             }
 
             if (Input.GetKey(KeyCode.Space)) OnJumpPress?.Invoke();
 
-
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) OnPausePress?.Invoke();
+        //if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) OnPausePress?.Invoke();
 
             
         }

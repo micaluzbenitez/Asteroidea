@@ -1,11 +1,12 @@
+using UnityEngine.Rendering.Universal;
 using System.Collections.Generic;
 using System.Collections;
 using Entities.Enemies;
-using Entities.Player;
-using UnityEngine;
-using UnityEngine.Rendering.Universal;
-using Toolbox;
 using Toolbox.Lerpers;
+using Entities.Player;
+using UnityEngine.UI;
+using UnityEngine;
+using Toolbox;
 using System;
 using TMPro;
 using UI;
@@ -25,6 +26,7 @@ namespace Managers
         [Header("UI")]
         [SerializeField] private UIGame uiGame = null;
         [SerializeField] private TMP_Text timerText = null;
+        [SerializeField] private Button pauseButton = null;
         [SerializeField] private int timerStartingValue = 5;
 
         [Header("Camera Movement")]
@@ -185,6 +187,7 @@ namespace Managers
             gameStarted = true;
             InputManager.OnJumpPress -= SkipTimer;
             StartCoroutine(SecondsTimer());
+            pauseButton.interactable = true;
         }
 
         private void SkipTimer()
