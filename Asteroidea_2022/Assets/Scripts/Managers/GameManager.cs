@@ -187,7 +187,7 @@ namespace Managers
             gameStarted = true;
             InputManager.OnJumpPress -= SkipTimer;
             StartCoroutine(SecondsTimer());
-            pauseButton.interactable = true;
+            pauseButton.gameObject.SetActive(true);
         }
 
         private void SkipTimer()
@@ -252,6 +252,7 @@ namespace Managers
 
         private void EndGame()
         {
+            pauseButton.gameObject.SetActive(false);
             uiGame.SetLifeBarValue(0);
             gameOver = true;
             GameRunning = false;
