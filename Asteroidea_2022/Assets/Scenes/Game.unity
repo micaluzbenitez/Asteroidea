@@ -1712,7 +1712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656523, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656523, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_SpriteState.m_PressedSprite
@@ -2639,7 +2639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453469629715405685, guid: c11c4d96eac2fbc4ea70350f96cc29f1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5453469629715405686, guid: c11c4d96eac2fbc4ea70350f96cc29f1, type: 3}
       propertyPath: finalJump.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -45,7 +45,8 @@ using System;
 
                 else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) OnMovementPress?.Invoke(MovementDirection.Right);
 
-            }
+                if (Input.GetMouseButtonDown(0)) OnJumpPress?.Invoke();
+        }
 
             if (Input.GetKey(KeyCode.Space)) OnJumpPress?.Invoke();
 
