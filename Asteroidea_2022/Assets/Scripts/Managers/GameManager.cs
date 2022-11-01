@@ -26,6 +26,9 @@ namespace Managers
         [Header("Pickups")]
         [SerializeField] private PickupsManager pickupsManager = null;
 
+        [Header("Bonus Level")]
+        [SerializeField] private ParticleSystem bonusLevel = null;
+
         [Header("UI")]
         [SerializeField] private UIGame uiGame = null;
         [SerializeField] private TMP_Text timerText = null;
@@ -262,6 +265,7 @@ namespace Managers
             for (int i = 0; i < enemies.Length; i++)
             {
                 enemies[i].gameObject.SetActive(false);
+                Instantiate(bonusLevel, enemies[i].transform.position, Quaternion.identity);
                 pickupsManager.SpawnRandomPickup(enemies[i].transform.position);
             }
         }
