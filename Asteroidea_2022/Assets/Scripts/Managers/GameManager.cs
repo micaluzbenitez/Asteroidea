@@ -28,6 +28,7 @@ namespace Managers
 
         [Header("Bonus Level")]
         [SerializeField] private ParticleSystem bonusLevel = null;
+        [SerializeField] private float timePerBonusLevel = 50;
 
         [Header("UI")]
         [SerializeField] private UIGame uiGame = null;
@@ -174,7 +175,8 @@ namespace Managers
             if (distance > distanceLightReduction) TurnOffLight();
             ChangeLight();
 
-            if (Input.GetKeyDown(KeyCode.M)) BonusLevel();
+            // Bonus level
+            if (distance % timePerBonusLevel == 0) BonusLevel();
         }
 
         private void OnDestroy()
