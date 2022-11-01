@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Entities.Walls
+namespace Entities.Background
 {
     public class Background : MonoBehaviour
     {

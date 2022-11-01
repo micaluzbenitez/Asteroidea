@@ -1,6 +1,6 @@
 using UnityEngine;
 using Toolbox;
-using Entities.Enemies.Objects;
+using Objects;
 
 namespace Entities.Enemies
 {

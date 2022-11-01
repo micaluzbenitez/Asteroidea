@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using Entities.Enemies;
-using Entities.Enemies.Objects;
+using Objects;
 using Entities.Walls;
 
 namespace Entities.Player
