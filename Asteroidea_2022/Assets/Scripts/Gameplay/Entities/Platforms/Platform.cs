@@ -116,9 +116,8 @@ namespace Entities.Platforms
             obstacle.SetActive(false);
             SetRandomX();
             CheckHorizontalMovement();
-            CheckBreakablePlatform();
             transform.position = new Vector3(transform.position.x, platformRespawnPos.position.y);
-            SpawnEnemy();
+            if (!CheckBreakablePlatform()) SpawnEnemy();
         }
 
         private void SpawnEnemy()
@@ -174,7 +173,7 @@ namespace Entities.Platforms
         {
             if (collision.tag.Equals("ResetZone"))
             {
-                gameObject.active = false;
+                gameObject.SetActive(false);
                 //ResetPosition();
             }
         }
@@ -200,7 +199,7 @@ namespace Entities.Platforms
             speed = horizontalMovement ? horizontalSpeed : 0;
         }
 
-        private void CheckBreakablePlatform()
+        private bool CheckBreakablePlatform()
         {
             bool breakable = Random.Range(0.0f, 1.0f) < hSpawnRate;
             if (breakable) breakablePlatform = true;
@@ -219,6 +218,8 @@ namespace Entities.Platforms
                 model.SetActive(true);
                 breakableModel.SetActive(false);
             }
+
+            return breakablePlatform;
         }
 
         public void ResetPlatform()
