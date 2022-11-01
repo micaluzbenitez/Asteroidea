@@ -48,13 +48,13 @@ namespace Entities.Background
             {
                 spriteRenderer.flipX = true;
                 if (entityLight.enabled) 
-                    entityLight.gameObject.transform.localPosition = new Vector2(rightPosition, entityLight.transform.localPosition.y);
+                    entityLight.transform.localPosition = new Vector2(rightPosition, entityLight.transform.localPosition.y);
             }
             else
             {
                 spriteRenderer.flipX = false;
                 if (entityLight.enabled) 
-                    entityLight.gameObject.transform.localPosition = new Vector2(leftPosition, entityLight.transform.localPosition.y);
+                    entityLight.transform.localPosition = new Vector2(leftPosition, entityLight.transform.localPosition.y);
             }
         }
     }

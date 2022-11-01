@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using Toolbox;
-using Toolbox.Pool;
+using Random = UnityEngine.Random;
 
 namespace Managers
 {
@@ -34,6 +34,12 @@ namespace Managers
             {
                 CheckTimer(pickup[i].timer, pickup[i].name);
             }
+        }
+
+        public void SpawnRandomPickup(Vector2 position)
+        {
+            int randomPickup = Random.Range(0, pickup.Length);
+            objectPooler.SpawnFromPool(pickup[randomPickup].name, position, Quaternion.identity);
         }
     }
 }

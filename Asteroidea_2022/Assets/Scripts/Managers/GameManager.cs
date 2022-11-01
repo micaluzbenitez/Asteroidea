@@ -23,6 +23,9 @@ namespace Managers
         [Header("Enemies")]
         [SerializeField] private EnemiesManager enemiesManager = null;
 
+        [Header("Pickups")]
+        [SerializeField] private PickupsManager pickupsManager = null;
+
         [Header("UI")]
         [SerializeField] private UIGame uiGame = null;
         [SerializeField] private TMP_Text timerText = null;
@@ -167,6 +170,8 @@ namespace Managers
             // Light reduction
             if (distance > distanceLightReduction) TurnOffLight();
             ChangeLight();
+
+            if (Input.GetKeyDown(KeyCode.M)) BonusLevel();
         }
 
         private void OnDestroy()
@@ -250,6 +255,17 @@ namespace Managers
             pickupPoints += score;
         }
 
+        private void BonusLevel()
+        {
+            Enemy[] enemies = FindObjectsOfType<Enemy>();   
+
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                enemies[i].gameObject.SetActive(false);
+                pickupsManager.SpawnRandomPickup(enemies[i].transform.position);
+            }
+        }
+
         private void EndGame()
         {
             pauseButton.gameObject.SetActive(false);
@@ -261,13 +277,13 @@ namespace Managers
             OnEndGame?.Invoke((int)distance, score);
         }
 
-        IEnumerator SecondsTimer()
+        private IEnumerator SecondsTimer()
         {
             yield return new WaitForSeconds(timeForNextAugment);
             StartCoroutine(SpeedAugment());
         }
 
-        IEnumerator SpeedAugment()
+        private IEnumerator SpeedAugment()
         {
             float t = 0;
             while (t < augmentDuration)
