@@ -72,5 +72,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPosition: 0.5
-  resetPosition: 0
+  resetPosition: -0.5
   speed: 0.01

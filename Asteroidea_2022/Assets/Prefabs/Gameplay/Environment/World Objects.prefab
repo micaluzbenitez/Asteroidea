@@ -68,8 +68,8 @@ MonoBehaviour:
   objectPooler: {fileID: 7977987417730100077}
   cameraPosition: {fileID: 0}
   yPosition: 6
-  xMinPosition: -3
-  xMaxPosition: 3
+  xMinPosition: -2
+  xMaxPosition: 2
   pickup:
   - name: Pickup
     startPickup: 0
