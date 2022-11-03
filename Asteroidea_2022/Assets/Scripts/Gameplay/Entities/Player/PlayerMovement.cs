@@ -13,6 +13,8 @@ namespace Entities.Player
         [Tooltip("Number of jumps allowed in the air")]
         [SerializeField] private int allowJumpTimesOnAir = 0;
 
+        [SerializeField] private Joystick joystick = null;
+
         private float horizontalInput = 0;
         private bool faceRight = true;
         private bool jumpPressed = false;
@@ -28,15 +30,28 @@ namespace Entities.Player
         {
             playerStats = GetComponent<PlayerStats>();
             rigidBody = GetComponent<Rigidbody2D>();
+            Debug.Log(Application.platform.ToString());
         }
 
         private void Update()
         {
-            /// Move
-            horizontalInput = Input.GetAxisRaw("Horizontal");
+            if(Application.platform == RuntimePlatform.Android)
+            {
+                /// Move
+                horizontalInput = joystick.Horizontal;
+                /// Jump
+                jumpPressed = joystick.Vertical == 1;
+            }
+            
+            if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WebGLPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+            {
+                /// Move
+                horizontalInput = Input.GetAxisRaw("Horizontal");
+                /// Jump
+                if (Input.GetButtonDown("Jump")) jumpPressed = true;
+            }
 
-            /// Jump
-            if (Input.GetButtonDown("Jump")) jumpPressed = true;
+
         }
 
         private void FixedUpdate()
