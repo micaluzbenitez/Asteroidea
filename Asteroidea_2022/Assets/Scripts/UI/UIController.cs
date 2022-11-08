@@ -8,17 +8,21 @@ public class UIController : MonoBehaviour
     #region VARIABLES
     #region SERIALIZED VARIABLES
     [Header("Start panel")]
-    [SerializeField] private CanvasGroup startingPanel;
+    [SerializeField] private CanvasGroup startingPanel = null;
 
     [Header("Pause panel")]
-    [SerializeField] private CanvasGroup pausePanel;
+    [SerializeField] private CanvasGroup pausePanel = null;
+    [SerializeField] private TMP_Text pauseDistanceText = null;
+    [SerializeField] private TMP_Text pauseScoreText = null;
+    [SerializeField] private TMP_Text pauseCoinsText = null;
 
     [Header("Game over panel")]
-    [SerializeField] private CanvasGroup gameOverPanel;
-    [SerializeField] private TMP_Text distanceText;
-    [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private TMP_Text highscoreDistanceText;
-    [SerializeField] private TMP_Text highscoreScoreText;
+    [SerializeField] private CanvasGroup gameOverPanel = null;
+    [SerializeField] private TMP_Text distanceText = null;
+    [SerializeField] private TMP_Text scoreText = null;
+    [SerializeField] private TMP_Text coinsText = null;
+    [SerializeField] private TMP_Text highscoreDistanceText = null;
+    [SerializeField] private TMP_Text highscoreScoreText = null;
 
     [Header("Scene")]
     [SerializeField] private string menuSceneName = "";
@@ -73,6 +77,9 @@ public class UIController : MonoBehaviour
         }
         else
         {
+            pauseCoinsText.text = coinsText.text;
+            pauseDistanceText.text = distanceText.text;
+            pauseScoreText.text = scoreText.text;
             ShowPanel(pausePanel);
         }
     }

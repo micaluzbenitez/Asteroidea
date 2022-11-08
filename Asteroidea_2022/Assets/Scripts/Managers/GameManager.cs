@@ -85,6 +85,7 @@ namespace Managers
         private float time = 0;
         private int pickupPoints = 0;
         private float points = 0;
+        private int coins = 0;
         
         private int distance = 0;
         private int score = 0;
