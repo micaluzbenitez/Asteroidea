@@ -17,6 +17,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private CanvasGroup gameOverPanel;
     [SerializeField] private TMP_Text distanceText;
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text highscoreDistanceText;
+    [SerializeField] private TMP_Text highscoreScoreText;
 
     [Header("Scene")]
     [SerializeField] private string menuSceneName = "";
@@ -95,12 +97,13 @@ public class UIController : MonoBehaviour
         panel.interactable = false;
         panel.alpha = 0;
     }
-    private void ChangeEndGamePanelValues(int distance, int score)
+    private void ChangeEndGamePanelValues(int distance, int score, int highscoreDistance, int highscoreScore)
     {
         scoreText.text = score.ToString();
         distanceText.text = distance.ToString() + " m";
+        highscoreScoreText.text = highscoreScore.ToString();
+        highscoreDistanceText.text = highscoreDistance.ToString() + " m";
     }
     #endregion
     #endregion
 }
-
