@@ -830,7 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingPanel: {fileID: 815273838}
   versionText: {fileID: 279052633}
-  gameSceneName: Game
+  gameSceneName: Mobile_Game
 --- !u!1 &154289047
 GameObject:
   m_ObjectHideFlags: 0
