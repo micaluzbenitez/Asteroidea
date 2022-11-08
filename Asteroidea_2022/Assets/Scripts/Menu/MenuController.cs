@@ -12,7 +12,7 @@ namespace Menu
         [SerializeField] private CanvasGroup startingPanel = null;
         [SerializeField] private TMP_Text versionText = null;
         [Header("Game scene")]
-        [SerializeField] private string gameSceneName = "";
+        [SerializeField] private string gameSceneName = default;
 
         private CanvasGroup actualPanel = null;
 

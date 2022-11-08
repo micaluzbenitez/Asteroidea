@@ -18,19 +18,7 @@
         },
         {
             "id": "DeploymentPlatforms",
-            "valueId": "Mac"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "Windows"
-        },
-        {
-            "id": "Packages",
-            "valueId": "Unity"
-        },
-        {
-            "id": "Packages",
-            "valueId": "Extensions"
+            "valueId": "Android"
         },
         {
             "id": "DeploymentPlatforms",
