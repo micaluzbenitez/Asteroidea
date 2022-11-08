@@ -62,7 +62,7 @@ namespace Managers
 
         public static Action OnGameOver;
         public static Action OnGameStart;
-        public static Action<int, int> OnEndGame; //Time, Score
+        public static Action<int, int, int, int> OnEndGame; //Time, Score
 
         public static float VerticalSpeed
         {
@@ -83,11 +83,13 @@ namespace Managers
         private bool gameStarted = false;
 
         private float time = 0;
-        private int distance = 0;
-
         private int pickupPoints = 0;
         private float points = 0;
+        
+        private int distance = 0;
         private int score = 0;
+        private int higshcoreDistance = 0;
+        private int higshcoreScore = 0;
 
         private Timer timer = new Timer();
         private int timerTime = 0;
@@ -280,7 +282,23 @@ namespace Managers
             GameRunning = false;
             StopCoroutine(SpeedAugment());
             OnGameOver?.Invoke();
-            OnEndGame?.Invoke((int)distance, score);
+
+            SaveHighscore("Distance", distance, higshcoreDistance);
+            SaveHighscore("Score", score, higshcoreScore);
+            OnEndGame?.Invoke(distance, score, higshcoreDistance, higshcoreScore);
+        }
+
+        private void SaveHighscore(string typeOfData, int data, int highscore)
+        {
+            if (PlayerPrefs.GetInt(typeOfData) < data)
+            {
+                highscore = data;
+                PlayerPrefs.SetInt(typeOfData, data);
+            }
+            else
+            {
+                highscore = PlayerPrefs.GetInt(typeOfData);
+            }
         }
 
         private IEnumerator SecondsTimer()
