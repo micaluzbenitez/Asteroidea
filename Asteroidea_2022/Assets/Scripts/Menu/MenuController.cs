@@ -91,5 +91,9 @@ namespace Menu
             SceneManager.LoadScene(gameSceneName);
         }
 
+        public void Exit()
+        {
+            Application.Quit();
+        }
     }
 }
