@@ -61,6 +61,7 @@ public class UIController : MonoBehaviour
         GameManager.OnGameOver += GameOverPanelController;
         GameManager.OnGameStart += GameStartPanelController;
         GameManager.OnEndGame += ChangeEndGamePanelValues;
+        
     }
     private void OnDestroy()
     {
