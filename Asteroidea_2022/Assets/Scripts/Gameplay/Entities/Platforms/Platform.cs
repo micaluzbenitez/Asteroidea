@@ -142,7 +142,7 @@ namespace Entities.Platforms
                 PlatformController.HorizontalLimits.Right - boxCollider.bounds.size.x / 2,
                 moveTime);
             
-            rigidBody.MovePosition(new Vector2(newX,rigidBody.position.y));
+            rigidBody?.MovePosition(new Vector2(newX,rigidBody.position.y));
                 
                
             if (moveTime < 0)
