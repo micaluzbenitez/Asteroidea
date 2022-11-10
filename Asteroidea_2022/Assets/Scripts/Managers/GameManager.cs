@@ -36,6 +36,9 @@ namespace Managers
         [SerializeField] private Button pauseButton = null;
         [SerializeField] private int timerStartingValue = 5;
 
+        [Header("Player")]
+        [SerializeField] private FloatingJoystick joystick = null;
+
         [Header("Camera Movement")]
         [SerializeField] private float startingVerticalSpeed = 1.0f;
         [SerializeField] private float timeForNextAugment = 5;
@@ -121,6 +124,7 @@ namespace Managers
             PlayerEnemies.OnLoseLife += playerStats.LoseLife;
             DeathChecker.OnReachLimit += EndGame;
             InputManager.OnJumpPress += SkipTimer;
+            joystick.OnTap += SkipTimer;
 
             timer.SetTimer(timerStartingValue, Timer.TIMER_MODE.DECREASE);
             backgroundLerper.SetValues(initColor, finalColor, colorChangeSpeed, Lerper<Color>.LERPER_TYPE.STEP_SMOOTH, true);
@@ -156,6 +160,7 @@ namespace Managers
             // Init game
             if (timer.Active)
             {
+                
                 timer.UpdateTimer();
                 ChangeTimerText();
             }
@@ -199,6 +204,7 @@ namespace Managers
             OnGameStart?.Invoke();
             gameStarted = true;
             InputManager.OnJumpPress -= SkipTimer;
+            joystick.OnTap -= SkipTimer;
             StartCoroutine(SecondsTimer());
             pauseButton.gameObject.SetActive(true);
         }

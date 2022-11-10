@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System;
 
 public class FloatingJoystick : Joystick
 {
+    public Action OnTap;
+    public Action OnRelease;
     protected override void Start()
     {
         base.Start();
@@ -15,12 +18,14 @@ public class FloatingJoystick : Joystick
     {
         background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
         background.gameObject.SetActive(true);
+        OnTap?.Invoke();
         base.OnPointerDown(eventData);
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
         background.gameObject.SetActive(false);
+        OnRelease?.Invoke();
         base.OnPointerUp(eventData);
     }
 }

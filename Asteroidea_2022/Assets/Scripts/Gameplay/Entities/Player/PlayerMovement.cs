@@ -40,7 +40,7 @@ namespace Entities.Player
                 /// Move
                 horizontalInput = joystick.Horizontal;
                 /// Jump
-                jumpPressed = joystick.Vertical == 1;
+                jumpPressed = joystick.Vertical >= 0.97f;
             }
             
             if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WebGLPlayer || Application.platform == RuntimePlatform.WindowsEditor)
@@ -50,8 +50,6 @@ namespace Entities.Player
                 /// Jump
                 if (Input.GetButtonDown("Jump")) jumpPressed = true;
             }
-
-
         }
 
         private void FixedUpdate()
