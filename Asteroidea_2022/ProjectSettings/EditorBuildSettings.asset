@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Mobile/Mobile_Menu.unity
     guid: 01306ebb8a930264484639d947565d6a
   - enabled: 1
+    path: Assets/Scenes/Mobile/Mobile_Tutorial.unity
+    guid: 4740caeda90c06443926d6e76083b134
+  - enabled: 1
     path: Assets/Scenes/Mobile/Mobile_Game.unity
     guid: e04e3416320f7f44eb83a0481eff2a73
   - enabled: 0

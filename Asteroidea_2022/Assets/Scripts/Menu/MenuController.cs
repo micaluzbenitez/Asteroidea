@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 namespace Menu
 {
@@ -11,10 +12,16 @@ namespace Menu
         [Header("Menu panel")]
         [SerializeField] private CanvasGroup startingPanel = null;
         [SerializeField] private TMP_Text versionText = null;
+        [SerializeField] private GameObject playButton = null;
         [Header("Game scene")]
         [SerializeField] private string gameSceneName = default;
+        [SerializeField] private string tutorialSceneName = default;
 
         private CanvasGroup actualPanel = null;
+
+        private string seenTutorialKey = "tutorial";
+        private const int TRUE_VALUE = 1;
+        private const int FALSE_VALUE = 0;
 
         private void Awake()
         {
@@ -32,6 +39,8 @@ namespace Menu
             actualPanel.alpha = 1;
             actualPanel.blocksRaycasts = true;
             actualPanel.interactable = true;
+
+            EnablePlay();
 
         }
 
@@ -81,6 +90,18 @@ namespace Menu
             StartCoroutine(MakeItVisible(panel));
             actualPanel = panel;
         }
+
+        private void EnablePlay()
+        {
+            if (PlayerPrefs.HasKey(seenTutorialKey)) return;
+
+            if (PlayerPrefs.GetInt(seenTutorialKey) == FALSE_VALUE) return;
+
+            playButton.GetComponent<Image>().color = new Color();
+            playButton.GetComponent<Button>().interactable = true;
+        }
+
+
         public void CloseGame()
         {
             Application.Quit();
@@ -89,6 +110,10 @@ namespace Menu
         public void LoadGame()
         {
             SceneManager.LoadScene(gameSceneName);
+        }
+        public void LoadTutorial()
+        {
+            SceneManager.LoadScene(tutorialSceneName);
         }
 
         public void Exit()
