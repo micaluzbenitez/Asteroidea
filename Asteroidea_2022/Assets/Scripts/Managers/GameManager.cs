@@ -290,12 +290,12 @@ namespace Managers
             StopCoroutine(SpeedAugment());
             OnGameOver?.Invoke();
 
-            SaveHighscore("Distance", distance, higshcoreDistance);
-            SaveHighscore("Score", score, higshcoreScore);
+            SaveHighscore("Distance", distance, ref higshcoreDistance);
+            SaveHighscore("Score", score, ref higshcoreScore);
             OnEndGame?.Invoke(distance, score, higshcoreDistance, higshcoreScore);
         }
 
-        private void SaveHighscore(string typeOfData, int data, int highscore)
+        private void SaveHighscore(string typeOfData, int data, ref int highscore)
         {
             if (PlayerPrefs.GetInt(typeOfData) < data)
             {
