@@ -247,6 +247,10 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 240762963056826366, guid: a168aedfe4c2b1843b367cdefa52cdfc, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 240762963056826366, guid: a168aedfe4c2b1843b367cdefa52cdfc, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
@@ -257,6 +261,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 240762963056826361, guid: a168aedfe4c2b1843b367cdefa52cdfc, type: 3}
   m_PrefabInstance: {fileID: 31037597}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &31037599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 240762963056826366, guid: a168aedfe4c2b1843b367cdefa52cdfc, type: 3}
+  m_PrefabInstance: {fileID: 31037597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &64430094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -528,7 +543,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 77090601}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1137208352}
+        m_TargetAssemblyTypeName: Shop.PlayerSkin, Assembly-CSharp
+        m_MethodName: UnlockSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &99313442
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 154289048}
+  - component: {fileID: 154289049}
   m_Layer: 5
   m_Name: Skin 6
   m_TagString: Untagged
@@ -925,6 +953,116 @@ RectTransform:
   m_AnchoredPosition: {x: 1250, y: -750}
   m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &154289049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154289047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef45e8ea9321b644913f953f61b112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: {fileID: 702970114}
+  icon: {fileID: 471998901}
+  cost: {fileID: 387472321}
+  ID: 5
+  skins:
+  - {fileID: 11400000, guid: b3006e2f9d4b3df42b99eff4108d4bdb, type: 2}
+  - {fileID: 11400000, guid: 571bd5fc267d7bc408f3837a12b1e6fe, type: 2}
+  - {fileID: 11400000, guid: 309fa89dc49dcdc48be6a455efefb217, type: 2}
+  - {fileID: 11400000, guid: cade24010bb80ba4db1ed5e2ea20fc62, type: 2}
+  - {fileID: 11400000, guid: 3325af5647aa01040b742ff12794a7fc, type: 2}
+  - {fileID: 11400000, guid: eaf87b340db2be84c9f683ed912b3f6e, type: 2}
+  OnUnlockSkin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 300155617}
+        m_TargetAssemblyTypeName: UI.UIShop, Assembly-CSharp
+        m_MethodName: UpdateCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 134947045}
+        m_TargetAssemblyTypeName: Menu.MenuController, Assembly-CSharp
+        m_MethodName: SetPlayerSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1084568373}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 710918747}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459778014}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1012203881}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2058657484}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &161078248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,6 +1772,7 @@ GameObject:
   - component: {fileID: 300155616}
   - component: {fileID: 300155615}
   - component: {fileID: 300155614}
+  - component: {fileID: 300155617}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -1717,6 +1856,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300155612}
   m_CullTransparentMesh: 1
+--- !u!114 &300155617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300155612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9832c4359c79f2c43b8972292f015600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: {fileID: 31037599}
 --- !u!1 &347896928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,6 +1878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 347896929}
+  - component: {fileID: 347896930}
   m_Layer: 5
   m_Name: Skin 1
   m_TagString: Untagged
@@ -1755,6 +1908,116 @@ RectTransform:
   m_AnchoredPosition: {x: 250, y: -250}
   m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &347896930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347896928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef45e8ea9321b644913f953f61b112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: {fileID: 1084568373}
+  icon: {fileID: 1858073377}
+  cost: {fileID: 2004298866}
+  ID: 0
+  skins:
+  - {fileID: 11400000, guid: b3006e2f9d4b3df42b99eff4108d4bdb, type: 2}
+  - {fileID: 11400000, guid: 571bd5fc267d7bc408f3837a12b1e6fe, type: 2}
+  - {fileID: 11400000, guid: 309fa89dc49dcdc48be6a455efefb217, type: 2}
+  - {fileID: 11400000, guid: cade24010bb80ba4db1ed5e2ea20fc62, type: 2}
+  - {fileID: 11400000, guid: 3325af5647aa01040b742ff12794a7fc, type: 2}
+  - {fileID: 11400000, guid: eaf87b340db2be84c9f683ed912b3f6e, type: 2}
+  OnUnlockSkin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 300155617}
+        m_TargetAssemblyTypeName: UI.UIShop, Assembly-CSharp
+        m_MethodName: UpdateCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 134947045}
+        m_TargetAssemblyTypeName: Menu.MenuController, Assembly-CSharp
+        m_MethodName: SetPlayerSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 710918747}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459778014}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1012203881}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2058657484}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 702970114}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &348853422 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5809047259163656525, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
@@ -2002,7 +2265,7 @@ GameObject:
   - component: {fileID: 387472322}
   - component: {fileID: 387472321}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2496,7 +2759,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 471998901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 154289049}
+        m_TargetAssemblyTypeName: Shop.PlayerSkin, Assembly-CSharp
+        m_MethodName: UnlockSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &499942300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2952,7 +3227,7 @@ GameObject:
   - component: {fileID: 639907982}
   - component: {fileID: 639907981}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3178,7 +3453,7 @@ GameObject:
   - component: {fileID: 702970117}
   - component: {fileID: 702970116}
   m_Layer: 5
-  m_Name: Skin Frame
+  m_Name: Skin Frame6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3254,7 +3529,7 @@ GameObject:
   - component: {fileID: 710918750}
   - component: {fileID: 710918749}
   m_Layer: 5
-  m_Name: Skin Frame
+  m_Name: Skin Frame2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4539,7 +4814,7 @@ GameObject:
   - component: {fileID: 1012203884}
   - component: {fileID: 1012203883}
   m_Layer: 5
-  m_Name: Skin Frame
+  m_Name: Skin Frame4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5155,7 +5430,7 @@ GameObject:
   - component: {fileID: 1084568376}
   - component: {fileID: 1084568375}
   m_Layer: 5
-  m_Name: Skin Frame
+  m_Name: Skin Frame1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5644,6 +5919,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1137208351}
+  - component: {fileID: 1137208352}
   m_Layer: 5
   m_Name: Skin 3
   m_TagString: Untagged
@@ -5673,6 +5949,116 @@ RectTransform:
   m_AnchoredPosition: {x: 1250, y: -250}
   m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1137208352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137208350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef45e8ea9321b644913f953f61b112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: {fileID: 1459778014}
+  icon: {fileID: 77090601}
+  cost: {fileID: 1932808435}
+  ID: 2
+  skins:
+  - {fileID: 11400000, guid: b3006e2f9d4b3df42b99eff4108d4bdb, type: 2}
+  - {fileID: 11400000, guid: 571bd5fc267d7bc408f3837a12b1e6fe, type: 2}
+  - {fileID: 11400000, guid: 309fa89dc49dcdc48be6a455efefb217, type: 2}
+  - {fileID: 11400000, guid: cade24010bb80ba4db1ed5e2ea20fc62, type: 2}
+  - {fileID: 11400000, guid: 3325af5647aa01040b742ff12794a7fc, type: 2}
+  - {fileID: 11400000, guid: eaf87b340db2be84c9f683ed912b3f6e, type: 2}
+  OnUnlockSkin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 300155617}
+        m_TargetAssemblyTypeName: UI.UIShop, Assembly-CSharp
+        m_MethodName: UpdateCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 134947045}
+        m_TargetAssemblyTypeName: Menu.MenuController, Assembly-CSharp
+        m_MethodName: SetPlayerSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1084568373}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 710918747}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1012203881}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2058657484}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 702970114}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1139850315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6790,7 +7176,7 @@ GameObject:
   - component: {fileID: 1459778017}
   - component: {fileID: 1459778016}
   m_Layer: 5
-  m_Name: Skin Frame
+  m_Name: Skin Frame3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6937,6 +7323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1610667762}
+  - component: {fileID: 1610667763}
   m_Layer: 5
   m_Name: Skin 5
   m_TagString: Untagged
@@ -6966,6 +7353,116 @@ RectTransform:
   m_AnchoredPosition: {x: 750, y: -750}
   m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1610667763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610667761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef45e8ea9321b644913f953f61b112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: {fileID: 2058657484}
+  icon: {fileID: 2006320694}
+  cost: {fileID: 1792502463}
+  ID: 4
+  skins:
+  - {fileID: 11400000, guid: b3006e2f9d4b3df42b99eff4108d4bdb, type: 2}
+  - {fileID: 11400000, guid: 571bd5fc267d7bc408f3837a12b1e6fe, type: 2}
+  - {fileID: 11400000, guid: 309fa89dc49dcdc48be6a455efefb217, type: 2}
+  - {fileID: 11400000, guid: cade24010bb80ba4db1ed5e2ea20fc62, type: 2}
+  - {fileID: 11400000, guid: 3325af5647aa01040b742ff12794a7fc, type: 2}
+  - {fileID: 11400000, guid: eaf87b340db2be84c9f683ed912b3f6e, type: 2}
+  OnUnlockSkin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 300155617}
+        m_TargetAssemblyTypeName: UI.UIShop, Assembly-CSharp
+        m_MethodName: UpdateCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 134947045}
+        m_TargetAssemblyTypeName: Menu.MenuController, Assembly-CSharp
+        m_MethodName: SetPlayerSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1084568373}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 710918747}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459778014}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1012203881}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 702970114}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1644528410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7125,6 +7622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1657387730}
+  - component: {fileID: 1657387731}
   m_Layer: 5
   m_Name: Skin 4
   m_TagString: Untagged
@@ -7154,6 +7652,116 @@ RectTransform:
   m_AnchoredPosition: {x: 250, y: -750}
   m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1657387731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657387729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef45e8ea9321b644913f953f61b112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: {fileID: 1012203881}
+  icon: {fileID: 2067079071}
+  cost: {fileID: 1736531558}
+  ID: 3
+  skins:
+  - {fileID: 11400000, guid: b3006e2f9d4b3df42b99eff4108d4bdb, type: 2}
+  - {fileID: 11400000, guid: 571bd5fc267d7bc408f3837a12b1e6fe, type: 2}
+  - {fileID: 11400000, guid: 309fa89dc49dcdc48be6a455efefb217, type: 2}
+  - {fileID: 11400000, guid: cade24010bb80ba4db1ed5e2ea20fc62, type: 2}
+  - {fileID: 11400000, guid: 3325af5647aa01040b742ff12794a7fc, type: 2}
+  - {fileID: 11400000, guid: eaf87b340db2be84c9f683ed912b3f6e, type: 2}
+  OnUnlockSkin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 300155617}
+        m_TargetAssemblyTypeName: UI.UIShop, Assembly-CSharp
+        m_MethodName: UpdateCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 134947045}
+        m_TargetAssemblyTypeName: Menu.MenuController, Assembly-CSharp
+        m_MethodName: SetPlayerSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1084568373}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 710918747}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459778014}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2058657484}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 702970114}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1674797859
 GameObject:
   m_ObjectHideFlags: 0
@@ -7204,7 +7812,7 @@ GameObject:
   - component: {fileID: 1736531559}
   - component: {fileID: 1736531558}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7749,7 +8357,7 @@ GameObject:
   - component: {fileID: 1792502464}
   - component: {fileID: 1792502463}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7993,7 +8601,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1819826566}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1855445585}
+        m_TargetAssemblyTypeName: Shop.PlayerSkin, Assembly-CSharp
+        m_MethodName: UnlockSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1845182028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8141,6 +8761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1855445584}
+  - component: {fileID: 1855445585}
   m_Layer: 5
   m_Name: Skin 2
   m_TagString: Untagged
@@ -8170,6 +8791,116 @@ RectTransform:
   m_AnchoredPosition: {x: 750, y: -250}
   m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1855445585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855445583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef45e8ea9321b644913f953f61b112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: {fileID: 710918747}
+  icon: {fileID: 1819826566}
+  cost: {fileID: 639907981}
+  ID: 1
+  skins:
+  - {fileID: 11400000, guid: b3006e2f9d4b3df42b99eff4108d4bdb, type: 2}
+  - {fileID: 11400000, guid: 571bd5fc267d7bc408f3837a12b1e6fe, type: 2}
+  - {fileID: 11400000, guid: 309fa89dc49dcdc48be6a455efefb217, type: 2}
+  - {fileID: 11400000, guid: cade24010bb80ba4db1ed5e2ea20fc62, type: 2}
+  - {fileID: 11400000, guid: 3325af5647aa01040b742ff12794a7fc, type: 2}
+  - {fileID: 11400000, guid: eaf87b340db2be84c9f683ed912b3f6e, type: 2}
+  OnUnlockSkin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 300155617}
+        m_TargetAssemblyTypeName: UI.UIShop, Assembly-CSharp
+        m_MethodName: UpdateCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 134947045}
+        m_TargetAssemblyTypeName: Menu.MenuController, Assembly-CSharp
+        m_MethodName: SetPlayerSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1084568373}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459778014}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1012203881}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2058657484}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 702970114}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1858073375
 GameObject:
   m_ObjectHideFlags: 0
@@ -8291,7 +9022,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1858073377}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 347896930}
+        m_TargetAssemblyTypeName: Shop.PlayerSkin, Assembly-CSharp
+        m_MethodName: UnlockSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1885209536
 GameObject:
   m_ObjectHideFlags: 0
@@ -8383,7 +9126,7 @@ GameObject:
   - component: {fileID: 1932808436}
   - component: {fileID: 1932808435}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8894,7 +9637,7 @@ GameObject:
   - component: {fileID: 2004298867}
   - component: {fileID: 2004298866}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9138,7 +9881,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2006320694}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1610667763}
+        m_TargetAssemblyTypeName: Shop.PlayerSkin, Assembly-CSharp
+        m_MethodName: UnlockSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2031033588
 GameObject:
   m_ObjectHideFlags: 0
@@ -9542,7 +10297,7 @@ GameObject:
   - component: {fileID: 2058657487}
   - component: {fileID: 2058657486}
   m_Layer: 5
-  m_Name: Skin Frame
+  m_Name: Skin Frame5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9801,7 +10556,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2067079071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1657387731}
+        m_TargetAssemblyTypeName: Shop.PlayerSkin, Assembly-CSharp
+        m_MethodName: UnlockSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2090122176
 GameObject:
   m_ObjectHideFlags: 0

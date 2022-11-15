@@ -321,6 +321,7 @@ namespace Managers
             StopCoroutine(SpeedAugment());
             OnGameOver?.Invoke();
 
+            PlayerPrefs.SetInt("Coins", coins);
             SaveHighscore("Distance", distance, ref higshcoreDistance);
             SaveHighscore("Score", score, ref higshcoreScore);
             OnEndGame?.Invoke(distance, score, higshcoreDistance, higshcoreScore);

@@ -59,7 +59,7 @@ namespace Menu
             versionText.text = $"v{Application.version}";
         }
 
-        private void SetPlayerSkin()
+        public void SetPlayerSkin()
         {
             for (int i = 0; i < skins.Length; i++)
             {
