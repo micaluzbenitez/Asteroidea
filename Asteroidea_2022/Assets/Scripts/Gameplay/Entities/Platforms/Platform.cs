@@ -57,6 +57,7 @@ namespace Entities.Platforms
         private float moveTime = 0;
         private float speed = 0;
 
+        private ObjectShake objectShake = null;
         private Timer breakablePlatformTimer = new Timer();
         #endregion
         #endregion
@@ -75,8 +76,11 @@ namespace Entities.Platforms
         {
             rigidBody = GetComponent<Rigidbody2D>();
             boxCollider = GetComponent<BoxCollider2D>();
+            objectShake = GetComponent<ObjectShake>();  
             distanceToObstacle = Vector3.Distance(obstacle.transform.position, transform.position);
             breakablePlatformTimer.SetTimer(breakableSpeed, Timer.TIMER_MODE.DECREASE);
+
+            objectShake.OnFinishShake += BreakPlatform;
         }
 
         private void Start()
@@ -94,8 +98,13 @@ namespace Entities.Platforms
         private void Update()
         {
             if(horizontalMovement) HorizontalMove();
-            BreakPlatform();
-        }        
+            UpdateBreakPlatform();
+        }
+
+        private void OnDestroy()
+        {
+            objectShake.OnFinishShake += BreakPlatform;
+        }
 
         private void SetRandomX()
         {
@@ -157,7 +166,7 @@ namespace Entities.Platforms
             }
         }
 
-        private void BreakPlatform()
+        private void UpdateBreakPlatform()
         {
             if (breakablePlatformTimer.Active) breakablePlatformTimer.UpdateTimer();
 
@@ -167,6 +176,12 @@ namespace Entities.Platforms
                 model.SetActive(false);
                 breakableModel.SetActive(false);
             }
+        }
+
+        private void BreakPlatform()
+        {
+            for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", true);
+            breakablePlatformTimer.ActiveTimer();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -180,11 +195,7 @@ namespace Entities.Platforms
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player") && breakablePlatform)
-            {
-                for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", true);
-                breakablePlatformTimer.ActiveTimer();
-            }
+            if (collision.gameObject.CompareTag("Player") && breakablePlatform) objectShake.StartShake();
         }
 
         private void Enable()
