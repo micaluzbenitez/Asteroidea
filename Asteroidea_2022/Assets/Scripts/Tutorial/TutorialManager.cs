@@ -9,7 +9,7 @@ public class TutorialManager : MonoBehaviour
 {
     public enum Step
     {
-        MOVEMENT = default, PLATFORMS, PICK_UPS, LIFE_BAR, EXPLAINATION, COUNT
+        LORE = default, MOVEMENT, PLATFORMS, UI, WALLS, LIMITS, ENEMIES, PICK_UPS, COUNT
     }
 
     [Header("Tutorial UI")]
