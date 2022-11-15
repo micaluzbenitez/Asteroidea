@@ -1,6 +1,8 @@
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using System;
 using TMPro;
 
 public class TutorialManager : MonoBehaviour
@@ -10,11 +12,16 @@ public class TutorialManager : MonoBehaviour
         MOVEMENT = default, PLATFORMS, PICK_UPS, LIFE_BAR, EXPLAINATION, COUNT
     }
 
+    [Header("Tutorial UI")]
     [SerializeField] private GameObject nextStep;
     [SerializeField] private GameObject prevStep;
     [SerializeField] private TMP_Text stepText;
-    public Step currentStep;
+    [Header("Change scene")]
+    [SerializeField] private string menuSceneName;
 
+    public static Action<Step> OnStepChange;
+
+    private Step currentStep;
     private int actualStep = 0;
 
     private void Awake()
@@ -34,6 +41,8 @@ public class TutorialManager : MonoBehaviour
             prevStep.SetActive(true);
         }
         stepText.text = actualStep.ToString();
+
+        OnStepChange?.Invoke((Step)actualStep);
     }
     public void PrevStep()
     {
@@ -47,6 +56,13 @@ public class TutorialManager : MonoBehaviour
             nextStep.SetActive(true);
         }
         stepText.text = actualStep.ToString();
+
+        OnStepChange?.Invoke((Step)actualStep);
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(menuSceneName);
     }
 
 }
