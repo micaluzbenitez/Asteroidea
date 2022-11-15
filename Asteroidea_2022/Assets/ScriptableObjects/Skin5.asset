@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 4
   cost: 200
+  starUI: {fileID: 21300000, guid: 3daf057cd1ee67f45b3579d8ae4ab561, type: 3}
   body: {fileID: 21300000, guid: 4bbde9008073e3d4bb8ef6ae4432af97, type: 3}
+  feet: {fileID: 21300000, guid: ed0d9a2f66e303d4d8a82c3fb74e820b, type: 3}
   animation: Skin5

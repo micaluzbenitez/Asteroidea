@@ -39,6 +39,12 @@ namespace Managers
         [Header("Player")]
         [SerializeField] private FloatingJoystick joystick = null;
 
+        [Header("Skins")]
+        [SerializeField] private SpriteRenderer player = null;
+        [SerializeField] private SpriteRenderer[] feets = null;
+        [SerializeField] private Animator[] feetsAnimator = null;
+        [SerializeField] private Skin[] skins = null;
+
         [Header("Camera Movement")]
         [SerializeField] private float startingVerticalSpeed = 1.0f;
         [SerializeField] private float timeForNextAugment = 5;
@@ -131,6 +137,8 @@ namespace Managers
 
             timer.OnReachedTime += StartGame;
             verticalMaxSpeed = maxVerticalSpeed;
+
+            SetPlayerSkin();
         }
 
         private IEnumerator Start()
@@ -198,8 +206,31 @@ namespace Managers
             if (!gameStarted) InputManager.OnJumpPress -= SkipTimer;
         }
 
+        private void SetPlayerSkin()
+        {
+            for (int i = 0; i < skins.Length; i++)
+            {
+                if (PlayerPrefs.GetInt("Skin") == skins[i].ID)
+                {
+                    player.sprite = skins[i].body;
+
+                    for (int j = 0; j < feets.Length; j++)
+                    {
+                        feetsAnimator[j].enabled = false;
+                        feets[j].sprite = skins[i].feet;
+                        skins[i].SetAnimation(feetsAnimator[j]);
+                    }
+                }
+            }
+        }
+
         private void StartGame()
         {
+            for (int j = 0; j < feets.Length; j++)
+            {
+                feetsAnimator[j].enabled = true;
+            }
+
             PauseSystem.UnPause();
             OnGameStart?.Invoke();
             gameStarted = true;

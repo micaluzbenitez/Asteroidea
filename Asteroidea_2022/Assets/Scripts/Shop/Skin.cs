@@ -8,7 +8,9 @@ public class Skin : ScriptableObject
 {
     public int ID = 0;
     public int cost = 0;
+    public Sprite starUI = null;
     public Sprite body = null;
+    public Sprite feet = null;
     public string animation = "";
 
     public void SetAnimation(Animator animator)
