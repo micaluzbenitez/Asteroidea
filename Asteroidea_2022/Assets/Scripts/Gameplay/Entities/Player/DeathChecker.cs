@@ -37,7 +37,7 @@ namespace Entities.Player
         public void DeadPlayer()
         {            
             GameObject particles = Instantiate(deathParticles, transform.position, Quaternion.identity);
-            playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
+            playerStats.ChangePlayerState(PlayerStats.STATE.DEAD);
             endGameTimer.ActiveTimer();
             Time.timeScale = 0;
         }

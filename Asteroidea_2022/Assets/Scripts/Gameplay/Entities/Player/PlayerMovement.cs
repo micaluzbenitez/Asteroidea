@@ -21,6 +21,7 @@ namespace Entities.Player
         private int airJumpCount = 0;
 
         private PlayerStats playerStats = null;
+        private PlayerEnemies playerEnemies = null;
         private Rigidbody2D rigidBody = null;
 
         // Properties
@@ -29,6 +30,7 @@ namespace Entities.Player
         private void Awake()
         {
             playerStats = GetComponent<PlayerStats>();
+            playerEnemies= GetComponent<PlayerEnemies>();
             rigidBody = GetComponent<Rigidbody2D>();
             Debug.Log(Application.platform.ToString());
         }
@@ -102,9 +104,12 @@ namespace Entities.Player
 
         private void PlayerExpression()
         {
-            if (!isGrounded && isFalling) playerStats.ChangePlayerState(PlayerStats.STATE.FALLING);
-            else if (horizontalInput != 0) playerStats.ChangePlayerState(PlayerStats.STATE.WALKING);
-            else playerStats.ChangePlayerState(PlayerStats.STATE.IDLE);
+            if (!playerEnemies.GetDamageState())
+            {
+                if (!isGrounded && isFalling) playerStats.ChangePlayerState(PlayerStats.STATE.FALLING);
+                else if (horizontalInput != 0) playerStats.ChangePlayerState(PlayerStats.STATE.WALKING);
+                else playerStats.ChangePlayerState(PlayerStats.STATE.IDLE);
+            }
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

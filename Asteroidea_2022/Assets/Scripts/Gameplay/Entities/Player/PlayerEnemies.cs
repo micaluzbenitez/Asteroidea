@@ -21,6 +21,7 @@ namespace Entities.Player
         [SerializeField] private UnityEvent OnCollideEnemy = null;
 
         private PlayerStats playerStats = null;
+        private bool damage = false;
 
         public static Action<int> OnLoseLife = null;
 
@@ -35,6 +36,12 @@ namespace Entities.Player
             playerStats.ChangePlayerState(PlayerStats.STATE.DAMAGE);
             OnLoseLife?.Invoke(damage);
             OnCollideEnemy?.Invoke();
+            this.damage = true;
+        }
+
+        public bool GetDamageState()
+        {
+            return damage;
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -59,6 +66,17 @@ namespace Entities.Player
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
                 PlayerDamage(bullet.Damage);
             }
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag(enemiesTag)) damage = false;
+            if (collision.gameObject.CompareTag(lavaTag)) damage = false;
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag(bulletsTag)) damage = false;
         }
     }
 }

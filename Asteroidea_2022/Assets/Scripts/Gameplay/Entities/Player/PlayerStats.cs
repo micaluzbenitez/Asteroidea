@@ -11,7 +11,8 @@ namespace Entities.Player
             IDLE,
             WALKING,
             FALLING,
-            DAMAGE
+            DAMAGE, 
+            DEAD
         }
 
         [Header("State")]
@@ -57,7 +58,11 @@ namespace Entities.Player
         {
             life -= damage;
             OnUpdateLife?.Invoke(life, 0, initialLife);
-            if (life <= 0) deathChecker.DeadPlayer();
+            if (life <= 0)
+            {
+                deathChecker.DeadPlayer();
+                ChangePlayerState(STATE.DEAD);
+            }
         }
 
         public void ChangePlayerState(STATE state)
