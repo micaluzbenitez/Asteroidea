@@ -4,6 +4,11 @@ using UnityEngine;
 
 namespace Entities.Walls
 {
+    public enum WallType
+    {
+        COMMON,
+        LAVA
+    }
     public class Wall : MonoBehaviour
     {
         [Header("Wall data")]
@@ -13,11 +18,14 @@ namespace Entities.Walls
         [SerializeField] private int lavaDamage = 0;
         [SerializeField] private string wallTag = "";
         [SerializeField] private string lavaWallTag = "";
+        [SerializeField] private bool forceLavaWall = false;
 
         [Header("Assets")]
         [SerializeField] private Sprite[] commonWalls = null;
         [SerializeField] private Sprite[] lavaWalls = null;
         [SerializeField] private float lavaSpawnRate = 0.07f;
+
+        private bool forcedToLava = false;
 
         private void Start()
         {
@@ -29,6 +37,8 @@ namespace Entities.Walls
             VerticalMovement();
 
             if (transform.localPosition.y > maxPosition) Reset();
+
+            CheckForcingLavaWall();
         }
 
         private void VerticalMovement()
@@ -49,11 +59,12 @@ namespace Entities.Walls
         {
             bool lavaWall = Random.Range(0.0f, 1.0f) < lavaSpawnRate;
 
-            if (lavaWall)
+            if (lavaWall || forceLavaWall)
             {
                 int index = Random.Range(0, lavaWalls.Length);
                 sprite.sprite = lavaWalls[index];
                 tag = lavaWallTag;
+                forcedToLava = true;
             }
             else
             {
@@ -67,5 +78,30 @@ namespace Entities.Walls
         {
             return lavaDamage;
         }
+
+        private void CheckForcingLavaWall()
+        {
+            if (!forcedToLava)
+            {
+                if (forceLavaWall)
+                {
+                    int index = Random.Range(0, lavaWalls.Length);
+                    sprite.sprite = lavaWalls[index];
+                    tag = lavaWallTag;
+                    forcedToLava = true;
+                }
+            }
+            else
+            {
+                if(!forceLavaWall)
+                {
+                    int index = Random.Range(0, commonWalls.Length);
+                    sprite.sprite = commonWalls[index];
+                    tag = wallTag;
+                    forcedToLava = false;
+                }
+            }
+        }
+
     }
 }
