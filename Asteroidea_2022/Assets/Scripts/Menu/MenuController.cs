@@ -13,9 +13,14 @@ namespace Menu
         [SerializeField] private CanvasGroup startingPanel = null;
         [SerializeField] private TMP_Text versionText = null;
         [SerializeField] private GameObject playButton = null;
+
         [Header("Game scene")]
         [SerializeField] private string gameSceneName = default;
         [SerializeField] private string tutorialSceneName = default;
+
+        [Header("Skins")]
+        [SerializeField] private Image player = null;
+        [SerializeField] private Skin[] skins = null;
 
         private CanvasGroup actualPanel = null;
 
@@ -41,7 +46,7 @@ namespace Menu
             actualPanel.interactable = true;
 
             EnablePlay();
-
+            SetPlayerSkin();
         }
 
         private void Start()
@@ -52,6 +57,17 @@ namespace Menu
         private void SetProjectVersion()
         {
             versionText.text = $"v{Application.version}";
+        }
+
+        private void SetPlayerSkin()
+        {
+            for (int i = 0; i < skins.Length; i++)
+            {
+                if (PlayerPrefs.GetInt("Skin") == skins[i].ID)
+                {
+                    player.sprite = skins[i].starUI;
+                }
+            }
         }
 
         public void StartPanel(CanvasGroup newPanel)
