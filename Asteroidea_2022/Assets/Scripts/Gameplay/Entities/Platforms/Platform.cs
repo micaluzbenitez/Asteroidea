@@ -103,7 +103,7 @@ namespace Entities.Platforms
 
         private void OnDestroy()
         {
-            objectShake.OnFinishShake += BreakPlatform;
+            objectShake.OnFinishShake -= BreakPlatform;
         }
 
         private void SetRandomX()
@@ -195,7 +195,7 @@ namespace Entities.Platforms
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player") && breakablePlatform) objectShake.StartShake();
+            if (collision.gameObject.CompareTag("Player") && breakablePlatform) objectShake?.StartShake();
         }
 
         private void Enable()

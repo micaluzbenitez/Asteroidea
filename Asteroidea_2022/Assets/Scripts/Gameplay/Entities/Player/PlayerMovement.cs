@@ -32,7 +32,7 @@ namespace Entities.Player
             playerStats = GetComponent<PlayerStats>();
             playerEnemies= GetComponent<PlayerEnemies>();
             rigidBody = GetComponent<Rigidbody2D>();
-            Debug.Log(Application.platform.ToString());
+            //Debug.Log(Application.platform.ToString());
         }
 
         private void Update()

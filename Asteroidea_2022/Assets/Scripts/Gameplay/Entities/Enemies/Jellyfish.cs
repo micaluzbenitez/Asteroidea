@@ -19,6 +19,9 @@ namespace Entities.Enemies
         [Header("Reset trigger")]
         [SerializeField] private string triggerTagName = "";
 
+        [Header("Tutorial")]
+        [SerializeField] private bool onTutorial = false;
+
         private Timer timerPerShot = new Timer();
 
         protected override void Awake()
@@ -53,7 +56,18 @@ namespace Entities.Enemies
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.CompareTag(triggerTagName)) gameObject.SetActive(false);
+
+            if (collision.gameObject.CompareTag(triggerTagName))
+            {
+                if (!onTutorial)
+                {
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    transform.position = new Vector3(transform.position.x, -2, 0);
+                }
+            }
         }
 
         protected override void OnCollisionEnter2D(Collision2D collision)

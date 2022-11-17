@@ -15,7 +15,9 @@ namespace Entities.Player
         [SerializeField] private float yMaxPosition = 0;
         [SerializeField] private float xMinPosition = 0;
         [SerializeField] private float yMinPosition = 0;
+        [SerializeField] private bool onTutorial = false;
         #endregion
+
 
         #region STATIC VARIABLES
         public static Action OnReachLimit;
@@ -37,9 +39,16 @@ namespace Entities.Player
         public void DeadPlayer()
         {            
             GameObject particles = Instantiate(deathParticles, transform.position, Quaternion.identity);
-            playerStats.ChangePlayerState(PlayerStats.STATE.DEAD);
-            endGameTimer.ActiveTimer();
-            Time.timeScale = 0;
+            if (!onTutorial)
+            {
+                playerStats.ChangePlayerState(PlayerStats.STATE.DEAD);
+                endGameTimer.ActiveTimer();
+                Time.timeScale = 0;
+            }
+            else
+            {
+                transform.position = new Vector3(-1.3f, 1.3f, 0);
+            }
         }
         #endregion
 

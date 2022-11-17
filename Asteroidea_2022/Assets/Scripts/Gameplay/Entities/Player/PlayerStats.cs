@@ -75,7 +75,7 @@ namespace Entities.Player
         {
             if (collision.gameObject.CompareTag("Pickup"))
             {
-                OnAddScore(pickupScore);
+                OnAddScore?.Invoke(pickupScore);
                 collision.gameObject.SetActive(false);
             }
         }

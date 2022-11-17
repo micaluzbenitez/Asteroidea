@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 664007291863717110}
   - component: {fileID: 664007291863717113}
   - component: {fileID: 664007291863717108}
+  - component: {fileID: 1193778356}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Floor
@@ -143,10 +144,28 @@ MonoBehaviour:
   - {fileID: 3639125617120669598}
   - {fileID: 6283395695393466441}
   - {fileID: 2538548767116807105}
-  - {fileID: 0}
   bSpawnRate: 0.2
   platformRespawnPos: {fileID: 0}
   isVisible: 0
+--- !u!114 &1193778356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664007291863717115}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d0a59747668ff4692fb36969a1c03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularShake: 1
+  startRightDireccion: 1
+  timePerShake: 0
+  duration: 0
+  rangeX: 0
+  rangeY: 0
+  magnitude: 0
 --- !u!1 &944751041353641963
 GameObject:
   m_ObjectHideFlags: 0
