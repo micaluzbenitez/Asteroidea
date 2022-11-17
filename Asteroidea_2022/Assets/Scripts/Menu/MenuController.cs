@@ -24,9 +24,9 @@ namespace Menu
 
         private CanvasGroup actualPanel = null;
 
-        private string seenTutorialKey = "tutorial";
-        private const int TRUE_VALUE = 1;
-        private const int FALSE_VALUE = 0;
+        public static string seenTutorialKey = "tutorial";
+        public static int TRUE_VALUE = 1;
+        public static int FALSE_VALUE = 0;
 
         private void Awake()
         {
@@ -109,11 +109,14 @@ namespace Menu
 
         private void EnablePlay()
         {
-            if (PlayerPrefs.HasKey(seenTutorialKey)) return;
+            if (!PlayerPrefs.HasKey(seenTutorialKey))
+            {
+                PlayerPrefs.SetInt(seenTutorialKey, FALSE_VALUE);
+            }
 
             if (PlayerPrefs.GetInt(seenTutorialKey) == FALSE_VALUE) return;
 
-            playButton.GetComponent<Image>().color = new Color();
+            playButton.GetComponent<Image>().color = new Color(1,1,1,1);
             playButton.GetComponent<Button>().interactable = true;
         }
 

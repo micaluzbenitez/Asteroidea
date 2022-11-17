@@ -36,7 +36,7 @@ public class TutorialManager : MonoBehaviour
         titleText.text = titleArray[(int)Step.LORE];
     }
     private void Start()
-    {
+    { 
         stepArray = stepFolder.GetComponentsInChildren<CanvasGroup>();
 
         for (int i = 0; i < stepArray.Length; i++)
@@ -92,6 +92,7 @@ public class TutorialManager : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        PlayerPrefs.SetInt(Menu.MenuController.seenTutorialKey, Menu.MenuController.TRUE_VALUE);
         SceneManager.LoadScene(menuSceneName);
     }
 
