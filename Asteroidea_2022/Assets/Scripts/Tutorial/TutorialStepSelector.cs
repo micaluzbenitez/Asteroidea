@@ -10,6 +10,9 @@ public class TutorialStepSelector : MonoBehaviour
     [Header("Step Prefabs")]
     [SerializeField] private List<GameObject> stepPrefabs = null;
 
+    [Header("Joystick Reference")]
+    [SerializeField] private Joystick joystick = null;
+
     private int actualStep = 0;
     private GameObject expositor = null;
 
@@ -33,6 +36,7 @@ public class TutorialStepSelector : MonoBehaviour
         Destroy(expositor);
         actualStep = step;
         expositor = Instantiate(stepPrefabs[actualStep], transform);
+        expositor.GetComponentInChildren<Entities.Player.PlayerMovement>().SetJoystick(joystick);
     }
 
 }

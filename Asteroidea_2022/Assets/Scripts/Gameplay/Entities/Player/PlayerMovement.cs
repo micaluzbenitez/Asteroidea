@@ -27,6 +27,10 @@ namespace Entities.Player
         // Properties
         public float HorizontalInput { get => horizontalInput; }
 
+        public void SetJoystick(Joystick newJoystick)
+        {
+            joystick = newJoystick;
+        }
         private void Awake()
         {
             playerStats = GetComponent<PlayerStats>();
