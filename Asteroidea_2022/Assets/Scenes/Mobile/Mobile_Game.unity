@@ -11842,12 +11842,7 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d0a47cda9478d96408f60e1b52c5233d, type: 3}
-    m_RemovedComponents:
-    - {fileID: 9092753385303589672, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-    - {fileID: 6623344685869523670, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-    - {fileID: 6623344684766324341, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-    - {fileID: 6623344684432015105, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
-    - {fileID: 6623344686268196349, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c228635dcabdde42ae2492b35b55301, type: 3}
 --- !u!114 &6623344685265320588 stripped
 MonoBehaviour:

@@ -46,12 +46,6 @@ namespace Entities.Player
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag(enemiesTag))
-            {
-                Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-                PlayerDamage(enemy.GetDamage());
-            }
-
             if (collision.gameObject.CompareTag(lavaTag))
             {
                 Wall wall = collision.gameObject.GetComponent<Wall>();
@@ -61,6 +55,12 @@ namespace Entities.Player
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            if (collision.gameObject.CompareTag(enemiesTag))
+            {
+                Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+                PlayerDamage(enemy.GetDamage());
+            }
+
             if (collision.gameObject.CompareTag(bulletsTag))
             {
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
