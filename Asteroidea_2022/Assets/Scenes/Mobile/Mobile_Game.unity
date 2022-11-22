@@ -12256,3 +12256,4 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   distanceText: {fileID: 1972390809}
   scoreText: {fileID: 2035836830}
+  coinsText: {fileID: 1185468180}

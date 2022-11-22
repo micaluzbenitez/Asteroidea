@@ -12,6 +12,7 @@ TagManager:
   - Wall
   - Pickup
   - LavaWall
+  - Coin
   layers:
   - Default
   - TransparentFX

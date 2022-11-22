@@ -25,14 +25,16 @@ namespace Entities.Player
         [SerializeField] private float recuperateLifeValue = 0;
         [SerializeField] private float recuperateLifeSpeed = 0;
 
-        [Header("Pickups points")]
+        [Header("Pickups")]
         [SerializeField] private int pickupScore = 0;
+        [SerializeField] private int coinsValue = 0;
 
         private float life = 0;
         private DeathChecker deathChecker = null;
 
         public static Action<float, float, float> OnUpdateLife;
         public static Action<int> OnAddScore;
+        public static Action<int> OnAddCoins;
 
         private void Awake()
         {
@@ -76,6 +78,12 @@ namespace Entities.Player
             if (collision.gameObject.CompareTag("Pickup"))
             {
                 OnAddScore?.Invoke(pickupScore);
+                collision.gameObject.SetActive(false);
+            }
+
+            if (collision.gameObject.CompareTag("Coin"))
+            {
+                OnAddCoins?.Invoke(coinsValue);
                 collision.gameObject.SetActive(false);
             }
         }

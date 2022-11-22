@@ -16,6 +16,7 @@ namespace UI
         [Header("Game data")]
         public TMP_Text distanceText = null;
         public TMP_Text scoreText = null;
+        public TMP_Text coinsText = null;
 
         public void UpdateLifeBar(float value, float minValue, float maxValue)
         {
@@ -26,10 +27,11 @@ namespace UI
             if (changeGradient) lifeBar.color = gradient.Evaluate(actualLife);
         }
 
-        public void UpdateGameData(int distance, int score)
+        public void UpdateGameData(int distance, int score, int coins)
         {
             distanceText.text = distance.ToString() + " m";
             scoreText.text = score.ToString();
+            coinsText.text = coins.ToString();
         }
 
         public void SetLifeBarValue(float value)

@@ -127,6 +127,7 @@ namespace Managers
         {
             PlayerStats.OnUpdateLife += uiGame.UpdateLifeBar;
             PlayerStats.OnAddScore += AddScore;
+            PlayerStats.OnAddCoins += AddCoins;
             PlayerEnemies.OnLoseLife += playerStats.LoseLife;
             DeathChecker.OnReachLimit += EndGame;
             InputManager.OnJumpPress += SkipTimer;
@@ -174,7 +175,7 @@ namespace Managers
             }
 
             // Game
-            uiGame.UpdateGameData((int)distance, score);
+            uiGame.UpdateGameData((int)distance, score, coins);
 
             // Score
             points += Time.deltaTime;
@@ -199,6 +200,7 @@ namespace Managers
         {
             PlayerStats.OnUpdateLife -= uiGame.UpdateLifeBar;
             PlayerStats.OnAddScore -= AddScore;
+            PlayerStats.OnAddCoins -= AddCoins;
             PlayerEnemies.OnLoseLife -= playerStats.LoseLife;
             DeathChecker.OnReachLimit -= EndGame;
             //InputManager.OnJumpPress -= SkipTimer;
@@ -298,6 +300,11 @@ namespace Managers
         private void AddScore(int score)
         {
             pickupPoints += score;
+        }
+
+        private void AddCoins(int coins)
+        {
+            this.coins += coins;
         }
 
         private void BonusLevel()

@@ -705,6 +705,7 @@ MonoBehaviour:
   recuperateLifeValue: 0.1
   recuperateLifeSpeed: 0.1
   pickupScore: 10
+  coinsValue: 10
 --- !u!114 &5453469629715405686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,6 +771,7 @@ MonoBehaviour:
   yMaxPosition: 0
   xMinPosition: 0
   yMinPosition: 0
+  onTutorial: 0
 --- !u!60 &1812442743
 PolygonCollider2D:
   m_ObjectHideFlags: 0
