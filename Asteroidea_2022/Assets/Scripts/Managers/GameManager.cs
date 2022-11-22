@@ -32,6 +32,7 @@ namespace Managers
 
         [Header("UI")]
         [SerializeField] private UIGame uiGame = null;
+        [SerializeField] private UIPause uiPause = null;
         [SerializeField] private TMP_Text timerText = null;
         [SerializeField] private Button pauseButton = null;
         [SerializeField] private int timerStartingValue = 5;
@@ -130,6 +131,7 @@ namespace Managers
             PlayerStats.OnAddCoins += AddCoins;
             PlayerEnemies.OnLoseLife += playerStats.LoseLife;
             DeathChecker.OnReachLimit += EndGame;
+            uiPause.OnShowGameData += ShowPausePanelData;
             InputManager.OnJumpPress += SkipTimer;
             joystick.OnTap += SkipTimer;
 
@@ -203,6 +205,7 @@ namespace Managers
             PlayerStats.OnAddCoins -= AddCoins;
             PlayerEnemies.OnLoseLife -= playerStats.LoseLife;
             DeathChecker.OnReachLimit -= EndGame;
+            uiPause.OnShowGameData -= ShowPausePanelData;
             //InputManager.OnJumpPress -= SkipTimer;
             if (!skippedTimer) timer.OnReachedTime -= StartGame;
             if (!gameStarted) InputManager.OnJumpPress -= SkipTimer;
@@ -317,6 +320,13 @@ namespace Managers
                 Instantiate(bonusLevel, enemies[i].transform.position, Quaternion.identity);
                 pickupsManager.SpawnRandomPickup(enemies[i].transform.position);
             }
+        }
+
+        private void ShowPausePanelData(TMP_Text distanceText, TMP_Text scoreText, TMP_Text coinsText)
+        {
+            distanceText.text = distance.ToString();
+            scoreText.text = score.ToString();  
+            coinsText.text = coins.ToString();
         }
 
         private void EndGame()

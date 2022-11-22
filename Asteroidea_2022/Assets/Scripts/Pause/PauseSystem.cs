@@ -48,6 +48,7 @@ public class PauseSystem : MonoBehaviour
         Time.timeScale = 0;
         ActualState = PauseStates.Paused;
     }
+
     public static void UnPause()
     {
         Paused = false;
