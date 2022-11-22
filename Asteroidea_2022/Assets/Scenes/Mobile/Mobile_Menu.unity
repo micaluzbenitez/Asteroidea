@@ -6724,7 +6724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.67691696, g: 1, b: 0.6462264, a: 1}
+  m_Color: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7983,7 +7983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 240762963056826366, guid: a168aedfe4c2b1843b367cdefa52cdfc, type: 3}
       propertyPath: m_text
-      value: Pablo Julian
+      value: Pablo Julian Luna
       objectReference: {fileID: 0}
     - target: {fileID: 240762963056826366, guid: a168aedfe4c2b1843b367cdefa52cdfc, type: 3}
       propertyPath: m_fontSize
@@ -9326,7 +9326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02, y: 0.07}
   m_AnchorMax: {x: 0.98, y: 0.665}
-  m_AnchoredPosition: {x: 0, y: 70.8}
+  m_AnchoredPosition: {x: 0, y: 70.80005}
   m_SizeDelta: {x: 0, y: 141.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1885209538
