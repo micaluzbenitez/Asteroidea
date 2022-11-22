@@ -78,7 +78,6 @@ namespace Entities.Platforms
             boxCollider = GetComponent<BoxCollider2D>();
             objectShake = GetComponent<ObjectShake>();  
             distanceToObstacle = Vector3.Distance(obstacle.transform.position, transform.position);
-            breakablePlatformTimer.SetTimer(breakableSpeed, Timer.TIMER_MODE.DECREASE);
 
             objectShake.OnFinishShake += BreakPlatform;
         }
@@ -175,12 +174,14 @@ namespace Entities.Platforms
                 boxCollider.enabled = false;
                 model.SetActive(false);
                 breakableModel.SetActive(false);
+                for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", false);
             }
         }
 
         private void BreakPlatform()
         {
             for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", true);
+            breakablePlatformTimer.SetTimer(breakableSpeed, Timer.TIMER_MODE.DECREASE);
             breakablePlatformTimer.ActiveTimer();
         }
 
