@@ -1,0 +1,26 @@
+Event	ID	Name			Wwise Object Path	Notes
+	660528677	Play_cascarudo			\Default Work Unit\Play_cascarudo	
+	784302017	Play_Damage			\Default Work Unit\Play_Damage	
+	1866806893	Play_fish_bite			\Default Work Unit\Play_fish_bite	
+	1875812120	Starfish_Movements			\Default Work Unit\Starfish_Movements	
+	3431618819	Jellyfish_Movement			\Default Work Unit\Jellyfish_Movement	
+	3635214037	Play_Juego_Estrella_Musica_Tema1_1			\Default Work Unit\Play_Juego_Estrella_Musica_Tema1_1	
+	3795799651	Play_impact_plataform			\Default Work Unit\Play_impact_plataform	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2842583027	Gameplay_Objets			\Default Work Unit\Gameplay_Objets	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Gameplay_Objets			
+	984691642	inGame	Gameplay_Objets			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	72936469	fish_bite	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\fish_bite _10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Unmuted Enemies\fish_bite		2194
+	157275980	daño00	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\daño00_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Damage\daño00		7714
+	158985340	cascarudo	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\cascarudo_23BBE8C3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Unmuted Enemies\Crab\cascarudo		14534
+	429896064	impact_plataform_01	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\impact_plataform_4F72F85B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Plataform\impact_plataform_01		5466
+	532153880	Juego Estrella_Musica_Tema1_1	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Juego Estrella_Musica_Tema1.1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Juego Estrella_Musica_Tema1_1\Juego Estrella_Musica_Tema1_1		9600064
+	540095840	daño01	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\daño01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Damage\daño01		8734
+	869724118	medusa	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\medusa_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Unmuted Enemies\medusa		549084
+	940296832	cascarudo_01	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\cascarudo_31CBC1D8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Unmuted Enemies\Crab\cascarudo_01		14534
+

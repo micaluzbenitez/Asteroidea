@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ProjectRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2901137828">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1886070492">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3659513767">
-			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
-			<ShortName>Main_SoundBank</ShortName>
-			<Path>Main_SoundBank.bnk</Path>
+		<SoundBank Id="1825057083" Language="SFX" Hash="895210234">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_GamePlay</ObjectPath>
+			<ShortName>Main_SoundBank_GamePlay</ShortName>
+			<Path>Main_SoundBank_GamePlay.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3431618819" Name="Jellyfish_Movement" ObjectPath="\Events\Default Work Unit\Jellyfish_Movement" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="869724118" Language="SFX">
+							<ShortName>medusa.wav</ShortName>
+							<Path>SFX\medusa_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="660528677" Name="Play_cascarudo" ObjectPath="\Events\Default Work Unit\Play_cascarudo" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="158985340" Language="SFX">
+							<ShortName>cascarudo.wav</ShortName>
+							<Path>SFX\cascarudo_23BBE8C3.wem</Path>
+						</File>
+						<File Id="940296832" Language="SFX">
+							<ShortName>cascarudo.wav</ShortName>
+							<Path>SFX\cascarudo_31CBC1D8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="784302017" Name="Play_Damage" ObjectPath="\Events\Default Work Unit\Play_Damage" DurationType="OneShot" DurationMin="0.067009" DurationMax="0.1074">
+					<IncludedMemoryFiles>
+						<File Id="157275980" Language="SFX">
+							<ShortName>daño00.wav</ShortName>
+							<Path>SFX\daño00_10C4C929.wem</Path>
+						</File>
+						<File Id="540095840" Language="SFX">
+							<ShortName>daño01.wav</ShortName>
+							<Path>SFX\daño01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1866806893" Name="Play_fish_bite" ObjectPath="\Events\Default Work Unit\Play_fish_bite" DurationType="OneShot" DurationMin="0.018657" DurationMax="0.026386">
+					<IncludedMemoryFiles>
+						<File Id="72936469" Language="SFX">
+							<ShortName>fish_bite .wav</ShortName>
+							<Path>SFX\fish_bite _10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3795799651" Name="Play_impact_plataform" ObjectPath="\Events\Default Work Unit\Play_impact_plataform" DurationType="OneShot" DurationMin="0.035446" DurationMax="0.084305">
+					<IncludedMemoryFiles>
+						<File Id="429896064" Language="SFX">
+							<ShortName>impact_plataform.wav</ShortName>
+							<Path>SFX\impact_plataform_4F72F85B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3635214037" Name="Play_Juego_Estrella_Musica_Tema1_1" ObjectPath="\Events\Default Work Unit\Play_Juego_Estrella_Musica_Tema1_1" DurationType="OneShot" DurationMin="50." DurationMax="50.">
+					<IncludedMemoryFiles>
+						<File Id="532153880" Language="SFX">
+							<ShortName>Juego Estrella_Musica_Tema1.1.wav</ShortName>
+							<Path>SFX\Juego Estrella_Musica_Tema1.1_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1875812120" Name="Starfish_Movements" ObjectPath="\Events\Default Work Unit\Starfish_Movements" DurationType="OneShot" DurationMin="0.094827" DurationMax="0.188731"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="532153880" Language="SFX">
+					<ShortName>Juego Estrella_Musica_Tema1.1.wav</ShortName>
+					<Path>SFX\Juego Estrella_Musica_Tema1.1_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+			<StateGroups>
+				<StateGroup Id="2842583027" Name="Gameplay_Objets" ObjectPath="\States\Default Work Unit\Gameplay_Objets" GUID="{B8B0B889-AF5F-4C55-BA3B-A8EE6FB55311}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Gameplay_Objets\None" GUID="{DAEA48B5-0769-4AD7-B195-3CF6CE6A27D8}"/>
+						<State Id="984691642" Name="inGame" ObjectPath="\States\Default Work Unit\Gameplay_Objets\inGame" GUID="{C66CAA8F-2503-450C-A1FF-EDD0A8816DB1}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

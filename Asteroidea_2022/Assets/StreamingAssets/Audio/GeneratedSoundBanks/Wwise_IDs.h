@@ -11,10 +11,36 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID JELLYFISH_MOVEMENT = 3431618819U;
+        static const AkUniqueID PLAY_CASCARUDO = 660528677U;
+        static const AkUniqueID PLAY_DAMAGE = 784302017U;
+        static const AkUniqueID PLAY_FISH_BITE = 1866806893U;
+        static const AkUniqueID PLAY_IMPACT_PLATAFORM = 3795799651U;
+        static const AkUniqueID PLAY_JUEGO_ESTRELLA_MUSICA_TEMA1_1 = 3635214037U;
+        static const AkUniqueID STARFISH_MOVEMENTS = 1875812120U;
+    } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAMEPLAY_OBJETS
+        {
+            static const AkUniqueID GROUP = 2842583027U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INGAME = 984691642U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace GAMEPLAY_OBJETS
+
+    } // namespace STATES
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID MAIN_SOUNDBANK = 2228651116U;
+        static const AkUniqueID MAIN_SOUNDBANK_GAMEPLAY = 1825057083U;
     } // namespace BANKS
 
     namespace BUSSES

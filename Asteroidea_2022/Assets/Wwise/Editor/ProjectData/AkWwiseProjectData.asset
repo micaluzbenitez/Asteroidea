@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 0e7372c42c5ff24aa595cfe938ab24b9
     GuidInternal: 
-    m_lastTime: -8585336894175217069
+    m_lastTime: -8585331524321431109
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2beab9713dc0b547b40dcf678a15d3e3
     GuidInternal: 
-    m_lastTime: -8585336894175256707
+    m_lastTime: -8585331524321471011
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,11 +66,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: eafd11fdaa55e94d9fbdbc831ea8d0d9
     GuidInternal: 
-    m_lastTime: -8585334833982017693
+    m_lastTime: -8585327238664762432
     List:
-    - name: Main_SoundBank
+    - name: Main_SoundBank_GamePlay
       guid: a947d137cbf91f4b8dc782b485d3534e
-      id: 2228651116
+      id: 1825057083
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -78,10 +78,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: eafd11fdaa55e94d9fbdbc831ea8d0d9
-      - ElementName: Main_SoundBank
+      - ElementName: Main_SoundBank_GamePlay
         ObjectType: 7
         guid: a947d137cbf91f4b8dc782b485d3534e
-      Path: SoundBanks\Default Work Unit\Main_SoundBank
+      Path: SoundBanks\Default Work Unit\Main_SoundBank_GamePlay
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,8 +94,127 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 6dd67e438611ed438cd252e93499c946
     GuidInternal: 
-    m_lastTime: -8585336894175297150
-    List: []
+    m_lastTime: -8585321385843229348
+    List:
+    - name: Jellyfish_Movement
+      guid: e8a0df452c61cc4baf94bd89ec557ad6
+      id: 3431618819
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Jellyfish_Movement
+        ObjectType: 3
+        guid: e8a0df452c61cc4baf94bd89ec557ad6
+      Path: Events\Default Work Unit\Jellyfish_Movement
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_cascarudo
+      guid: ab05bded5e8af443a3a71949d9306775
+      id: 660528677
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Play_cascarudo
+        ObjectType: 3
+        guid: ab05bded5e8af443a3a71949d9306775
+      Path: Events\Default Work Unit\Play_cascarudo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Damage
+      guid: 1bf462bb83c9b64692f8cf38f2609dcc
+      id: 784302017
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Play_Damage
+        ObjectType: 3
+        guid: 1bf462bb83c9b64692f8cf38f2609dcc
+      Path: Events\Default Work Unit\Play_Damage
+      maxAttenuation: 0
+      maxDuration: 0.1074
+      minDuration: 0.067009
+    - name: Play_fish_bite
+      guid: c086e013e0b66647a88efc90d7db479e
+      id: 1866806893
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Play_fish_bite
+        ObjectType: 3
+        guid: c086e013e0b66647a88efc90d7db479e
+      Path: Events\Default Work Unit\Play_fish_bite
+      maxAttenuation: 0
+      maxDuration: 0.026386
+      minDuration: 0.018657
+    - name: Play_impact_plataform
+      guid: 173cbb62f910e44cbbb2d95c7cb7a0b1
+      id: 3795799651
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Play_impact_plataform
+        ObjectType: 3
+        guid: 173cbb62f910e44cbbb2d95c7cb7a0b1
+      Path: Events\Default Work Unit\Play_impact_plataform
+      maxAttenuation: 0
+      maxDuration: 0.084305
+      minDuration: 0.035446
+    - name: Play_Juego_Estrella_Musica_Tema1_1
+      guid: b905119a6ec9ae449befe55c5821bca7
+      id: 3635214037
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Play_Juego_Estrella_Musica_Tema1_1
+        ObjectType: 3
+        guid: b905119a6ec9ae449befe55c5821bca7
+      Path: Events\Default Work Unit\Play_Juego_Estrella_Musica_Tema1_1
+      maxAttenuation: 0
+      maxDuration: 50
+      minDuration: 50
+    - name: Starfish_Movements
+      guid: 8510ebad6cad3f4ab237c3d6ed3e3621
+      id: 1875812120
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Starfish_Movements
+        ObjectType: 3
+        guid: 8510ebad6cad3f4ab237c3d6ed3e3621
+      Path: Events\Default Work Unit\Starfish_Movements
+      maxAttenuation: 0
+      maxDuration: 0.188731
+      minDuration: 0.094827
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -108,7 +227,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 7b1ec2c55a046a48adba9793bdaba557
     GuidInternal: 
-    m_lastTime: -8585336894175286825
+    m_lastTime: -8585331524321510904
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -122,8 +241,58 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 02d9c217b79b764096e154f91779a987
     GuidInternal: 
-    m_lastTime: -8585336894175227034
-    List: []
+    m_lastTime: -8585321385843308855
+    List:
+    - name: Gameplay_Objets
+      guid: 89b8b0b85faf554cba3ba8ee6fb55311
+      id: 2842583027
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 02d9c217b79b764096e154f91779a987
+      - ElementName: Gameplay_Objets
+        ObjectType: 9
+        guid: 89b8b0b85faf554cba3ba8ee6fb55311
+      Path: States\Default Work Unit\Gameplay_Objets
+      values:
+      - name: inGame
+        guid: 8faa6cc603250c45a1ffedd0a8816db1
+        id: 984691642
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 02d9c217b79b764096e154f91779a987
+        - ElementName: Gameplay_Objets
+          ObjectType: 9
+          guid: 89b8b0b85faf554cba3ba8ee6fb55311
+        - ElementName: inGame
+          ObjectType: 8
+          guid: 8faa6cc603250c45a1ffedd0a8816db1
+      - name: None
+        guid: b548eada6907d74ab1953cf6ce6a27d8
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 02d9c217b79b764096e154f91779a987
+        - ElementName: Gameplay_Objets
+          ObjectType: 9
+          guid: 89b8b0b85faf554cba3ba8ee6fb55311
+        - ElementName: None
+          ObjectType: 8
+          guid: b548eada6907d74ab1953cf6ce6a27d8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -136,7 +305,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 127740e46f98ca40889a3161b9a9763d
     GuidInternal: 
-    m_lastTime: -8585336894175217069
+    m_lastTime: -8585331524321431109
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -150,11 +319,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 22b0ef0303bbcc49a6ed5177ceb23f42
     GuidInternal: 
-    m_lastTime: -8585336894175217069
+    m_lastTime: -8585331524321431109
     List: []
-  ExpandedFileSystemItemIds: 0800000009000000
-  ExpandedWaapiItemIds: 090000000a000000
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 02000000050000000600000007000000090000000a0000000c0000000e0000000f00000010000000110000002201000023010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 

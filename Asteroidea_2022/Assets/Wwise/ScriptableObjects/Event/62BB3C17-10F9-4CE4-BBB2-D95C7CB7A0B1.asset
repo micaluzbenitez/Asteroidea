@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6d3d4040cea1d41bccfb8853b07835, type: 3}
+  m_Name: 62BB3C17-10F9-4CE4-BBB2-D95C7CB7A0B1
+  m_EditorClassIdentifier: 
+  objectName: Play_impact_plataform
+  id: 3795799651
+  guid: 62BB3C17-10F9-4CE4-BBB2-D95C7CB7A0B1
