@@ -53,7 +53,7 @@ namespace Shop
         {
             if (PlayerPrefs.GetInt($"Skin{ID}") == 0)
             {
-                if (PlayerPrefs.GetInt("Coins") > skins[ID].cost)
+                if (PlayerPrefs.GetInt("Coins") >= skins[ID].cost)
                 {
                     PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - skins[ID].cost);
                     PlayerPrefs.SetInt($"Skin{ID}", 1);
