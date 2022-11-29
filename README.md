@@ -24,7 +24,7 @@ This is a game being developed by students from <a href="https://www.imagecampus
 - **Melina Klurfan** - *Art*
 - **Santiago Lafosse** - *Art*
 - **Federico Diaz** - *Testing*
-- **Lucas Massei** - *Testing*
+- **Lucas Mazzei** - *Testing*
 - **Isidoro Jaimovich** - *Testing*
 - **Rodrigo Abrahan Cerimeli** - *Audio*
 - **Pablo Julian Luna** - *Audio*
@@ -32,16 +32,18 @@ This is a game being developed by students from <a href="https://www.imagecampus
 This game was also possible thanks to the support of these professors:
 
 - **Sergio Baretto**
-- **Ignacio Mosconi**
 - **Ramiro Cabrera**
-- **Nicolas Jimenez Lamberti**
-- **Federico Olive**
+- **Ignacio Mosconi**
+- **Lucía Inés Patetta**
+- **Nazareno Rivero**
+- **Eugenio Taboada**
 
 ## Acknowledgements
 
-- ****
-- ****
-
+- **Ramón Bunge**
+- **Juan Cruz Tourret**
+- **Nicolás Jimenez Lamberti**
+- **Federico Olivé**
 
 ## Links
 
