@@ -26,8 +26,8 @@ This is a game being developed by students from <a href="https://www.imagecampus
 - **Federico Diaz** - *Testing*
 - **Lucas Massei** - *Testing*
 - **Isidoro Jaimovich** - *Testing*
-- **** - *Audio*
-- **** - *Audio*
+- **Rodrigo Abrahan Cerimeli** - *Audio*
+- **Pablo Julian Luna** - *Audio*
 
 This game was also possible thanks to the support of these professors:
 
