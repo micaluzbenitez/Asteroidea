@@ -6,7 +6,7 @@
 
 # Asteroidea
 
-Description...
+A little starfish is curious to explore the ocean, diving into the depths of an underwater adventure. How deep can it get? What sort of creatures will it come across with?
 
 This is a game being developed by students from <a href="https://www.imagecampus.edu.ar/">Image Campus</a>
 
