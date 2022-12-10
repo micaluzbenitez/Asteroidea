@@ -386,6 +386,7 @@ MonoBehaviour:
   titleText: {fileID: 1594709438}
   stepFolder: {fileID: 647160600}
   menuSceneName: Mobile_Menu
+  gameSceneName: Mobile_Game
 --- !u!1 &186760841
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656525, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_Name
-      value: Return
+      value: Close
       objectReference: {fileID: 0}
     - target: {fileID: 7531533435631336803, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_AnchorMax.x
@@ -895,7 +896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7531533435631336804, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_text
-      value: Return
+      value: Close Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 7531533435631336804, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_fontSize

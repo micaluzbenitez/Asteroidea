@@ -36,7 +36,8 @@ public class TutorialStepSelector : MonoBehaviour
         Destroy(expositor);
         actualStep = step;
         expositor = Instantiate(stepPrefabs[actualStep], transform);
-        expositor.GetComponentInChildren<Entities.Player.PlayerMovement>().SetJoystick(joystick);
+        if(step!=(int)TutorialManager.Step.ENEMIES)
+            expositor.GetComponentInChildren<Entities.Player.PlayerMovement>().SetJoystick(joystick);
     }
 
 }

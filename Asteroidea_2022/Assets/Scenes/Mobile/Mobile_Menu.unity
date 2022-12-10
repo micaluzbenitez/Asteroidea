@@ -903,7 +903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingPanel: {fileID: 815273838}
   versionText: {fileID: 279052633}
-  playButton: {fileID: 348853422}
+  tutorialButton: {fileID: 1078919636}
   gameSceneName: Mobile_Game
   tutorialSceneName: Mobile_Tutorial
   player: {fileID: 563562926}
@@ -2016,11 +2016,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &348853422 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5809047259163656525, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
-  m_PrefabInstance: {fileID: 353108209}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &353108209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2038,15 +2033,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 339ddb0e247b0174c946b619697de844, type: 3}
     - target: {fileID: 5809047259163656520, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_Color.b
-      value: 0.39215687
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656520, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_Color.g
-      value: 0.39215687
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656520, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_Color.r
-      value: 0.39215687
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656520, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_PreserveAspect
@@ -2142,7 +2137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656523, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656523, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_SpriteState.m_PressedSprite
@@ -2178,11 +2173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656523, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadGame
+      value: PlayButtonTap
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656523, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuController, Assembly-CSharp
+      value: Menu.MenuController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5809047259163656523, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -5648,6 +5643,11 @@ PrefabInstance:
 --- !u!224 &1078919635 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5809047259163656522, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
+  m_PrefabInstance: {fileID: 1078919634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1078919636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5809047259163656525, guid: 45bf74727a7fdcd4fadf15157ddb12df, type: 3}
   m_PrefabInstance: {fileID: 1078919634}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1084568373

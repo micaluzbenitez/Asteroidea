@@ -12,7 +12,7 @@ namespace Menu
         [Header("Menu panel")]
         [SerializeField] private CanvasGroup startingPanel = null;
         [SerializeField] private TMP_Text versionText = null;
-        [SerializeField] private GameObject playButton = null;
+        [SerializeField] private GameObject tutorialButton = null;
 
         [Header("Game scene")]
         [SerializeField] private string gameSceneName = default;
@@ -45,7 +45,7 @@ namespace Menu
             actualPanel.blocksRaycasts = true;
             actualPanel.interactable = true;
 
-            EnablePlay();
+            TryPlay();
             SetPlayerSkin();
         }
 
@@ -107,17 +107,14 @@ namespace Menu
             actualPanel = panel;
         }
 
-        private void EnablePlay()
+        private void TryPlay()
         {
             if (!PlayerPrefs.HasKey(seenTutorialKey))
             {
                 PlayerPrefs.SetInt(seenTutorialKey, FALSE_VALUE);
             }
 
-            if (PlayerPrefs.GetInt(seenTutorialKey) == FALSE_VALUE) return;
-
-            playButton.GetComponent<Image>().color = new Color(1,1,1,1);
-            playButton.GetComponent<Button>().interactable = true;
+            tutorialButton.gameObject.SetActive(PlayerPrefs.GetInt(seenTutorialKey) == TRUE_VALUE);
         }
 
 
@@ -126,7 +123,7 @@ namespace Menu
             Application.Quit();
         }
 
-        public void LoadGame()
+        private void LoadGame()
         {
             SceneManager.LoadScene(gameSceneName);
         }
@@ -135,9 +132,31 @@ namespace Menu
             SceneManager.LoadScene(tutorialSceneName);
         }
 
+        public void PlayButtonTap()
+        {
+            if (PlayerPrefs.GetInt(seenTutorialKey) == FALSE_VALUE)
+            {
+                LoadTutorial();
+            }
+            else
+            {
+                LoadGame();
+            }
+        }
+
         public void Exit()
         {
             Application.Quit();
         }
+
+
+        //Cheats
+        /*public void GetPoints(int pointsToGet)
+        {
+
+        }
+        */
+
+
     }
 }

@@ -21,6 +21,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject stepFolder;
     [Header("Change scene")]
     [SerializeField] private string menuSceneName;
+    [SerializeField] private string gameSceneName;
 
     public static Action<int> OnStepChange;
 
@@ -92,8 +93,10 @@ public class TutorialManager : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        string sceneToLoad = "";
+        sceneToLoad = PlayerPrefs.GetInt(Menu.MenuController.seenTutorialKey) == Menu.MenuController.FALSE_VALUE ? gameSceneName : menuSceneName;
         PlayerPrefs.SetInt(Menu.MenuController.seenTutorialKey, Menu.MenuController.TRUE_VALUE);
-        SceneManager.LoadScene(menuSceneName);
+        SceneManager.LoadScene(sceneToLoad);
     }
 
     private void HideStep(int posToHide)
