@@ -17,9 +17,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMP_Text pauseScoreText = null;
     [SerializeField] private TMP_Text pauseCoinsText = null;
 
-    [SerializeField] private GameObject pauseButton = null;
-    [SerializeField] private Sprite pausedSprite = null;
-    [SerializeField] private Sprite resumedSprite = null;
+    [SerializeField] private GameObject pausedButton = null;
+    [SerializeField] private GameObject resumedButton = null;
 
     [Header("Game over panel")]
     [SerializeField] private CanvasGroup gameOverPanel = null;
@@ -76,10 +75,14 @@ public class UIController : MonoBehaviour
     }
     private void PausePanelController(PauseStates state)
     {
+        bool pausedState = state == PauseStates.Paused;
+
+        pausedButton.gameObject.SetActive(pausedState);//Si uno esta vivo, el otro no
+        resumedButton.gameObject.SetActive(!pausedState);
+
         if (state == PauseStates.Resumed)
         {
             HidePanel(pausePanel); //if it is resumed, then, i should show the message
-            pauseButton.GetComponent<Image>().sprite = resumedSprite;
         }
         else
         {
@@ -87,9 +90,10 @@ public class UIController : MonoBehaviour
             pauseDistanceText.text = distanceText.text;
             pauseScoreText.text = scoreText.text;
             ShowPanel(pausePanel);
-            pauseButton.GetComponent<Image>().sprite = pausedSprite;
         }
     }
+
+
     private void GameOverPanelController()
     {
         ShowPanel(gameOverPanel);
