@@ -73,6 +73,11 @@ namespace Toolbox.Pool
             objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
 
+            if(objectToSpawn.name == "Mine")
+            {
+                objectToSpawn.GetComponent<Mine>().SetOriginalPos(position);
+            }
+
             IPooledObject pooledObj = objectToSpawn.GetComponent<IPooledObject>();
 
             if (pooledObj != null) pooledObj.OnObjectSpawn();

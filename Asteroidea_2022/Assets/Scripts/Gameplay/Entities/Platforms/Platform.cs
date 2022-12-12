@@ -131,7 +131,7 @@ namespace Entities.Platforms
         private void SpawnEnemy()
         {
             float rand = UnityEngine.Random.Range(0.0f, 1.0f);
-            Debug.Log("Random: " + rand + "/ SpawnRate: " + PlatformController.ObstacleSpawnRate);
+            //Debug.Log("Random: " + rand + "/ SpawnRate: " + PlatformController.ObstacleSpawnRate);
             if (PlatformController.ObstacleSpawnRate > 1.0f || rand < PlatformController.ObstacleSpawnRate)
             {
                 obstacle.transform.position = new Vector3(transform.position.x, platformRespawnPos.position.y + distanceToObstacle);

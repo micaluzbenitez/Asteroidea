@@ -59,6 +59,10 @@ namespace Entities.Player
             {
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                 PlayerDamage(enemy.GetDamage());
+                if (collision.gameObject.name == "Mine")
+                {
+                    Destroy(collision.gameObject);
+                }
             }
 
             if (collision.gameObject.CompareTag(bulletsTag))
