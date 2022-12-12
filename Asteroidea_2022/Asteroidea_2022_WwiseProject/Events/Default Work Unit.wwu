@@ -19,7 +19,7 @@
 						<Action Name="" ID="{9BD297C7-C478-41B9-B5CC-7BB0D2FDD0D8}" ShortID="913502106">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Crab" ID="{80432542-7BB9-4766-BF4B-BE38C5BA1447}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+									<ObjectRef Name="Cangrejin" ID="{0116A5CB-7598-48D3-B0F0-95999868C4A7}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -30,7 +30,7 @@
 						<Action Name="" ID="{A94511BA-0C60-4449-A7B3-DAA74881A922}" ShortID="1042035308">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="fish_bite" ID="{FBCA7D19-237B-4DAE-BA7F-2C9EDC8BE970}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+									<ObjectRef Name="Pescadin" ID="{5AC68FAD-9C38-405E-990A-D215DDEC16EA}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -72,9 +72,57 @@
 				<Event Name="Jellyfish_Movement" ID="{45DFA0E8-612C-4BCC-AF94-BD89EC557AD6}">
 					<ChildrenList>
 						<Action Name="" ID="{04838272-D96C-47DA-89B5-C2059028A574}" ShortID="484387553">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="medusa" ID="{72C9C794-A407-4954-9AC8-78DF2DFF4D89}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+									<ObjectRef Name="Medusin" ID="{A0289879-1848-4082-B80D-F640AFEA9355}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Coins" ID="{0D4540C2-00C5-4741-A808-D3CC4059D9F9}">
+					<ChildrenList>
+						<Action Name="" ID="{44E916E5-EE21-49BE-BE6B-ABC7FAA3B37E}" ShortID="1053167749">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="coins" ID="{DEA1CFCC-BC66-4EA6-A4B0-70753A9DBF8C}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_pickup" ID="{8ABCF7C9-5584-4C65-8352-E63425531B83}">
+					<ChildrenList>
+						<Action Name="" ID="{8633BF29-FA99-4486-847E-45AF1E920689}" ShortID="1014851557">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pickup" ID="{7A4BDD02-6776-4A44-9FB6-C01F64FCC1E7}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_bubles" ID="{CBF63A53-B705-41F7-B2E7-40D21F094A8A}">
+					<ChildrenList>
+						<Action Name="" ID="{5B291696-E99D-42F1-A368-4780492FBAA2}" ShortID="843164201">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Burbujas" ID="{05F4EE49-6AD5-47BB-9BD8-3D251D6AE9BD}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bombas" ID="{429E52F2-C33C-4A0A-AE03-82E583B74E64}">
+					<ChildrenList>
+						<Action Name="" ID="{8B440D2A-35FE-4855-B7A5-7FC52E1BD3FF}" ShortID="427393991">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bombas" ID="{F06C371C-8A6F-4EF9-B58F-6FE9EFA19E8C}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

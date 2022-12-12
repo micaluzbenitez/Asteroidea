@@ -7,6 +7,7 @@
 					<ChildrenList>
 						<State Name="None" ID="{DAEA48B5-0769-4AD7-B195-3CF6CE6A27D8}"/>
 						<State Name="inGame" ID="{C66CAA8F-2503-450C-A1FF-EDD0A8816DB1}"/>
+						<State Name="outGame" ID="{418F58A5-37DD-41B0-8E55-1FD7EBA6810C}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

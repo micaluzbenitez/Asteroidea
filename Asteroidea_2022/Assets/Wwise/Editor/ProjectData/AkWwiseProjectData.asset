@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: eafd11fdaa55e94d9fbdbc831ea8d0d9
     GuidInternal: 
-    m_lastTime: -8585327238664762432
+    m_lastTime: -8585309060916172604
     List:
     - name: Main_SoundBank_GamePlay
       guid: a947d137cbf91f4b8dc782b485d3534e
@@ -82,6 +82,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: a947d137cbf91f4b8dc782b485d3534e
       Path: SoundBanks\Default Work Unit\Main_SoundBank_GamePlay
+    - name: Menu
+      guid: f7d3d5733227ba4aa375439fe4468040
+      id: 2607556080
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eafd11fdaa55e94d9fbdbc831ea8d0d9
+      - ElementName: Menu
+        ObjectType: 7
+        guid: f7d3d5733227ba4aa375439fe4468040
+      Path: SoundBanks\Default Work Unit\Menu
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 6dd67e438611ed438cd252e93499c946
     GuidInternal: 
-    m_lastTime: -8585321385843229348
+    m_lastTime: -8585307545337636582
     List:
     - name: Jellyfish_Movement
       guid: e8a0df452c61cc4baf94bd89ec557ad6
@@ -113,6 +127,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Bombas
+      guid: f2529e423cc30a4aae0382e583b74e64
+      id: 2443709602
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Play_Bombas
+        ObjectType: 3
+        guid: f2529e423cc30a4aae0382e583b74e64
+      Path: Events\Default Work Unit\Play_Bombas
+      maxAttenuation: 0
+      maxDuration: 3.099264
+      minDuration: 2.056597
+    - name: Play_bubles
+      guid: 533af6cb05b7f741b2e740d21f094a8a
+      id: 4115595731
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Play_bubles
+        ObjectType: 3
+        guid: 533af6cb05b7f741b2e740d21f094a8a
+      Path: Events\Default Work Unit\Play_bubles
+      maxAttenuation: 0
+      maxDuration: 0.798743
+      minDuration: 0.526974
     - name: Play_cascarudo
       guid: ab05bded5e8af443a3a71949d9306775
       id: 660528677
@@ -130,6 +178,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Coins
+      guid: c240450dc5004147a808d3cc4059d9f9
+      id: 3115138860
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Play_Coins
+        ObjectType: 3
+        guid: c240450dc5004147a808d3cc4059d9f9
+      Path: Events\Default Work Unit\Play_Coins
+      maxAttenuation: 0
+      maxDuration: 1.84626
+      minDuration: 1.84626
     - name: Play_Damage
       guid: 1bf462bb83c9b64692f8cf38f2609dcc
       id: 784302017
@@ -162,8 +227,8 @@ MonoBehaviour:
         guid: c086e013e0b66647a88efc90d7db479e
       Path: Events\Default Work Unit\Play_fish_bite
       maxAttenuation: 0
-      maxDuration: 0.026386
-      minDuration: 0.018657
+      maxDuration: -1
+      minDuration: -1
     - name: Play_impact_plataform
       guid: 173cbb62f910e44cbbb2d95c7cb7a0b1
       id: 3795799651
@@ -198,6 +263,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 50
       minDuration: 50
+    - name: Play_pickup
+      guid: c9f7bc8a8455654c8352e63425531b83
+      id: 3860455926
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Play_pickup
+        ObjectType: 3
+        guid: c9f7bc8a8455654c8352e63425531b83
+      Path: Events\Default Work Unit\Play_pickup
+      maxAttenuation: 0
+      maxDuration: 1.465378
+      minDuration: 1.465378
     - name: Starfish_Movements
       guid: 8510ebad6cad3f4ab237c3d6ed3e3621
       id: 1875812120
@@ -227,8 +309,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 7b1ec2c55a046a48adba9793bdaba557
     GuidInternal: 
-    m_lastTime: -8585331524321510904
-    List: []
+    m_lastTime: -8585307294601325746
+    List:
+    - name: SFXvolume
+      guid: 69e11e385851b14b8d9b38126467d74d
+      id: 988953028
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7b1ec2c55a046a48adba9793bdaba557
+      - ElementName: SFXvolume
+        ObjectType: 13
+        guid: 69e11e385851b14b8d9b38126467d74d
+      Path: Game Parameters\Default Work Unit\SFXvolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -241,7 +337,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 02d9c217b79b764096e154f91779a987
     GuidInternal: 
-    m_lastTime: -8585321385843308855
+    m_lastTime: -8585321358315476040
     List:
     - name: Gameplay_Objets
       guid: 89b8b0b85faf554cba3ba8ee6fb55311
@@ -290,6 +386,22 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: b548eada6907d74ab1953cf6ce6a27d8
+      - name: outGame
+        guid: a5588f41dd37b0418e551fd7eba6810c
+        id: 2467320441
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 02d9c217b79b764096e154f91779a987
+        - ElementName: Gameplay_Objets
+          ObjectType: 9
+          guid: 89b8b0b85faf554cba3ba8ee6fb55311
+        - ElementName: outGame
+          ObjectType: 8
+          guid: a5588f41dd37b0418e551fd7eba6810c
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -305,8 +417,58 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 127740e46f98ca40889a3161b9a9763d
     GuidInternal: 
-    m_lastTime: -8585331524321431109
-    List: []
+    m_lastTime: -8585310851333503876
+    List:
+    - name: Enemies
+      guid: 870dde24f7f95a418682da3e0cb282c6
+      id: 2242381963
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 127740e46f98ca40889a3161b9a9763d
+      - ElementName: Enemies
+        ObjectType: 11
+        guid: 870dde24f7f95a418682da3e0cb282c6
+      Path: Switches\Default Work Unit\Enemies
+      values:
+      - name: InGame
+        guid: 39e3422d9222d94cbd936f0d5917602f
+        id: 984691642
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 127740e46f98ca40889a3161b9a9763d
+        - ElementName: Enemies
+          ObjectType: 11
+          guid: 870dde24f7f95a418682da3e0cb282c6
+        - ElementName: InGame
+          ObjectType: 10
+          guid: 39e3422d9222d94cbd936f0d5917602f
+      - name: OutGame
+        guid: 5d133cd4a22fb6499075a452ac691ecc
+        id: 2467320441
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 127740e46f98ca40889a3161b9a9763d
+        - ElementName: Enemies
+          ObjectType: 11
+          guid: 870dde24f7f95a418682da3e0cb282c6
+        - ElementName: OutGame
+          ObjectType: 10
+          guid: 5d133cd4a22fb6499075a452ac691ecc
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -322,7 +484,7 @@ MonoBehaviour:
     m_lastTime: -8585331524321431109
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 02000000050000000600000007000000090000000a0000000c0000000e0000000f00000010000000110000002201000023010000
+  ExpandedWaapiItemIds: 0100000002000000050000000600000007000000090000000a0000000c0000000e0000000f000000100000001100000015000000160000001700000018000000190000001a0000001b0000001c0000001e0000001f0000009200000093000000e5000000e6000000e70000002201000023010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -8,7 +8,7 @@ public class AkTriggerExit : AkTriggerBase
 {
 	public UnityEngine.GameObject triggerObject = null;
 
-	private void OnTriggerExit(UnityEngine.Collider in_other)
+	private void OnTriggerExit2D(UnityEngine.Collider2D in_other)
 	{
 		if (triggerDelegate != null && (triggerObject == null || triggerObject == in_other.gameObject))
 			triggerDelegate(in_other.gameObject);
