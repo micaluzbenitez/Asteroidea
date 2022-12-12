@@ -88,7 +88,6 @@ namespace Managers
         #endregion
 
         #region PRIVATE VARIABLES
-        private bool gameOver = false;
         private bool skippedTimer = false;
         private bool gameStarted = false;
 
@@ -152,7 +151,6 @@ namespace Managers
                 if (mine) mine.SetTarget(playerStats.transform);
             }
 
-            gameOver = false;
             GameRunning = true;
 
             PauseSystem.Pause();
@@ -333,7 +331,6 @@ namespace Managers
         {
             pauseButton.gameObject.SetActive(false);
             uiGame.SetLifeBarValue(0);
-            gameOver = true;
             GameRunning = false;
             StopCoroutine(SpeedAugment());
             OnGameOver?.Invoke();
