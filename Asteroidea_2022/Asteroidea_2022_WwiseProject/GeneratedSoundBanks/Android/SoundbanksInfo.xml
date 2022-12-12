@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ProjectRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1825057083" Language="SFX" Hash="1861665098">
+		<SoundBank Id="1825057083" Language="SFX" Hash="1720441547">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_GamePlay</ObjectPath>
 			<ShortName>Main_SoundBank_GamePlay</ShortName>
 			<Path>Main_SoundBank_GamePlay.bnk</Path>
@@ -95,6 +95,14 @@
 						<File Id="540095840" Language="SFX">
 							<ShortName>daño01.wav</ShortName>
 							<Path>SFX\daño01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1172822028" Name="Play_death" ObjectPath="\Events\Default Work Unit\Play_death" DurationType="OneShot" DurationMin="3.154898" DurationMax="3.154898">
+					<IncludedMemoryFiles>
+						<File Id="794939064" Language="SFX">
+							<ShortName>death.wav</ShortName>
+							<Path>SFX\death_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
