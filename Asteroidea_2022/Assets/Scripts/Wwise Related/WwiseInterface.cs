@@ -10,6 +10,7 @@ public class WwiseInterface
         Player_Movement,
         Player_Damage,
         Button_Touch,
+        Bomb_Explode,
         Hit_Pick_Up,
         Hit_Jelly,
         Hit_Crab,
@@ -49,10 +50,14 @@ public class WwiseInterface
             case WwiseEvents.Player_Movement:
                 eventText = "Starfish_Movements";
                 break;
+            case WwiseEvents.Bomb_Explode:
+                eventText = "Play_Bombas";
+                break;
             default:
                 eventText = "Incorrect Index";
                 break;
         }
+
         //If (No se esta reproduciendo "eventText")
         AkSoundEngine.PostEvent(eventText, obj);
 
