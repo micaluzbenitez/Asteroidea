@@ -11,15 +11,180 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1915100439">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3659513767">
-			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
-			<ShortName>Main_SoundBank</ShortName>
-			<Path>Main_SoundBank.bnk</Path>
+		<SoundBank Id="1825057083" Language="SFX" Hash="1861665098">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_GamePlay</ObjectPath>
+			<ShortName>Main_SoundBank_GamePlay</ShortName>
+			<Path>Main_SoundBank_GamePlay.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3431618819" Name="Jellyfish_Movement" ObjectPath="\Events\Default Work Unit\Jellyfish_Movement" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="869724118" Language="SFX">
+							<ShortName>medusa.wav</ShortName>
+							<Path>SFX\medusa_781FFAD0.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{2D42E339-2292-4CD9-BD93-6F0D5917602F}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{2D42E339-2292-4CD9-BD93-6F0D5917602F}">
+							<Media>
+								<File Id="869724118"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2443709602" Name="Play_Bombas" ObjectPath="\Events\Default Work Unit\Play_Bombas" DurationType="OneShot" DurationMin="2.056597" DurationMax="3.099264">
+					<IncludedMemoryFiles>
+						<File Id="673283373" Language="SFX">
+							<ShortName>bomb.wav</ShortName>
+							<Path>SFX\bomb_21951ACA.wem</Path>
+						</File>
+						<File Id="942505313" Language="SFX">
+							<ShortName>bomb.wav</ShortName>
+							<Path>SFX\bomb_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4115595731" Name="Play_bubles" ObjectPath="\Events\Default Work Unit\Play_bubles" DurationType="OneShot" DurationMin="0.526974" DurationMax="0.798743">
+					<IncludedMemoryFiles>
+						<File Id="980605193" Language="SFX">
+							<ShortName>bubles.wav</ShortName>
+							<Path>SFX\bubles_875CEA0F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="660528677" Name="Play_cascarudo" ObjectPath="\Events\Default Work Unit\Play_cascarudo" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="158985340" Language="SFX">
+							<ShortName>cascarudo.wav</ShortName>
+							<Path>SFX\cascarudo_98EAD6B3.wem</Path>
+						</File>
+						<File Id="940296832" Language="SFX">
+							<ShortName>cascarudo.wav</ShortName>
+							<Path>SFX\cascarudo_FBBDE3A5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{2D42E339-2292-4CD9-BD93-6F0D5917602F}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{2D42E339-2292-4CD9-BD93-6F0D5917602F}">
+							<Media>
+								<File Id="158985340"/>
+								<File Id="940296832"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3115138860" Name="Play_Coins" ObjectPath="\Events\Default Work Unit\Play_Coins" DurationType="OneShot" DurationMin="1.84626" DurationMax="1.84626">
+					<IncludedMemoryFiles>
+						<File Id="75077757" Language="SFX">
+							<ShortName>pick_coin.wav</ShortName>
+							<Path>SFX\pick_coin_93714AB8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="784302017" Name="Play_Damage" ObjectPath="\Events\Default Work Unit\Play_Damage" DurationType="OneShot" DurationMin="0.067009" DurationMax="0.1074">
+					<IncludedMemoryFiles>
+						<File Id="157275980" Language="SFX">
+							<ShortName>daño00.wav</ShortName>
+							<Path>SFX\daño00_10C4C929.wem</Path>
+						</File>
+						<File Id="540095840" Language="SFX">
+							<ShortName>daño01.wav</ShortName>
+							<Path>SFX\daño01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1866806893" Name="Play_fish_bite" ObjectPath="\Events\Default Work Unit\Play_fish_bite" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="72936469" Language="SFX">
+							<ShortName>fish_bite .wav</ShortName>
+							<Path>SFX\fish_bite _10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{2D42E339-2292-4CD9-BD93-6F0D5917602F}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{2D42E339-2292-4CD9-BD93-6F0D5917602F}">
+							<Media>
+								<File Id="72936469"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3795799651" Name="Play_impact_plataform" ObjectPath="\Events\Default Work Unit\Play_impact_plataform" DurationType="OneShot" DurationMin="0.035446" DurationMax="0.084305">
+					<IncludedMemoryFiles>
+						<File Id="429896064" Language="SFX">
+							<ShortName>impact_plataform.wav</ShortName>
+							<Path>SFX\impact_plataform_4F72F85B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3635214037" Name="Play_Juego_Estrella_Musica_Tema1_1" ObjectPath="\Events\Default Work Unit\Play_Juego_Estrella_Musica_Tema1_1" DurationType="OneShot" DurationMin="50." DurationMax="50.">
+					<IncludedMemoryFiles>
+						<File Id="532153880" Language="SFX">
+							<ShortName>Juego Estrella_Musica_Tema1.1.wav</ShortName>
+							<Path>SFX\Juego Estrella_Musica_Tema1.1_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3860455926" Name="Play_pickup" ObjectPath="\Events\Default Work Unit\Play_pickup" DurationType="OneShot" DurationMin="1.465378" DurationMax="1.465378">
+					<IncludedMemoryFiles>
+						<File Id="136648624" Language="SFX">
+							<ShortName>pick_coin.wav</ShortName>
+							<Path>SFX\pick_coin_74EC0AC9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1875812120" Name="Starfish_Movements" ObjectPath="\Events\Default Work Unit\Starfish_Movements" DurationType="OneShot" DurationMin="0.094827" DurationMax="0.188731">
+					<IncludedMemoryFiles>
+						<File Id="455091364" Language="SFX">
+							<ShortName>starfish14.wav</ShortName>
+							<Path>SFX\starfish14_10C4C929.wem</Path>
+						</File>
+						<File Id="762603482" Language="SFX">
+							<ShortName>starfish12.wav</ShortName>
+							<Path>SFX\starfish12_10C4C929.wem</Path>
+						</File>
+						<File Id="842587924" Language="SFX">
+							<ShortName>starfish13.wav</ShortName>
+							<Path>SFX\starfish13_10C4C929.wem</Path>
+						</File>
+						<File Id="870338947" Language="SFX">
+							<ShortName>starfish10.wav</ShortName>
+							<Path>SFX\starfish10_10C4C929.wem</Path>
+						</File>
+						<File Id="900548622" Language="SFX">
+							<ShortName>starfish11.wav</ShortName>
+							<Path>SFX\starfish11_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="532153880" Language="SFX">
+					<ShortName>Juego Estrella_Musica_Tema1.1.wav</ShortName>
+					<Path>SFX\Juego Estrella_Musica_Tema1.1_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXvolume" ObjectPath="\Game Parameters\Default Work Unit\SFXvolume"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="2242381963" Name="Enemies" ObjectPath="\Switches\Default Work Unit\Enemies" GUID="{24DE0D87-F9F7-415A-8682-DA3E0CB282C6}">
+					<Switches>
+						<Switch Id="984691642" Name="InGame" ObjectPath="\Switches\Default Work Unit\Enemies\InGame" GUID="{2D42E339-2292-4CD9-BD93-6F0D5917602F}"/>
+						<Switch Id="2467320441" Name="OutGame" ObjectPath="\Switches\Default Work Unit\Enemies\OutGame" GUID="{D43C135D-2FA2-49B6-9075-A452AC691ECC}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="2607556080" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Menu</ObjectPath>
+			<ShortName>Menu</ShortName>
+			<Path>Menu.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

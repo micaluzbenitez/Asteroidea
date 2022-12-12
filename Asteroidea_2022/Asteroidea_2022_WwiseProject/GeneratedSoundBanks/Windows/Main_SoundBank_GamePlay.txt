@@ -1,0 +1,48 @@
+Event	ID	Name			Wwise Object Path	Notes
+	660528677	Play_cascarudo			\Default Work Unit\Play_cascarudo	
+	784302017	Play_Damage			\Default Work Unit\Play_Damage	
+	1866806893	Play_fish_bite			\Default Work Unit\Play_fish_bite	
+	1875812120	Starfish_Movements			\Default Work Unit\Starfish_Movements	
+	2443709602	Play_Bombas			\Default Work Unit\Play_Bombas	
+	3115138860	Play_Coins			\Default Work Unit\Play_Coins	
+	3431618819	Jellyfish_Movement			\Default Work Unit\Jellyfish_Movement	
+	3635214037	Play_Juego_Estrella_Musica_Tema1_1			\Default Work Unit\Play_Juego_Estrella_Musica_Tema1_1	
+	3795799651	Play_impact_plataform			\Default Work Unit\Play_impact_plataform	
+	3860455926	Play_pickup			\Default Work Unit\Play_pickup	
+	4115595731	Play_bubles			\Default Work Unit\Play_bubles	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2242381963	Enemies			\Default Work Unit\Enemies	
+
+Switch	ID	Name	Switch Group			Notes
+	984691642	InGame	Enemies			
+	2467320441	OutGame	Enemies			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	988953028	SFXvolume			\Default Work Unit\SFXvolume	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	123306068	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Medusin\Silence\Wwise Silence	
+	808477140	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Pescadin\Silence\Silence	
+	937468941	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Cangrejin\Silence\Wwise Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	72936469	fish_bite	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\fish_bite _10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pescadin\Fish\fish_bite		2194
+	75077757	coins	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\pick_coin_93714AB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\coins		177304
+	136648624	pickup	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\pick_coin_74EC0AC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\pickup		177304
+	157275980	daño00	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\daño00_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Damage\daño00		7714
+	158985340	cascarudo	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\cascarudo_98EAD6B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cangrejin\Crab\cascarudo		14534
+	429896064	impact_plataform_01	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\impact_plataform_4F72F85B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Plataform\impact_plataform_01		5466
+	455091364	starfish14	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\starfish14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Starfish\Player\starfish14		12338
+	532153880	Juego Estrella_Musica_Tema1_1	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\Juego Estrella_Musica_Tema1.1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Juego Estrella_Musica_Tema1_1\Juego Estrella_Musica_Tema1_1		9600064
+	540095840	daño01	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\daño01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Damage\daño01		8734
+	673283373	bomb_01	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\bomb_21951ACA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bombas\bomb_01		192242
+	762603482	starfish12	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\starfish12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Starfish\Player\starfish12		12606
+	842587924	starfish13	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\starfish13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Starfish\Player\starfish13		9452
+	869724118	medusa	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\medusa_781FFAD0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Medusin\medusa		314804
+	870338947	starfish10	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\starfish10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Starfish\Player\starfish10		14894
+	900548622	starfish11	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\starfish11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Starfish\Player\starfish11		13058
+	940296832	cascarudo_01	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\cascarudo_FBBDE3A5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cangrejin\Crab\cascarudo_01		14534
+	942505313	bomb	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\bomb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bombas\bomb		192242
+	980605193	bubles	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Windows\SFX\bubles_875CEA0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Burbujas\bubles		63802
+

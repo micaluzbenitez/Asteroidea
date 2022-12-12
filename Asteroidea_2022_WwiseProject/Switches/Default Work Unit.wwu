@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E4407712-986F-40CA-889A-3161B9A9763D}" SchemaVersion="103">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{E4407712-986F-40CA-889A-3161B9A9763D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="MX" ID="{395028E5-6478-44D7-90E8-21531FD4CCFE}">
+					<ChildrenList>
+						<Switch Name="Tema1" ID="{B567A6C5-9038-4061-937B-AE92DB5C2784}"/>
+						<Switch Name="Tema2" ID="{CCF2C60F-B72C-4058-A954-296E2D8CF184}"/>
+						<Switch Name="Tema3" ID="{A3D7195A-A945-4F08-8337-A17634E634BC}"/>
+						<Switch Name="Menu" ID="{5BCACF2F-EA8A-4EF4-9AE9-61970CEB76BF}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

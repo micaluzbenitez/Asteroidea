@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}" SchemaVersion="103">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="Juego Estrella_Musica_Tema1_1" ID="{95BB98D0-32B1-4714-92A8-E9D1082A0F70}" ShortID="439382998">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="50244.6183953033"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AA027EC3-DD64-4F1C-8837-AA4A2843A0CD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{71B9EA2B-C03D-47B5-B40D-CF678A15D3E3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Juego Estrella_Musica_Tema1_1" ID="{FB4C908C-9191-457E-8B6B-D5C8EEDDCE28}" ShortID="108170299">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{71B9EA2B-C03D-47B5-B40D-CF678A15D3E3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Juego Estrella_Musica_Tema1_1" ID="{0DFAB3FD-55F3-4F9A-9F87-7160AF427280}">
+									<Language>SFX</Language>
+									<AudioFile>Juego Estrella_Musica_Tema1.1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="532153880"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{9B2CE312-07F1-4835-B6D4-18F02C942B4F}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists>
+								<ObjectList Name="Sequences">
+									<Reference>
+										<Local>
+											<MusicTrackSequence Name="" ID="{C0D4F2DF-A971-479A-9757-A0956C6961EB}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<Reference>
+															<Local>
+																<MusicClip Name="Juego Estrella_Musica_Tema1_1" ID="{25BF0CCF-9FFD-4F62-9E98-CF2266F9169D}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="50000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Juego Estrella_Musica_Tema1_1" ID="{0DFAB3FD-55F3-4F9A-9F87-7160AF427280}"/>
+																</MusicClip>
+															</Local>
+														</Reference>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicTrack>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Cues">
+							<Reference>
+								<Local>
+									<MusicCue Name="Entry Cue" ID="{E375D0A5-022D-42CA-B58B-5A1E957B8A51}">
+										<PropertyList>
+											<Property Name="TimeMs" Type="Real64" Value="1499.50446363024"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="Exit Cue" ID="{9984107A-EA95-438E-96DD-3086D95AFC27}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="50000"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSegment>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
