@@ -57,6 +57,7 @@ namespace Entities.Player
         {
             if (collision.gameObject.CompareTag(enemiesTag))
             {
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage, this.gameObject);
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                 PlayerDamage(enemy.GetDamage());
                 if (collision.gameObject.name == "Mine")
@@ -67,6 +68,7 @@ namespace Entities.Player
 
             if (collision.gameObject.CompareTag(bulletsTag))
             {
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage, this.gameObject);
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
                 PlayerDamage(bullet.Damage);
             }
