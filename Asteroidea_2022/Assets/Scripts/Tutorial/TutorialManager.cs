@@ -33,7 +33,7 @@ public class TutorialManager : MonoBehaviour
 
     private void Awake()
     {
-        stepText.text = actualStep.ToString();
+        stepText.text = (actualStep + 1).ToString();
         titleText.text = titleArray[(int)Step.LORE];
     }
     private void Start()
@@ -65,7 +65,7 @@ public class TutorialManager : MonoBehaviour
             prevStep.SetActive(true);
         }
         ShowStep(actualStep);
-        stepText.text = actualStep.ToString();
+        stepText.text = (actualStep+1).ToString();
 
         titleText.text = titleArray[actualStep];
 
@@ -84,7 +84,7 @@ public class TutorialManager : MonoBehaviour
             nextStep.SetActive(true);
         }
         ShowStep(actualStep);
-        stepText.text = actualStep.ToString();
+        stepText.text = (actualStep + 1).ToString();
 
         titleText.text = titleArray[actualStep];
 
