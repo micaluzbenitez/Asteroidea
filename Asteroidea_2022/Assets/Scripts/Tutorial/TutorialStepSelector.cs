@@ -28,6 +28,7 @@ public class TutorialStepSelector : MonoBehaviour
 
     private void Start()
     {
+        actualStep = (int)initialStep;
         expositor = Instantiate(stepPrefabs[actualStep], transform);
     }
 
