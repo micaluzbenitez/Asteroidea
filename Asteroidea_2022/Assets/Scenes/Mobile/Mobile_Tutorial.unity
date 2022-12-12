@@ -4398,6 +4398,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5809047257795986248}
+        m_TargetAssemblyTypeName: ButtonTouch, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 134947045}
         m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
         m_MethodName: NextStep
@@ -4460,6 +4472,7 @@ GameObject:
   - component: {fileID: 5809047257795986243}
   - component: {fileID: 5809047257795986242}
   - component: {fileID: 5809047257795986241}
+  - component: {fileID: 5809047257795986248}
   m_Layer: 5
   m_Name: Next Step
   m_TagString: Untagged
@@ -4467,6 +4480,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5809047257795986248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809047257795986247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e1686529c7a64c8ef42ff9cfac259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &5809047258811072952
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4549,6 +4574,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5809047258811072957}
+        m_TargetAssemblyTypeName: ButtonTouch, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 134947045}
         m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
         m_MethodName: ReturnToMenu
@@ -4593,6 +4630,7 @@ GameObject:
   - component: {fileID: 5809047258811072952}
   - component: {fileID: 5809047258811072953}
   - component: {fileID: 5809047258811072954}
+  - component: {fileID: 5809047258811072957}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -4600,6 +4638,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5809047258811072957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809047258811072956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e1686529c7a64c8ef42ff9cfac259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &5809047258879902568
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4682,6 +4732,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5809047258879902573}
+        m_TargetAssemblyTypeName: ButtonTouch, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 134947045}
         m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
         m_MethodName: PrevStep
@@ -4726,6 +4788,7 @@ GameObject:
   - component: {fileID: 5809047258879902568}
   - component: {fileID: 5809047258879902569}
   - component: {fileID: 5809047258879902570}
+  - component: {fileID: 5809047258879902573}
   m_Layer: 5
   m_Name: Prev Step
   m_TagString: Untagged
@@ -4733,3 +4796,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &5809047258879902573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809047258879902572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e1686529c7a64c8ef42ff9cfac259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

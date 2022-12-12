@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 59829437}
   - component: {fileID: 59829436}
   - component: {fileID: 59829435}
+  - component: {fileID: 59829438}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -478,6 +479,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 59829438}
+        m_TargetAssemblyTypeName: ButtonTouch, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6030398545489251168}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: BackToMenu
@@ -528,6 +541,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59829433}
   m_CullTransparentMesh: 1
+--- !u!114 &59829438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59829433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e1686529c7a64c8ef42ff9cfac259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &109821110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4718,6 +4743,7 @@ GameObject:
   - component: {fileID: 1138354813}
   - component: {fileID: 1138354812}
   - component: {fileID: 1138354811}
+  - component: {fileID: 1138354814}
   m_Layer: 5
   m_Name: Replay Button
   m_TagString: Untagged
@@ -4789,6 +4815,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1138354814}
+        m_TargetAssemblyTypeName: ButtonTouch, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6030398545489251168}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: Replay
@@ -4839,6 +4877,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138354809}
   m_CullTransparentMesh: 1
+--- !u!114 &1138354814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138354809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e1686529c7a64c8ef42ff9cfac259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1172327298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7851,6 +7901,7 @@ GameObject:
   - component: {fileID: 1628583387}
   - component: {fileID: 1628583386}
   - component: {fileID: 1628583385}
+  - component: {fileID: 1628583388}
   m_Layer: 5
   m_Name: Resume Button
   m_TagString: Untagged
@@ -7922,6 +7973,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1628583388}
+        m_TargetAssemblyTypeName: ButtonTouch, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 699450229}
         m_TargetAssemblyTypeName: PauseSystem, Assembly-CSharp
         m_MethodName: PauseControl
@@ -7984,6 +8047,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628583383}
   m_CullTransparentMesh: 1
+--- !u!114 &1628583388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628583383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e1686529c7a64c8ef42ff9cfac259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1636322289
 GameObject:
   m_ObjectHideFlags: 0
@@ -9367,6 +9442,7 @@ GameObject:
   - component: {fileID: 1977320400}
   - component: {fileID: 1977320399}
   - component: {fileID: 1977320398}
+  - component: {fileID: 1977320401}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -9438,6 +9514,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1977320401}
+        m_TargetAssemblyTypeName: ButtonTouch, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6030398545489251168}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: BackToMenu
@@ -9488,6 +9576,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977320396}
   m_CullTransparentMesh: 1
+--- !u!114 &1977320401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977320396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e1686529c7a64c8ef42ff9cfac259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1995730859
 GameObject:
   m_ObjectHideFlags: 0
@@ -10398,6 +10498,7 @@ GameObject:
   - component: {fileID: 2141422715}
   - component: {fileID: 2141422714}
   - component: {fileID: 2141422713}
+  - component: {fileID: 2141422716}
   m_Layer: 5
   m_Name: Replay Button
   m_TagString: Untagged
@@ -10469,6 +10570,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2141422716}
+        m_TargetAssemblyTypeName: ButtonTouch, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6030398545489251168}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: Replay
@@ -10519,6 +10632,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141422711}
   m_CullTransparentMesh: 1
+--- !u!114 &2141422716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141422711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e1686529c7a64c8ef42ff9cfac259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1983888107028049045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10810,6 +10935,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5809047258690932688}
+        m_TargetAssemblyTypeName: ButtonTouch, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 699450229}
         m_TargetAssemblyTypeName: PauseSystem, Assembly-CSharp
         m_MethodName: PauseControl
@@ -10884,6 +11021,7 @@ GameObject:
   - component: {fileID: 5809047258690932683}
   - component: {fileID: 5809047258690932682}
   - component: {fileID: 5809047258690932681}
+  - component: {fileID: 5809047258690932688}
   m_Layer: 5
   m_Name: Pause Button
   m_TagString: Untagged
@@ -10891,6 +11029,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &5809047258690932688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809047258690932687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e1686529c7a64c8ef42ff9cfac259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!223 &5948567868104725490
 Canvas:
   m_ObjectHideFlags: 0
