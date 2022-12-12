@@ -46,7 +46,12 @@ namespace Entities.Player
                 /// Move
                 horizontalInput = joystick.Horizontal;
                 /// Jump
-                jumpPressed = joystick.Vertical >= 0.97f;
+                if(joystick.Vertical >= 0.94f)
+                {
+                    jumpPressed = true;
+                    AkSoundEngine.PostEvent("jumpEvent", this.gameObject);
+                }
+                
             }
             
             if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WebGLPlayer || Application.platform == RuntimePlatform.WindowsEditor)
@@ -54,7 +59,12 @@ namespace Entities.Player
                 /// Move
                 horizontalInput = Input.GetAxisRaw("Horizontal");
                 /// Jump
-                if (Input.GetButtonDown("Jump")) jumpPressed = true;
+                if (Input.GetButtonDown("Jump"))
+                {
+                    jumpPressed = true;
+                    AkSoundEngine.PostEvent("jumpEvent", this.gameObject);
+                }
+                
             }
         }
 

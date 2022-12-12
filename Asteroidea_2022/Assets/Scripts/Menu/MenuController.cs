@@ -22,11 +22,19 @@ namespace Menu
         [SerializeField] private Image player = null;
         [SerializeField] private Skin[] skins = null;
 
+        [Header("Shop")]
+        [SerializeField] private string shopPanelName = null;
+        [SerializeField] private TMP_Text coins = null;
+
+
         private CanvasGroup actualPanel = null;
 
         public static string seenTutorialKey = "tutorial";
         public static int TRUE_VALUE = 1;
         public static int FALSE_VALUE = 0;
+        private string coinsKey = "Coins";
+
+        private static int actualShopCoins = 0;
 
         private void Awake()
         {
@@ -47,6 +55,7 @@ namespace Menu
 
             TryPlay();
             SetPlayerSkin();
+            actualShopCoins = PlayerPrefs.GetInt("Coins");
         }
 
         private void Start()
@@ -69,9 +78,16 @@ namespace Menu
                 }
             }
         }
-
+        public void UpdateCurrentCoins()
+        {
+            coins.text = PlayerPrefs.GetInt("Coins").ToString();
+        }
         public void StartPanel(CanvasGroup newPanel)
         {
+            if(newPanel.gameObject.name.Equals(shopPanelName))
+            {
+                UpdateCurrentCoins();
+            }
             StartCoroutine(PanelChange(newPanel));
         }
 
@@ -149,14 +165,18 @@ namespace Menu
             Application.Quit();
         }
 
+        public static void UpdateShopCoinsText(int newCoinsAmount) => actualShopCoins = newCoinsAmount;
 
         //Cheats
-        /*public void GetPoints(int pointsToGet)
+        public void CheatGetCoins(int pointsToGet)
         {
-
+            PlayerPrefs.SetInt(coinsKey, PlayerPrefs.GetInt(coinsKey) + pointsToGet);
         }
-        */
-
+        
+        public void CheatResetCoins()
+        {
+            PlayerPrefs.SetInt(coinsKey, 0);
+        }
 
     }
 }
