@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Entities.Enemies
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Enemy : MonoBehaviour
     {
         [Header("Enemy data"), Tooltip("Damage dealt to the player if touched")]
