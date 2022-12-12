@@ -25,7 +25,6 @@ namespace Entities.Platforms
         [SerializeField] private float breakableSpeed = 0;
         [SerializeField] private GameObject breakableModel = null;
         [SerializeField] private Animator[] breakableAnimator = null;
-        [SerializeField] private float bSpawnRate = 0.07f;
 
         [Header("Platform Respawn")]
         [SerializeField] private Transform platformRespawnPos;
