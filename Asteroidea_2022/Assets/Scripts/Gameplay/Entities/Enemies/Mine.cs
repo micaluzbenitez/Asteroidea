@@ -12,15 +12,16 @@ public class Mine : Entities.Enemies.Enemy
         Count
     }
 
+    [Header("Mine Settings")]
     [SerializeField] private float movementAmount = 1;
     [SerializeField] private float idleSpeed = 1;
-    [SerializeField]private Vector3 originalPos;
+
+    [Header("Original Position")]
+    [SerializeField] private Vector3 originalPos = Vector3.zero;
+    [SerializeField] private bool useOriginalPosAsInitialPos = true;
 
     [Header("Reset trigger")]
     [SerializeField] private string triggerTagName = "";
-
-    [Header("Tutorial")]
-    [SerializeField] private bool onTutorial = false;
 
     private Vector3 initialPos;
     private Vector3 actualPos;
@@ -30,7 +31,16 @@ public class Mine : Entities.Enemies.Enemy
 
     private void Start()
     {
-        transform.position = originalPos;
+
+        if (useOriginalPosAsInitialPos)
+        {
+            transform.position = originalPos;
+        }
+        else
+        {
+            originalPos = transform.position;
+        }
+
         initialPos = originalPos;
         //rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
         movementCoroutine = MoveMine(initialPos);
@@ -98,9 +108,9 @@ public class Mine : Entities.Enemies.Enemy
             yield return null;
         }
         Debug.LogWarning("Termine la corrutina");
-        actualPos = Vector3.Lerp(initialPos, targetPos, 1);
-        transform.position = actualPos;
-        initialPos = actualPos;
+        actualPos = targetPos;
+        transform.position = targetPos;
+        initialPos = targetPos;
 
         StartCoroutine(MoveMine(initialPos));
     }
@@ -114,13 +124,9 @@ public class Mine : Entities.Enemies.Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.CompareTag(triggerTagName))
         {
-            if (!onTutorial)
-            {
-                gameObject.SetActive(false);
-            }
+            gameObject.SetActive(false);
         }
     }
 

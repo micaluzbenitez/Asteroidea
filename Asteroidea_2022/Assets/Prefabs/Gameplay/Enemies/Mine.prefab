@@ -123,9 +123,10 @@ MonoBehaviour:
   damage: 10
   speedX: 0
   speedY: 0
-  movementAmount: 0.2
-  idleSpeed: 1.2
+  movementAmount: 0.07
+  idleSpeed: 0.9
   originalPos: {x: 0, y: 0, z: 0}
+  useOriginalPosAsInitialPos: 0
   triggerTagName: ResetZone
   onTutorial: 0
 --- !u!58 &-1390890374785535754
