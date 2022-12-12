@@ -49,7 +49,6 @@ namespace Entities.Player
                 if(joystick.Vertical >= 0.94f)
                 {
                     jumpPressed = true;
-                    AkSoundEngine.PostEvent("jumpEvent", this.gameObject);
                 }
                 
             }
@@ -62,7 +61,6 @@ namespace Entities.Player
                 if (Input.GetButtonDown("Jump"))
                 {
                     jumpPressed = true;
-                    AkSoundEngine.PostEvent("jumpEvent", this.gameObject);
                 }
                 
             }
