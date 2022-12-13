@@ -23,6 +23,7 @@ namespace AK
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_FISH_BITE = 1866806893U;
         static const AkUniqueID PLAY_IMPACT_PLATAFORM = 3795799651U;
+        static const AkUniqueID PLAY_JELLYFISH_IMPACT = 796436477U;
         static const AkUniqueID PLAY_JUEGO_ESTRELLA_MUSICA_TEMA1_1 = 3635214037U;
         static const AkUniqueID PLAY_PICKUP = 3860455926U;
         static const AkUniqueID STARFISH_MOVEMENTS = 1875812120U;

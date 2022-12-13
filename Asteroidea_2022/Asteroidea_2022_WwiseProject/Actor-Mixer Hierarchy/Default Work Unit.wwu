@@ -376,6 +376,9 @@
 									</ModifierList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{D7AB8301-BDCE-4F09-BD6F-96F9DD522CDD}" ShortID="33680167">
 											<ReferenceList>
@@ -770,6 +773,9 @@
 						</Property>
 						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{859D19D8-4FE4-47C2-A750-C2CFCAF94416}" ShortID="567837916">
 									<ReferenceList>
@@ -1407,6 +1413,9 @@
 					<PropertyList>
 						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{68A63450-AC86-4D81-8758-22D5D0980294}" ShortID="965577393">
 									<ReferenceList>
@@ -2047,6 +2056,9 @@
 				<Sound Name="death" ID="{B5CD0BDE-0F05-4D9C-B279-1874DE7A6A6F}" ShortID="882268025">
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{C0F2697D-9BB4-43FF-80E1-FB977839FB1D}" ShortID="833426956">
 									<ReferenceList>
@@ -2095,6 +2107,62 @@
 					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="death" ID="{2E60F867-FDE6-4BD2-A1BF-4F06E68EBD42}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="jellyfish_impact" ID="{D2FFE0C6-1A2D-43CC-B0AA-87F37CA75BAC}" ShortID="97791498">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{D682A66C-AEF7-4B75-91C7-72491B4BFB95}" ShortID="190169323">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="SFXvolume" ID="{381EE169-5158-4BB1-8D9B-38126467D74D}" WorkUnitID="{C5C21E7B-045A-486A-ADBA-9793BDABA557}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{F3577B92-322A-4D9B-902B-9C049CE65155}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AA027EC3-DD64-4F1C-8837-AA4A2843A0CD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{71B9EA2B-C03D-47B5-B40D-CF678A15D3E3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="jellyfish_impact" ID="{A8F22D9E-1D4F-4F35-AD04-E8D45A074824}">
+							<Language>SFX</Language>
+							<AudioFile>jellyfish_impact.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="690782740"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="jellyfish_impact" ID="{A8F22D9E-1D4F-4F35-AD04-E8D45A074824}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

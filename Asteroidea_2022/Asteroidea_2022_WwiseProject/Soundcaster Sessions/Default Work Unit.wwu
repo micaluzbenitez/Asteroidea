@@ -4,20 +4,10 @@
 		<WorkUnit Name="Default Work Unit" ID="{C528C8A8-B7AB-43B2-A7DB-9540FEF9897E}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{DE40BE3E-2F4D-491D-84EE-8E3FBC8C280B}">
-					<ModuleList>
-						<Module>
-							<ObjectRef Name="Play_Juego_Estrella_Musica_Tema1_1" ID="{9A1105B9-C96E-44AE-9BEF-E55C5821BCA7}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}"/>
-							<Position X="0" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_impact_plataform" ID="{62BB3C17-10F9-4CE4-BBB2-D95C7CB7A0B1}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}"/>
-							<Position X="1" Y="0"/>
-						</Module>
-					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="SFXvolume" ID="{381EE169-5158-4BB1-8D9B-38126467D74D}"/>
-							<Value>50.1067235859125</Value>
+							<Value>100</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">

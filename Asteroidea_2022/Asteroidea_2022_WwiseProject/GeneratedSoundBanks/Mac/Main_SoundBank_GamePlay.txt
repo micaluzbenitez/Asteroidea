@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	660528677	Play_cascarudo			\Default Work Unit\Play_cascarudo	
 	784302017	Play_Damage			\Default Work Unit\Play_Damage	
+	796436477	Play_jellyfish_impact			\Default Work Unit\Play_jellyfish_impact	
 	1172822028	Play_death			\Default Work Unit\Play_death	
 	1866806893	Play_fish_bite			\Default Work Unit\Play_fish_bite	
 	1875812120	Starfish_Movements			\Default Work Unit\Starfish_Movements	
@@ -41,6 +42,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	532153880	Juego Estrella_Musica_Tema1_1	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Juego Estrella_Musica_Tema1.1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Juego Estrella_Musica_Tema1_1\Juego Estrella_Musica_Tema1_1		9600064
 	540095840	daño01	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\daño01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Damage\daño01		8734
 	673283373	bomb_01	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\bomb_21951ACA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bombas\bomb_01		192242
+	690782740	jellyfish_impact	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\jellyfish_impact_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\jellyfish_impact		60332
 	762603482	starfish12	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Starfish\Player\starfish12		12606
 	794939064	death	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\death		278326
 	842587924	starfish13	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Starfish\Player\starfish13		9452

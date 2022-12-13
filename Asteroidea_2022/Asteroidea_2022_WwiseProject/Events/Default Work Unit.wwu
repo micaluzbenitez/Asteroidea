@@ -150,6 +150,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_jellyfish_impact" ID="{23551367-85AC-497D-A481-92518289FAC7}">
+					<ChildrenList>
+						<Action Name="" ID="{A57D5FE0-A108-4429-9A11-890294D71B09}" ShortID="786759537">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="jellyfish_impact" ID="{D2FFE0C6-1A2D-43CC-B0AA-87F37CA75BAC}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

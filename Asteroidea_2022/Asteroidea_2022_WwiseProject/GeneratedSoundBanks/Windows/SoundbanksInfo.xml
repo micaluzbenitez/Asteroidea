@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1825057083" Language="SFX" Hash="4152718006">
+		<SoundBank Id="1825057083" Language="SFX" Hash="803011802">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_GamePlay</ObjectPath>
 			<ShortName>Main_SoundBank_GamePlay</ShortName>
 			<Path>Main_SoundBank_GamePlay.bnk</Path>
@@ -143,6 +143,14 @@
 						<File Id="429896064" Language="SFX">
 							<ShortName>impact_plataform.wav</ShortName>
 							<Path>SFX\impact_plataform_4F72F85B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="796436477" Name="Play_jellyfish_impact" ObjectPath="\Events\Default Work Unit\Play_jellyfish_impact" DurationType="OneShot" DurationMin="0.683311" DurationMax="0.683311">
+					<IncludedMemoryFiles>
+						<File Id="690782740" Language="SFX">
+							<ShortName>jellyfish_impact.wav</ShortName>
+							<Path>SFX\jellyfish_impact_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
