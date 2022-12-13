@@ -361,6 +361,207 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Plataforma Rota" ID="{1B1A768E-46BF-4CA5-8D9B-AA485E87D337}" ShortID="769498304">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8491186F-BCD2-4A5D-BFE8-5874243509EC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-51"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{D7AB8301-BDCE-4F09-BD6F-96F9DD522CDD}" ShortID="33680167">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="SFXvolume" ID="{381EE169-5158-4BB1-8D9B-38126467D74D}" WorkUnitID="{C5C21E7B-045A-486A-ADBA-9793BDABA557}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{75F6653F-D287-4A67-8FEC-50D42801BEC9}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AA027EC3-DD64-4F1C-8837-AA4A2843A0CD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{71B9EA2B-C03D-47B5-B40D-CF678A15D3E3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="broke_plataform" ID="{3CB01EC2-E243-491A-B9A6-40B062C97568}" ShortID="94404081">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AA027EC3-DD64-4F1C-8837-AA4A2843A0CD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{71B9EA2B-C03D-47B5-B40D-CF678A15D3E3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="broke_plataform" ID="{80BA7B86-396F-44E2-BE60-1FFF4CAA18DA}">
+											<Language>SFX</Language>
+											<AudioFile>broke_plataform.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="848021814"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="broke_plataform" ID="{80BA7B86-396F-44E2-BE60-1FFF4CAA18DA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="broke_plataform_01" ID="{73CADE7E-E795-4A57-B700-8E6A50E7D355}" ShortID="113715753">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AA027EC3-DD64-4F1C-8837-AA4A2843A0CD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{71B9EA2B-C03D-47B5-B40D-CF678A15D3E3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="broke_plataform" ID="{FF011F82-3DCE-4B6A-A81E-7C47AD4A907B}">
+											<Language>SFX</Language>
+											<AudioFile>broke_plataform.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="848021814"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="broke_plataform" ID="{FF011F82-3DCE-4B6A-A81E-7C47AD4A907B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="broke_plataform_02" ID="{C5321C0F-004A-437F-93F6-0D3EC604DCA6}" ShortID="67250072">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C7386010-77F4-4F6F-882F-520E4F2AA14C}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="250"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{3875276B-124E-484F-B131-818ACDEA52FA}" ShortID="600708188">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SFXvolume" ID="{381EE169-5158-4BB1-8D9B-38126467D74D}" WorkUnitID="{C5C21E7B-045A-486A-ADBA-9793BDABA557}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{CC4F5800-47E1-468F-A976-F29E919D4242}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AA027EC3-DD64-4F1C-8837-AA4A2843A0CD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{71B9EA2B-C03D-47B5-B40D-CF678A15D3E3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="broke_plataform" ID="{36372F5C-5BD7-4304-BED8-5C20006E908B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0307768720515026"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.23442808924336"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.071376150076889"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>broke_plataform.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="202490765"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="broke_plataform" ID="{36372F5C-5BD7-4304-BED8-5C20006E908B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="broke_plataform_03" ID="{C1C4BF8D-11C7-444B-B0AC-F39E803D1BEC}" ShortID="134228467">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AA027EC3-DD64-4F1C-8837-AA4A2843A0CD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{71B9EA2B-C03D-47B5-B40D-CF678A15D3E3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="broke_plataform" ID="{E75405DD-5228-4434-8132-9F42AFE91E57}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.339200419631454"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.339200419631454"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>broke_plataform.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="172605952"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="broke_plataform" ID="{E75405DD-5228-4434-8132-9F42AFE91E57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<ActorMixer Name="Starfish" ID="{D854E34A-F33D-4194-9755-7B04724D00A3}" ShortID="374859422">
@@ -1844,6 +2045,36 @@
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<Sound Name="death" ID="{B5CD0BDE-0F05-4D9C-B279-1874DE7A6A6F}" ShortID="882268025">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{C0F2697D-9BB4-43FF-80E1-FB977839FB1D}" ShortID="833426956">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="SFXvolume" ID="{381EE169-5158-4BB1-8D9B-38126467D74D}" WorkUnitID="{C5C21E7B-045A-486A-ADBA-9793BDABA557}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{9A4C0D71-2AC2-463D-B827-6CF68E44CBDD}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AA027EC3-DD64-4F1C-8837-AA4A2843A0CD}"/>

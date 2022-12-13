@@ -139,6 +139,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_broke_plataform" ID="{8D1FAC45-39AB-4A16-9520-49A52FE9C685}">
+					<ChildrenList>
+						<Action Name="" ID="{FACCDFA2-C264-4798-9C5E-CFC8D216F343}" ShortID="905578681">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Plataforma Rota" ID="{1B1A768E-46BF-4CA5-8D9B-AA485E87D337}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

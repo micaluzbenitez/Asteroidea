@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1825057083" Language="SFX" Hash="1720441547">
+		<SoundBank Id="1825057083" Language="SFX" Hash="4152718006">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_GamePlay</ObjectPath>
 			<ShortName>Main_SoundBank_GamePlay</ShortName>
 			<Path>Main_SoundBank_GamePlay.bnk</Path>
@@ -46,6 +46,22 @@
 						<File Id="942505313" Language="SFX">
 							<ShortName>bomb.wav</ShortName>
 							<Path>SFX\bomb_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2493944886" Name="Play_broke_plataform" ObjectPath="\Events\Default Work Unit\Play_broke_plataform" DurationType="OneShot" DurationMin="0.332698" DurationMax="0.470778">
+					<IncludedMemoryFiles>
+						<File Id="172605952" Language="SFX">
+							<ShortName>broke_plataform.wav</ShortName>
+							<Path>SFX\broke_plataform_F98DCC17.wem</Path>
+						</File>
+						<File Id="202490765" Language="SFX">
+							<ShortName>broke_plataform.wav</ShortName>
+							<Path>SFX\broke_plataform_0D422607.wem</Path>
+						</File>
+						<File Id="848021814" Language="SFX">
+							<ShortName>broke_plataform.wav</ShortName>
+							<Path>SFX\broke_plataform_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

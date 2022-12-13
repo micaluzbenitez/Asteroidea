@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID JELLYFISH_MOVEMENT = 3431618819U;
         static const AkUniqueID PLAY_BOMBAS = 2443709602U;
+        static const AkUniqueID PLAY_BROKE_PLATAFORM = 2493944886U;
         static const AkUniqueID PLAY_BUBLES = 4115595731U;
         static const AkUniqueID PLAY_CASCARUDO = 660528677U;
         static const AkUniqueID PLAY_COINS = 3115138860U;
