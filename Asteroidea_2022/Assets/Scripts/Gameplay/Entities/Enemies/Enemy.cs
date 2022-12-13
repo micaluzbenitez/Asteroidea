@@ -43,5 +43,11 @@ namespace Entities.Enemies
         {
             return damage;
         }
+
+        public virtual void PlaySound()
+        {
+
+        }
+
     }
 }

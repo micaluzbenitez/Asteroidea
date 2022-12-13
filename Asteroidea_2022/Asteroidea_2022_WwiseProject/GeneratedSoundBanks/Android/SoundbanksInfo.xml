@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ProjectRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1825057083" Language="SFX" Hash="803011802">
+		<SoundBank Id="1825057083" Language="SFX" Hash="381609012">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_GamePlay</ObjectPath>
 			<ShortName>Main_SoundBank_GamePlay</ShortName>
 			<Path>Main_SoundBank_GamePlay.bnk</Path>
@@ -53,11 +53,11 @@
 					<IncludedMemoryFiles>
 						<File Id="172605952" Language="SFX">
 							<ShortName>broke_plataform.wav</ShortName>
-							<Path>SFX\broke_plataform_F98DCC17.wem</Path>
+							<Path>SFX\broke_plataform_296F0653.wem</Path>
 						</File>
 						<File Id="202490765" Language="SFX">
 							<ShortName>broke_plataform.wav</ShortName>
-							<Path>SFX\broke_plataform_0D422607.wem</Path>
+							<Path>SFX\broke_plataform_B9AF139A.wem</Path>
 						</File>
 						<File Id="848021814" Language="SFX">
 							<ShortName>broke_plataform.wav</ShortName>

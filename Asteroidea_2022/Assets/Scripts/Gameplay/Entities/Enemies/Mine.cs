@@ -114,7 +114,6 @@ public class Mine : Entities.Enemies.Enemy
 
         StartCoroutine(MoveMine(initialPos));
     }
-
     private void OnDestroy()
     {
         StopCoroutine(movementCoroutine);
@@ -128,6 +127,11 @@ public class Mine : Entities.Enemies.Enemy
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public override void PlaySound()
+    {
+        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Bomb_Explode, this.gameObject);
     }
 
 }

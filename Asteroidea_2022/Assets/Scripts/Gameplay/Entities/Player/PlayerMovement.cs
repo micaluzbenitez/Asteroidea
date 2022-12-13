@@ -20,6 +20,8 @@ namespace Entities.Player
         private bool jumpPressed = false;
         private int airJumpCount = 0;
 
+        private bool playedFloorSound = false;
+
         private PlayerStats playerStats = null;
         private PlayerEnemies playerEnemies = null;
         private Rigidbody2D rigidBody = null;
@@ -45,6 +47,7 @@ namespace Entities.Player
             {
                 /// Move
                 horizontalInput = joystick.Horizontal;
+                
                 /// Jump
                 if(joystick.Vertical >= 0.94f)
                 {
@@ -57,6 +60,7 @@ namespace Entities.Player
             {
                 /// Move
                 horizontalInput = Input.GetAxisRaw("Horizontal");
+                
                 /// Jump
                 if (Input.GetButtonDown("Jump"))
                 {
@@ -83,14 +87,17 @@ namespace Entities.Player
         {
             if (jumpPressed)
             {
+                playedFloorSound = false;
                 if (isGrounded) /// Ground jump
                 {
+                    WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Movement, this.gameObject);
                     Jump();
                 }
                 else
                 {
                     if (airJumpCount < allowJumpTimesOnAir) /// Air jump
                     {
+                        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Movement, this.gameObject);
                         Jump();
                         airJumpCount++;
                     }
@@ -124,14 +131,33 @@ namespace Entities.Player
             }
         }
 
+        
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("Floor"))
             {
-                isGrounded = true;
-                airJumpCount = 0;
-                isFalling = false;
+                if (!isGrounded)
+                {
+                    isGrounded = true;
+                    airJumpCount = 0;
+                    isFalling = false;
+                    if (!playedFloorSound)
+                    {
+                        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Touch_Platform, this.gameObject);
+                        playedFloorSound = true;
+                    }
+                }
             }
         }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if (playedFloorSound)
+            {
+                playedFloorSound = false;
+            }
+        }
+
     }
 }

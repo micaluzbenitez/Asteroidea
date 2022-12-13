@@ -52,6 +52,11 @@ namespace Entities.Enemies
             }
         }
 
+        public override void PlaySound()
+        {
+            WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Crab, this.gameObject);
+        }
+
         private void SetMovingSide()
         {
             movingRight = Random.Range(0, 2) == 0; //Random entre 0 y 1

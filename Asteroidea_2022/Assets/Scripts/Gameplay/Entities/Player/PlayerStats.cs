@@ -19,6 +19,7 @@ namespace Entities.Player
         [SerializeField] private STATE playerState = STATE.IDLE;
         [SerializeField] private SpriteRenderer expression = null;
         [SerializeField] private Sprite[] expressions = null;
+        [SerializeField] private bool onTutorial = false;
 
         [Header("Player data")]
         [SerializeField] private int initialLife = 0;
@@ -77,13 +78,29 @@ namespace Entities.Player
         {
             if (collision.gameObject.CompareTag("Pickup"))
             {
-                OnAddScore?.Invoke(pickupScore);
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Pick_Up, this.gameObject);
+                if (!onTutorial)
+                {
+                    OnAddScore?.Invoke(pickupScore);
+                }
+                else
+                {
+                    OnAddScore?.Invoke(0);
+                }
                 collision.gameObject.SetActive(false);
             }
 
             if (collision.gameObject.CompareTag("Coin"))
             {
-                OnAddCoins?.Invoke(coinsValue);
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Coin, this.gameObject);
+                if (!onTutorial)
+                {
+                    OnAddCoins?.Invoke(coinsValue);
+                }
+                else
+                {
+                    OnAddCoins?.Invoke(0);
+                }
                 collision.gameObject.SetActive(false);
             }
         }

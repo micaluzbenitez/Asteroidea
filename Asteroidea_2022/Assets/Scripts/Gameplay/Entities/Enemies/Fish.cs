@@ -13,5 +13,11 @@ namespace Entities.Enemies
         {
             if (collision.gameObject.CompareTag(triggerTagName)) gameObject.SetActive(false);
         }
+
+        public override void PlaySound()
+        {
+            WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Fish, this.gameObject);
+        }
+
     }
 }

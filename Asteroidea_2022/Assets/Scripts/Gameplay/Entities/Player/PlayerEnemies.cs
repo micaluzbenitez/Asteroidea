@@ -48,6 +48,7 @@ namespace Entities.Player
         {
             if (collision.gameObject.CompareTag(lavaTag))
             {
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage, this.gameObject);
                 Wall wall = collision.gameObject.GetComponent<Wall>();
                 PlayerDamage(wall.GetDamage());
             }
@@ -60,6 +61,7 @@ namespace Entities.Player
                 WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage, this.gameObject);
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                 PlayerDamage(enemy.GetDamage());
+                enemy.PlaySound();
                 if (collision.gameObject.name == "Mine")
                 {
                     Destroy(collision.gameObject);

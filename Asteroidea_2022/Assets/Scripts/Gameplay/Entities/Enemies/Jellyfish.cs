@@ -86,5 +86,10 @@ namespace Entities.Enemies
         {
             this.target = target;
         }
+        public override void PlaySound()
+        {
+            WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Jelly, this.gameObject);
+        }
+
     }
 }
