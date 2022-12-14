@@ -98,7 +98,7 @@ public class Mine : Entities.Enemies.Enemy
 
         float t = 0;
         float distanceTraveled = 0;
-        Debug.LogWarning("Empiezo la corrutina");
+        //Debug.LogWarning("Empiezo la corrutina");
         while (distanceTraveled < targetDistance)
         {
             t += Time.deltaTime * idleSpeed;
@@ -107,7 +107,7 @@ public class Mine : Entities.Enemies.Enemy
             distanceTraveled = Vector3.Distance(actualPos, initialPos);
             yield return null;
         }
-        Debug.LogWarning("Termine la corrutina");
+        //Debug.LogWarning("Termine la corrutina");
         actualPos = targetPos;
         transform.position = targetPos;
         initialPos = targetPos;
@@ -116,7 +116,8 @@ public class Mine : Entities.Enemies.Enemy
     }
     private void OnDestroy()
     {
-        StopCoroutine(movementCoroutine);
+        if(movementCoroutine!=null)
+            StopCoroutine(movementCoroutine);
         //Tirar Evento de Particulas
         //Tirar evento de Wwise(sonido)
     }

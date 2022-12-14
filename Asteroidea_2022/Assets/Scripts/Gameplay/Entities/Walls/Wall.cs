@@ -25,6 +25,9 @@ namespace Entities.Walls
         [SerializeField] private Sprite[] lavaWalls = null;
         [SerializeField] private float lavaSpawnRate = 0.07f;
 
+        [Header("Tutorial")]
+        [SerializeField] private bool isTutorial = false;
+
         private bool forcedToLava = false;
 
         private void Start()
@@ -34,9 +37,11 @@ namespace Entities.Walls
 
         private void Update()
         {
-            VerticalMovement();
-
-            if (transform.localPosition.y > maxPosition) Reset();
+            if (!isTutorial)
+            {
+                VerticalMovement();
+                if (transform.localPosition.y > maxPosition) Reset();
+            }
 
             CheckForcingLavaWall();
         }

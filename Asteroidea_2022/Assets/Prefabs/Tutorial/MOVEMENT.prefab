@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightWall
       objectReference: {fileID: 0}
+    - target: {fileID: 4702883572335015564, guid: 87703d67c5b2ee8458028f55d3b82fc0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4702883572335015571, guid: 87703d67c5b2ee8458028f55d3b82fc0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -260,6 +264,10 @@ PrefabInstance:
     - target: {fileID: 4702883572335015571, guid: 87703d67c5b2ee8458028f55d3b82fc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878210057784496349, guid: 87703d67c5b2ee8458028f55d3b82fc0, type: 3}
+      propertyPath: isTutorial
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87703d67c5b2ee8458028f55d3b82fc0, type: 3}
@@ -500,12 +508,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 4390932025679329509}
     m_Modifications:
     - target: {fileID: 1128246038165936764, guid: 7552c4bfa35aac3458974c26f2042bc3, type: 3}
+      propertyPath: isTutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128246038165936764, guid: 7552c4bfa35aac3458974c26f2042bc3, type: 3}
       propertyPath: forceLavaWall
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8699687911749349470, guid: 7552c4bfa35aac3458974c26f2042bc3, type: 3}
       propertyPath: m_Name
       value: LeftWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699687911749349470, guid: 7552c4bfa35aac3458974c26f2042bc3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8699687911749349471, guid: 7552c4bfa35aac3458974c26f2042bc3, type: 3}
       propertyPath: m_RootOrder

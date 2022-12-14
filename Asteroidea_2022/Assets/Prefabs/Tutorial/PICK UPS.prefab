@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7878210057784496349, guid: 87703d67c5b2ee8458028f55d3b82fc0, type: 3}
+      propertyPath: isTutorial
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87703d67c5b2ee8458028f55d3b82fc0, type: 3}
 --- !u!4 &3598348727004269083 stripped
@@ -397,6 +401,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8118891351813984752}
     m_Modifications:
+    - target: {fileID: 1128246038165936764, guid: 7552c4bfa35aac3458974c26f2042bc3, type: 3}
+      propertyPath: isTutorial
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1128246038165936764, guid: 7552c4bfa35aac3458974c26f2042bc3, type: 3}
       propertyPath: forceLavaWall
       value: 0
