@@ -13,6 +13,8 @@ namespace Menu
         [SerializeField] private CanvasGroup startingPanel = null;
         [SerializeField] private TMP_Text versionText = null;
         [SerializeField] private GameObject tutorialButton = null;
+        [SerializeField] private GameObject playButton = null;
+        [SerializeField] private GameObject playCenterButton = null;
 
         [Header("Game scene")]
         [SerializeField] private string gameSceneName = default;
@@ -131,6 +133,8 @@ namespace Menu
             }
 
             tutorialButton.gameObject.SetActive(PlayerPrefs.GetInt(seenTutorialKey) == TRUE_VALUE);
+            playButton.gameObject.SetActive(PlayerPrefs.GetInt(seenTutorialKey) == TRUE_VALUE);
+            playCenterButton.gameObject.SetActive(PlayerPrefs.GetInt(seenTutorialKey) == FALSE_VALUE);
         }
 
 

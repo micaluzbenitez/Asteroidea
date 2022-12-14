@@ -37,7 +37,7 @@ public class PauseSystem : MonoBehaviour
             Paused = !Paused;
             Time.timeScale = Paused ? 0 : 1;
             ActualState = Paused ? PauseStates.Paused : PauseStates.Resumed;
-            Debug.Log("Envio estado de pausa: " + Paused);
+            //Debug.Log("Envio estado de pausa: " + Paused);
             OnPauseStateChange?.Invoke(ActualState);
         }
     }

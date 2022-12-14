@@ -904,6 +904,8 @@ MonoBehaviour:
   startingPanel: {fileID: 815273838}
   versionText: {fileID: 279052633}
   tutorialButton: {fileID: 5809047258085654687}
+  playButton: {fileID: 5809047258811072956}
+  playCenterButton: {fileID: 1547021199}
   gameSceneName: Mobile_Game
   tutorialSceneName: Mobile_Tutorial
   player: {fileID: 563562926}
@@ -7708,7 +7710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1547021200
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7724,8 +7726,8 @@ RectTransform:
   m_Father: {fileID: 815273837}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.38, y: 0.25}
-  m_AnchorMax: {x: 0.62, y: 0.33}
+  m_AnchorMin: {x: 0.328125, y: 0.1715}
+  m_AnchorMax: {x: 0.671875, y: 0.2857}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10971,7 +10973,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &5809047258085654688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11445,7 +11447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &5809047258811072957
 MonoBehaviour:
   m_ObjectHideFlags: 0
