@@ -181,6 +181,7 @@ namespace Entities.Platforms
                 breakableModel.SetActive(false);
                 for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", false);
                 finishedShake = false;
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Platform_Break);
             }
         }
 
