@@ -10,6 +10,7 @@
 						<ObjectRef Name="Default Work Unit" ID="{437ED66D-1186-43ED-8CD2-52E93499C946}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_cascarudo" ID="{EDBD05AB-8A5E-43F4-A3A7-1949D9306775}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Juego_Estrella_Musica_Tema1_1" ID="{9A1105B9-C96E-44AE-9BEF-E55C5821BCA7}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_SFX_Muteables" ID="{E2261C85-D9FC-4503-8215-8FC3AF3BB4E7}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Damage" ID="{BB62F41B-C983-46B6-92F8-CF38F2609DCC}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Coins" ID="{0D4540C2-00C5-4741-A808-D3CC4059D9F9}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_fish_bite" ID="{13E086C0-B6E0-4766-A88E-FC90D7DB479E}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
