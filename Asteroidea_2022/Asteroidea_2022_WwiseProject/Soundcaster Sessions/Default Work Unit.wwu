@@ -6,6 +6,10 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{DE40BE3E-2F4D-491D-84EE-8E3FBC8C280B}">
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="Metros" ID="{683A47C3-DA87-47D7-ADC0-A1E3F1C1A741}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SFXvolume" ID="{381EE169-5158-4BB1-8D9B-38126467D74D}"/>
 							<Value>100</Value>
 						</RTPCValue>
@@ -15,6 +19,7 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="InGame" ID="{2D42E339-2292-4CD9-BD93-6F0D5917602F}"/>
+						<CurrentSwitchRef Name="Menu" ID="{D6E262F9-A1F5-4C52-A363-29E29A1C7627}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

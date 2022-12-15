@@ -1,3 +1,12 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1685527054	MX			\Default Work Unit\MX	
+
+Switch	ID	Name	Switch Group			Notes
+	22743348	TEMA2	MX			
+	22743349	TEMA3	MX			
+	22743351	TEMA1	MX			
+	2607556080	Menu	MX			
+
 State Group	ID	Name			Wwise Object Path	Notes
 	2842583027	Gameplay_Objets			\Default Work Unit\Gameplay_Objets	
 

@@ -7,10 +7,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	1866806893	Play_fish_bite			\Default Work Unit\SFX\Play_fish_bite	
 	1875812120	Starfish_Movements			\Default Work Unit\SFX\Starfish_Movements	
 	2443709602	Play_Bombas			\Default Work Unit\SFX\Play_Bombas	
+	2447410425	Play_MX			\Default Work Unit\Play_MX	
 	2493944886	Play_broke_plataform			\Default Work Unit\SFX\Play_broke_plataform	
 	3115138860	Play_Coins			\Default Work Unit\SFX\Play_Coins	
 	3431618819	Jellyfish_Movement			\Default Work Unit\SFX\Jellyfish_Movement	
-	3635214037	Play_Juego_Estrella_Musica_Tema1_1			\Default Work Unit\Music\Play_Juego_Estrella_Musica_Tema1_1	
 	3795799651	Play_impact_plataform			\Default Work Unit\SFX\Play_impact_plataform	
 	3860455926	Play_pickup			\Default Work Unit\SFX\Play_pickup	
 	4115595731	Play_bubles			\Default Work Unit\SFX\Play_bubles	
@@ -29,40 +29,35 @@ Switch	ID	Name	Switch Group			Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	988953028	SFXvolume			\Default Work Unit\SFXvolume	
+	1603003027	Metros			\Default Work Unit\Metros	
 	3465895069	MusicaVolumen			\Default Work Unit\MusicaVolumen	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	123306068	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Medusin\Silence\Wwise Silence	
 	808477140	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Pescadin\Silence\Silence	
 	937468941	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Cangrejin\Silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	68590635	Tema2	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Tema2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX\Tema 2\Tema 2\Tema2		7497064
-	72936469	fish_bite	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\fish_bite _10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Pescadin\Fish\fish_bite		2194
-	75077757	coins	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\pick_coin_93714AB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\coins		177304
-	136648624	pickup	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\pick_coin_74EC0AC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\pickup		177304
-	157275980	daño00	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\daño00_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Damage\daño00		7714
-	158985340	cascarudo	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\cascarudo_98EAD6B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Cangrejin\Crab\cascarudo		14534
-	172605952	broke_plataform_03	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\broke_plataform_296F0653.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Plataforma Rota\broke_plataform_03		29982
-	202490765	broke_plataform_02	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\broke_plataform_B9AF139A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Plataforma Rota\broke_plataform_02		33966
-	374180870	Cuenta y Tema 1	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Cuenta y Tema 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX\Tema 1\Intro\Cuenta y Tema 1		10073468
-	429896064	impact_plataform_01	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\impact_plataform_4F72F85B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Plataform\impact_plataform_01		5466
-	455091364	starfish14	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Starfish\Player\starfish14		12338
-	540095840	daño01	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\daño01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Damage\daño01		8734
-	619842760	Transicion agua 2	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Transicion agua 2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Transcicion 2\Transicion agua 2		2771784
-	655395521	Menu	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Menu_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX\Menu\Menu\Menu		3177592
-	673283373	bomb_01	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\bomb_21951ACA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Bombas\bomb_01		192242
-	688225567	Transicion agua 1	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Transicion agua 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Transcicion 1\Transicion agua 1		2771784
-	690782740	jellyfish_impact	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\jellyfish_impact_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\jellyfish_impact		60332
-	762603482	starfish12	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Starfish\Player\starfish12		12606
-	794939064	death	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\death		278326
-	842587924	starfish13	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Starfish\Player\starfish13		9452
-	848021814	broke_plataform	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\broke_plataform_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Plataforma Rota\broke_plataform		40262
-	869724118	medusa	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\medusa_781FFAD0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Medusin\medusa		314804
-	870338947	starfish10	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Starfish\Player\starfish10		14894
-	884117834	Tema3	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Tema3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX\Tema 3\Tema 3\Tema3		14693276
-	900548622	starfish11	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Starfish\Player\starfish11		13058
-	940296832	cascarudo_01	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\cascarudo_FBBDE3A5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Cangrejin\Crab\cascarudo_01		14534
-	942505313	bomb	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\bomb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Bombas\bomb		192242
-	980605193	bubles	D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\bubles_875CEA0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Burbujas\bubles		63802
+	68590635	Tema2	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Tema2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX\Tema 2\Tema 2\Tema2		7497064
+	72936469	fish_bite	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\fish_bite _10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Pescadin\Fish\fish_bite		2194
+	75077757	coins	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\pick_coin_93714AB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\coins		177304
+	136648624	pickup	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\pick_coin_74EC0AC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\pickup		177304
+	157275980	daño00	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\daño00_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Damage\daño00		7714
+	278038360	cascarudo	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\cascarudo_06867FEA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Cangrejin\Crab\cascarudo		13676
+	374180870	Cuenta y Tema 1	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Cuenta y Tema 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX\Tema 1\Intro\Cuenta y Tema 1		10073468
+	429896064	impact_plataform_01	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\impact_plataform_4F72F85B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Plataform\impact_plataform_01		5466
+	540095840	daño01	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\daño01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Damage\daño01		8734
+	619842760	Transicion agua 2	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Transicion agua 2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Transcicion 2\Transicion agua 2		2771784
+	655395521	Menu	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Menu_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX\Menu\Menu\Menu		3177592
+	673283373	bomb_01	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\bomb_21951ACA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Bombas\bomb_01		192242
+	688225567	Transicion agua 1	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Transicion agua 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Transcicion 1\Transicion agua 1		2771784
+	690782740	jellyfish_impact	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\jellyfish_impact_52FFECD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Medusin\Random Medusa\jellyfish_impact		26976
+	762603482	starfish12	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Starfish\Player\starfish12		12606
+	794939064	death	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\death		278326
+	842587924	starfish13	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Starfish\Player\starfish13		9452
+	848021814	broke_plataform	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\broke_plataform_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Impacts\Plataforma Rota\broke_plataform		40262
+	870338947	starfish10	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Starfish\Player\starfish10		14894
+	884117834	Tema3	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\Tema3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MX\Tema 3\Tema 3\Tema3		14693276
+	900548622	starfish11	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\starfish11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Starfish\Player\starfish11		13058
+	942505313	bomb	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\bomb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Bombas\bomb		192242
+	980605193	bubles	D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\SFX\bubles_875CEA0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX Muteables\Burbujas\bubles		63802
 

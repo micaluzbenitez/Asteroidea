@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<GameParameter Name="SFXvolume" ID="{381EE169-5158-4BB1-8D9B-38126467D74D}"/>
 				<GameParameter Name="MusicaVolumen" ID="{8A3F317B-CE0B-4CF3-A06A-5852CCB79579}"/>
+				<GameParameter Name="Metros" ID="{683A47C3-DA87-47D7-ADC0-A1E3F1C1A741}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

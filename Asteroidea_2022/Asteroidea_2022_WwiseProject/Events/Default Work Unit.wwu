@@ -154,21 +154,7 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Music" ID="{91B5EB3A-4DFC-4048-B6CD-3ED115A31413}" ShortID="352406547">
-					<ChildrenList>
-						<Event Name="Play_Juego_Estrella_Musica_Tema1_1" ID="{9A1105B9-C96E-44AE-9BEF-E55C5821BCA7}">
-							<ChildrenList>
-								<Action Name="" ID="{AB495E96-8BF8-4CAD-A41E-FE23F428F21B}" ShortID="775611411">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Juego Estrella_Musica_Tema1_1" ID="{95BB98D0-32B1-4714-92A8-E9D1082A0F70}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
+				<Folder Name="Music" ID="{91B5EB3A-4DFC-4048-B6CD-3ED115A31413}" ShortID="352406547"/>
 				<Event Name="Stop_SFX_Muteables" ID="{E2261C85-D9FC-4503-8215-8FC3AF3BB4E7}">
 					<ChildrenList>
 						<Action Name="" ID="{751C1E1D-FC5B-4538-84A8-ED141602F1BF}" ShortID="402646339">
@@ -178,6 +164,27 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX Muteables" ID="{9A117EF5-890B-420A-BE59-4B713AE95D92}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MX" ID="{FE28FC5E-8F2F-48B8-8A13-2FC1B896D2B3}">
+					<ChildrenList>
+						<Action Name="" ID="{EAF38D44-955B-43A0-8222-B51CE5DEAF3A}" ShortID="499391417">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MX" ID="{F16920CA-AB7A-45C4-A63C-22F373396C34}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9672870D-CD2A-442C-8489-93CE5AC742A9}" ShortID="941638581">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Metros" ID="{683A47C3-DA87-47D7-ADC0-A1E3F1C1A741}" WorkUnitID="{C5C21E7B-045A-486A-ADBA-9793BDABA557}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
