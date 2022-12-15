@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\anapi\OneDrive\Escritorio\Asteroidea_2022_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\anapi\OneDrive\Escritorio\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\anapi\OneDrive\Escritorio\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\anapi\OneDrive\Escritorio\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4211010758">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1440603376">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1825057083" Language="SFX" Hash="381609012">
+		<SoundBank Id="1825057083" Language="SFX" Hash="1382231447">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_GamePlay</ObjectPath>
 			<ShortName>Main_SoundBank_GamePlay</ShortName>
 			<Path>Main_SoundBank_GamePlay.bnk</Path>
@@ -154,14 +154,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3635214037" Name="Play_Juego_Estrella_Musica_Tema1_1" ObjectPath="\Events\Default Work Unit\Play_Juego_Estrella_Musica_Tema1_1" DurationType="OneShot" DurationMin="50." DurationMax="50.">
-					<IncludedMemoryFiles>
-						<File Id="532153880" Language="SFX">
-							<ShortName>Juego Estrella_Musica_Tema1.1.wav</ShortName>
-							<Path>SFX\Juego Estrella_Musica_Tema1.1_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="3635214037" Name="Play_Juego_Estrella_Musica_Tema1_1" ObjectPath="\Events\Default Work Unit\Play_Juego_Estrella_Musica_Tema1_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3860455926" Name="Play_pickup" ObjectPath="\Events\Default Work Unit\Play_pickup" DurationType="OneShot" DurationMin="1.465378" DurationMax="1.465378">
 					<IncludedMemoryFiles>
 						<File Id="136648624" Language="SFX">
@@ -196,15 +189,44 @@
 				</Event>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="532153880" Language="SFX">
-					<ShortName>Juego Estrella_Musica_Tema1.1.wav</ShortName>
-					<Path>SFX\Juego Estrella_Musica_Tema1.1_D79FB2B7.wem</Path>
+				<File Id="68590635" Language="SFX">
+					<ShortName>Tema2.wav</ShortName>
+					<Path>SFX\Tema2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="374180870" Language="SFX">
+					<ShortName>Cuenta y Tema 1.wav</ShortName>
+					<Path>SFX\Cuenta y Tema 1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="619842760" Language="SFX">
+					<ShortName>Transicion agua 2.wav</ShortName>
+					<Path>SFX\Transicion agua 2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="655395521" Language="SFX">
+					<ShortName>Menu.wav</ShortName>
+					<Path>SFX\Menu_D79FB2B7.wem</Path>
+				</File>
+				<File Id="688225567" Language="SFX">
+					<ShortName>Transicion agua 1.wav</ShortName>
+					<Path>SFX\Transicion agua 1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="884117834" Language="SFX">
+					<ShortName>Tema3.wav</ShortName>
+					<Path>SFX\Tema3_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="988953028" Name="SFXvolume" ObjectPath="\Game Parameters\Default Work Unit\SFXvolume"/>
+				<GameParameter Id="3465895069" Name="MusicaVolumen" ObjectPath="\Game Parameters\Default Work Unit\MusicaVolumen"/>
 			</GameParameters>
 			<SwitchGroups>
+				<SwitchGroup Id="1685527054" Name="MX" ObjectPath="\Switches\Default Work Unit\MX" GUID="{A22DB189-F132-4F7C-845F-AB5B76420E1C}">
+					<Switches>
+						<Switch Id="2607556080" Name="Menu" ObjectPath="\Switches\Default Work Unit\MX\Menu" GUID="{D6E262F9-A1F5-4C52-A363-29E29A1C7627}"/>
+						<Switch Id="22743351" Name="TEMA1" ObjectPath="\Switches\Default Work Unit\MX\TEMA1" GUID="{29073E32-A13F-42CD-B9BA-64A71B9482AA}"/>
+						<Switch Id="22743348" Name="TEMA2" ObjectPath="\Switches\Default Work Unit\MX\TEMA2" GUID="{757C9ABF-57E0-4EE5-8CE3-3F6ABB7C10FD}"/>
+						<Switch Id="22743349" Name="TEMA3" ObjectPath="\Switches\Default Work Unit\MX\TEMA3" GUID="{08A36A85-9A47-4239-A130-E474CE091429}"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="2242381963" Name="Enemies" ObjectPath="\Switches\Default Work Unit\Enemies" GUID="{24DE0D87-F9F7-415A-8682-DA3E0CB282C6}">
 					<Switches>
 						<Switch Id="984691642" Name="InGame" ObjectPath="\Switches\Default Work Unit\Enemies\InGame" GUID="{2D42E339-2292-4CD9-BD93-6F0D5917602F}"/>

@@ -2165,6 +2165,17 @@
 						<ActiveSource Name="jellyfish_impact" ID="{A8F22D9E-1D4F-4F35-AD04-E8D45A074824}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<ActorMixer Name="VolumenMusica" ID="{67C1FE57-FBDA-4658-A795-1382F00525FA}" ShortID="391450350">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AA027EC3-DD64-4F1C-8837-AA4A2843A0CD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{71B9EA2B-C03D-47B5-B40D-CF678A15D3E3}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

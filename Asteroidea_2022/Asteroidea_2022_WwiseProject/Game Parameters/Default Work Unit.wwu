@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{C5C21E7B-045A-486A-ADBA-9793BDABA557}" PersistMode="Standalone">
 			<ChildrenList>
 				<GameParameter Name="SFXvolume" ID="{381EE169-5158-4BB1-8D9B-38126467D74D}"/>
+				<GameParameter Name="MusicaVolumen" ID="{8A3F317B-CE0B-4CF3-A06A-5852CCB79579}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

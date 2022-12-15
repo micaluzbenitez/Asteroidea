@@ -3,164 +3,172 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{437ED66D-1186-43ED-8CD2-52E93499C946}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_Damage" ID="{BB62F41B-C983-46B6-92F8-CF38F2609DCC}">
+				<Folder Name="SFX" ID="{59D67448-3B07-4297-A576-CCAD6E4E7007}" ShortID="61746023">
 					<ChildrenList>
-						<Action Name="" ID="{7D4A38C2-12F1-4488-BBC3-1D72EDD112C5}" ShortID="331133898">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Damage" ID="{B99CC272-D49F-4A40-8FEC-3BA9C165DC1A}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Starfish_Movements" ID="{ADEB1085-AD6C-4A3F-B237-C3D6ED3E3621}">
+							<ChildrenList>
+								<Action Name="" ID="{D95EFA18-E8E5-4A2F-8495-120C13812B3F}" ShortID="967698189">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player" ID="{55203656-5102-4FE3-AB5C-E5A2248C76AD}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_fish_bite" ID="{13E086C0-B6E0-4766-A88E-FC90D7DB479E}">
+							<ChildrenList>
+								<Action Name="" ID="{A94511BA-0C60-4449-A7B3-DAA74881A922}" ShortID="1042035308">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pescadin" ID="{5AC68FAD-9C38-405E-990A-D215DDEC16EA}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Damage" ID="{BB62F41B-C983-46B6-92F8-CF38F2609DCC}">
+							<ChildrenList>
+								<Action Name="" ID="{7D4A38C2-12F1-4488-BBC3-1D72EDD112C5}" ShortID="331133898">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Damage" ID="{B99CC272-D49F-4A40-8FEC-3BA9C165DC1A}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_cascarudo" ID="{EDBD05AB-8A5E-43F4-A3A7-1949D9306775}">
+							<ChildrenList>
+								<Action Name="" ID="{9BD297C7-C478-41B9-B5CC-7BB0D2FDD0D8}" ShortID="913502106">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cangrejin" ID="{0116A5CB-7598-48D3-B0F0-95999868C4A7}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_impact_plataform" ID="{62BB3C17-10F9-4CE4-BBB2-D95C7CB7A0B1}">
+							<ChildrenList>
+								<Action Name="" ID="{69AF639D-2B52-483D-8B04-4AA2B5DB7AD9}" ShortID="227364759">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Plataform" ID="{C82821FD-9A0E-4064-AD1A-76F976A6DAAE}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Jellyfish_Movement" ID="{45DFA0E8-612C-4BCC-AF94-BD89EC557AD6}">
+							<ChildrenList>
+								<Action Name="" ID="{04838272-D96C-47DA-89B5-C2059028A574}" ShortID="484387553">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Medusin" ID="{A0289879-1848-4082-B80D-F640AFEA9355}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_broke_plataform" ID="{8D1FAC45-39AB-4A16-9520-49A52FE9C685}">
+							<ChildrenList>
+								<Action Name="" ID="{FACCDFA2-C264-4798-9C5E-CFC8D216F343}" ShortID="905578681">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Plataforma Rota" ID="{1B1A768E-46BF-4CA5-8D9B-AA485E87D337}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Coins" ID="{0D4540C2-00C5-4741-A808-D3CC4059D9F9}">
+							<ChildrenList>
+								<Action Name="" ID="{44E916E5-EE21-49BE-BE6B-ABC7FAA3B37E}" ShortID="1053167749">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="coins" ID="{DEA1CFCC-BC66-4EA6-A4B0-70753A9DBF8C}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_bubles" ID="{CBF63A53-B705-41F7-B2E7-40D21F094A8A}">
+							<ChildrenList>
+								<Action Name="" ID="{5B291696-E99D-42F1-A368-4780492FBAA2}" ShortID="843164201">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Burbujas" ID="{05F4EE49-6AD5-47BB-9BD8-3D251D6AE9BD}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_pickup" ID="{8ABCF7C9-5584-4C65-8352-E63425531B83}">
+							<ChildrenList>
+								<Action Name="" ID="{8633BF29-FA99-4486-847E-45AF1E920689}" ShortID="1014851557">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="pickup" ID="{7A4BDD02-6776-4A44-9FB6-C01F64FCC1E7}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Bombas" ID="{429E52F2-C33C-4A0A-AE03-82E583B74E64}">
+							<ChildrenList>
+								<Action Name="" ID="{8B440D2A-35FE-4855-B7A5-7FC52E1BD3FF}" ShortID="427393991">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bombas" ID="{F06C371C-8A6F-4EF9-B58F-6FE9EFA19E8C}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_death" ID="{3E87F1E3-E586-426A-A4E9-3A981CB1D94B}">
+							<ChildrenList>
+								<Action Name="" ID="{4F31FB8C-B5E4-45A9-835A-13B8BB79DF14}" ShortID="783307464">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="death" ID="{B5CD0BDE-0F05-4D9C-B279-1874DE7A6A6F}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_jellyfish_impact" ID="{23551367-85AC-497D-A481-92518289FAC7}">
+							<ChildrenList>
+								<Action Name="" ID="{A57D5FE0-A108-4429-9A11-890294D71B09}" ShortID="786759537">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="jellyfish_impact" ID="{D2FFE0C6-1A2D-43CC-B0AA-87F37CA75BAC}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Play_cascarudo" ID="{EDBD05AB-8A5E-43F4-A3A7-1949D9306775}">
+				</Folder>
+				<Folder Name="Music" ID="{91B5EB3A-4DFC-4048-B6CD-3ED115A31413}" ShortID="352406547">
 					<ChildrenList>
-						<Action Name="" ID="{9BD297C7-C478-41B9-B5CC-7BB0D2FDD0D8}" ShortID="913502106">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Cangrejin" ID="{0116A5CB-7598-48D3-B0F0-95999868C4A7}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Play_Juego_Estrella_Musica_Tema1_1" ID="{9A1105B9-C96E-44AE-9BEF-E55C5821BCA7}">
+							<ChildrenList>
+								<Action Name="" ID="{AB495E96-8BF8-4CAD-A41E-FE23F428F21B}" ShortID="775611411">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Juego Estrella_Musica_Tema1_1" ID="{95BB98D0-32B1-4714-92A8-E9D1082A0F70}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Play_fish_bite" ID="{13E086C0-B6E0-4766-A88E-FC90D7DB479E}">
-					<ChildrenList>
-						<Action Name="" ID="{A94511BA-0C60-4449-A7B3-DAA74881A922}" ShortID="1042035308">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Pescadin" ID="{5AC68FAD-9C38-405E-990A-D215DDEC16EA}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_impact_plataform" ID="{62BB3C17-10F9-4CE4-BBB2-D95C7CB7A0B1}">
-					<ChildrenList>
-						<Action Name="" ID="{69AF639D-2B52-483D-8B04-4AA2B5DB7AD9}" ShortID="227364759">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Plataform" ID="{C82821FD-9A0E-4064-AD1A-76F976A6DAAE}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Juego_Estrella_Musica_Tema1_1" ID="{9A1105B9-C96E-44AE-9BEF-E55C5821BCA7}">
-					<ChildrenList>
-						<Action Name="" ID="{AB495E96-8BF8-4CAD-A41E-FE23F428F21B}" ShortID="775611411">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Juego Estrella_Musica_Tema1_1" ID="{95BB98D0-32B1-4714-92A8-E9D1082A0F70}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Starfish_Movements" ID="{ADEB1085-AD6C-4A3F-B237-C3D6ED3E3621}">
-					<ChildrenList>
-						<Action Name="" ID="{D95EFA18-E8E5-4A2F-8495-120C13812B3F}" ShortID="967698189">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Player" ID="{55203656-5102-4FE3-AB5C-E5A2248C76AD}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Jellyfish_Movement" ID="{45DFA0E8-612C-4BCC-AF94-BD89EC557AD6}">
-					<ChildrenList>
-						<Action Name="" ID="{04838272-D96C-47DA-89B5-C2059028A574}" ShortID="484387553">
-							<PropertyList>
-								<Property Name="FadeInCurve" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Medusin" ID="{A0289879-1848-4082-B80D-F640AFEA9355}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Coins" ID="{0D4540C2-00C5-4741-A808-D3CC4059D9F9}">
-					<ChildrenList>
-						<Action Name="" ID="{44E916E5-EE21-49BE-BE6B-ABC7FAA3B37E}" ShortID="1053167749">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="coins" ID="{DEA1CFCC-BC66-4EA6-A4B0-70753A9DBF8C}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_pickup" ID="{8ABCF7C9-5584-4C65-8352-E63425531B83}">
-					<ChildrenList>
-						<Action Name="" ID="{8633BF29-FA99-4486-847E-45AF1E920689}" ShortID="1014851557">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="pickup" ID="{7A4BDD02-6776-4A44-9FB6-C01F64FCC1E7}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_bubles" ID="{CBF63A53-B705-41F7-B2E7-40D21F094A8A}">
-					<ChildrenList>
-						<Action Name="" ID="{5B291696-E99D-42F1-A368-4780492FBAA2}" ShortID="843164201">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Burbujas" ID="{05F4EE49-6AD5-47BB-9BD8-3D251D6AE9BD}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Bombas" ID="{429E52F2-C33C-4A0A-AE03-82E583B74E64}">
-					<ChildrenList>
-						<Action Name="" ID="{8B440D2A-35FE-4855-B7A5-7FC52E1BD3FF}" ShortID="427393991">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Bombas" ID="{F06C371C-8A6F-4EF9-B58F-6FE9EFA19E8C}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_death" ID="{3E87F1E3-E586-426A-A4E9-3A981CB1D94B}">
-					<ChildrenList>
-						<Action Name="" ID="{4F31FB8C-B5E4-45A9-835A-13B8BB79DF14}" ShortID="783307464">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="death" ID="{B5CD0BDE-0F05-4D9C-B279-1874DE7A6A6F}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_broke_plataform" ID="{8D1FAC45-39AB-4A16-9520-49A52FE9C685}">
-					<ChildrenList>
-						<Action Name="" ID="{FACCDFA2-C264-4798-9C5E-CFC8D216F343}" ShortID="905578681">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Plataforma Rota" ID="{1B1A768E-46BF-4CA5-8D9B-AA485E87D337}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_jellyfish_impact" ID="{23551367-85AC-497D-A481-92518289FAC7}">
-					<ChildrenList>
-						<Action Name="" ID="{A57D5FE0-A108-4429-9A11-890294D71B09}" ShortID="786759537">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="jellyfish_impact" ID="{D2FFE0C6-1A2D-43CC-B0AA-87F37CA75BAC}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

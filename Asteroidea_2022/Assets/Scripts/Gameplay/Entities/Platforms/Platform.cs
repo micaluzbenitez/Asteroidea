@@ -58,6 +58,9 @@ namespace Entities.Platforms
 
         private ObjectShake objectShake = null;
         private Timer breakablePlatformTimer = new Timer();
+
+        private bool finishedShake = false;
+
         #endregion
         #endregion
 
@@ -96,7 +99,7 @@ namespace Entities.Platforms
         private void Update()
         {
             if(horizontalMovement) HorizontalMove();
-            UpdateBreakPlatform();
+            if(finishedShake) UpdateBreakPlatform();
         }
 
         private void OnDestroy()
@@ -166,7 +169,10 @@ namespace Entities.Platforms
 
         private void UpdateBreakPlatform()
         {
-            if (breakablePlatformTimer.Active) breakablePlatformTimer.UpdateTimer();
+            if (breakablePlatformTimer.Active) 
+                breakablePlatformTimer.UpdateTimer();
+
+            Debug.Log(breakablePlatformTimer.CurrentTime);
 
             if (breakablePlatformTimer.ReachedTimer())
             {
@@ -174,14 +180,16 @@ namespace Entities.Platforms
                 model.SetActive(false);
                 breakableModel.SetActive(false);
                 for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", false);
+                finishedShake = false;
             }
         }
 
         private void BreakPlatform()
         {
             for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", true);
-            breakablePlatformTimer.SetTimer(breakableSpeed, Timer.TIMER_MODE.DECREASE);
-            breakablePlatformTimer.ActiveTimer();
+            breakablePlatformTimer.SetTimer(breakableSpeed, Timer.TIMER_MODE.DECREASE,true);
+            finishedShake = true;
+            Debug.Log("Tengo que destruir " + gameObject.name, this.gameObject);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -212,9 +220,8 @@ namespace Entities.Platforms
 
         private bool CheckBreakablePlatform()
         {
-            bool breakable = Random.Range(0.0f, 1.0f) < hSpawnRate;
-            if (breakable) breakablePlatform = true;
-            else breakablePlatform = false;
+            breakablePlatform = Random.Range(0.0f, 1.0f) < hSpawnRate;
+
 
             boxCollider.enabled = true;
 

@@ -9,6 +9,19 @@
 						<Switch Name="OutGame" ID="{D43C135D-2FA2-49B6-9075-A452AC691ECC}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="MX" ID="{A22DB189-F132-4F7C-845F-AB5B76420E1C}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Menu" ID="{D6E262F9-A1F5-4C52-A363-29E29A1C7627}"/>
+						<Switch Name="TEMA1" ID="{29073E32-A13F-42CD-B9BA-64A71B9482AA}"/>
+						<Switch Name="TEMA2" ID="{757C9ABF-57E0-4EE5-8CE3-3F6ABB7C10FD}"/>
+						<Switch Name="TEMA3" ID="{08A36A85-9A47-4239-A130-E474CE091429}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>
