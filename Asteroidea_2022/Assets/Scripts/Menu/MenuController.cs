@@ -28,6 +28,8 @@ namespace Menu
         [SerializeField] private string shopPanelName = null;
         [SerializeField] private TMP_Text coins = null;
 
+        [SerializeField]
+
 
         private CanvasGroup actualPanel = null;
 
@@ -38,9 +40,12 @@ namespace Menu
 
         private static int actualShopCoins = 0;
 
+        
+
         private void Awake()
         {
-            SetProjectVersion();
+
+        SetProjectVersion();
 
             actualPanel = startingPanel;
 

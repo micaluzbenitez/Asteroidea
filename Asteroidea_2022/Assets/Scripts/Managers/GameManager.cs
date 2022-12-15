@@ -65,6 +65,10 @@ namespace Managers
         [SerializeField] private float distanceLightReduction = 0;
         [SerializeField] private float lightChangeSpeed = 0;
         [SerializeField] private float lightReductionValue = 0;
+
+        [Header("Audio Settings")]
+        [SerializeField] AK.Wwise.RTPC RTPCToBeChanged = new AK.Wwise.RTPC();
+
         #endregion
 
         #region STATIC VARIABLES
@@ -194,6 +198,9 @@ namespace Managers
 
             // Bonus level
             if (distance % timePerBonusLevel == 0) BonusLevel();
+
+            RTPCToBeChanged.SetGlobalValue(distance);
+
         }
 
         private void OnDestroy()

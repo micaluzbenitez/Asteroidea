@@ -7041,6 +7041,10 @@ PrefabInstance:
       propertyPath: feetsAnimator.Array.data[4]
       value: 
       objectReference: {fileID: 260843932}
+    - target: {fileID: 2699093757617742388, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
+      propertyPath: RTPCToBeChanged.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9014627da4d00104096f40f08f1d8177, type: 2}
     - target: {fileID: 6578806359591545769, guid: a5fdbd587603a954e8462a952bec2726, type: 3}
       propertyPath: m_Name
       value: Game Manager
