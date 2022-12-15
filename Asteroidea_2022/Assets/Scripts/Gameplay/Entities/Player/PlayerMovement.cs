@@ -90,14 +90,14 @@ namespace Entities.Player
                 playedFloorSound = false;
                 if (isGrounded) /// Ground jump
                 {
-                    WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Movement, this.gameObject);
+                    WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Movement);
                     Jump();
                 }
                 else
                 {
                     if (airJumpCount < allowJumpTimesOnAir) /// Air jump
                     {
-                        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Movement, this.gameObject);
+                        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Movement);
                         Jump();
                         airJumpCount++;
                     }
@@ -144,7 +144,7 @@ namespace Entities.Player
                     isFalling = false;
                     if (!playedFloorSound)
                     {
-                        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Touch_Platform, this.gameObject);
+                        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Touch_Platform);
                         playedFloorSound = true;
                     }
                 }

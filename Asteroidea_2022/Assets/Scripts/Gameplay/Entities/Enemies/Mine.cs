@@ -132,7 +132,7 @@ public class Mine : Entities.Enemies.Enemy
 
     public override void PlaySound()
     {
-        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Bomb_Explode, this.gameObject);
+        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Bomb_Explode);
     }
 
 }

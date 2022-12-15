@@ -172,7 +172,7 @@ namespace Entities.Platforms
             if (breakablePlatformTimer.Active) 
                 breakablePlatformTimer.UpdateTimer();
 
-            Debug.Log(breakablePlatformTimer.CurrentTime);
+            //Debug.Log(breakablePlatformTimer.CurrentTime);
 
             if (breakablePlatformTimer.ReachedTimer())
             {
@@ -189,7 +189,7 @@ namespace Entities.Platforms
             for (int i = 0; i < breakableAnimator.Length; i++) breakableAnimator[i].SetBool("Break", true);
             breakablePlatformTimer.SetTimer(breakableSpeed, Timer.TIMER_MODE.DECREASE,true);
             finishedShake = true;
-            Debug.Log("Tengo que destruir " + gameObject.name, this.gameObject);
+            //Debug.Log("Tengo que destruir " + gameObject.name, this.gameObject);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

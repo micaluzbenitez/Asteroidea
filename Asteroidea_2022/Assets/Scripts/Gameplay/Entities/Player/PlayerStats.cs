@@ -78,7 +78,7 @@ namespace Entities.Player
         {
             if (collision.gameObject.CompareTag("Pickup"))
             {
-                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Pick_Up, this.gameObject);
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Pick_Up);
                 if (!onTutorial)
                 {
                     OnAddScore?.Invoke(pickupScore);
@@ -92,7 +92,7 @@ namespace Entities.Player
 
             if (collision.gameObject.CompareTag("Coin"))
             {
-                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Coin, this.gameObject);
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Coin);
                 if (!onTutorial)
                 {
                     OnAddCoins?.Invoke(coinsValue);

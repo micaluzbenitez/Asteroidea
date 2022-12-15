@@ -38,7 +38,8 @@ namespace Entities.Player
         #region PUBLIC METHODS
         public void DeadPlayer()
         {
-            WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Death, this.gameObject);
+            WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Death);
+            WwiseInterface.PauseAllSounds();
             GameObject particles = Instantiate(deathParticles, transform.position, Quaternion.identity);
             if (!onTutorial)
             {

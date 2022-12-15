@@ -15,6 +15,6 @@ public class ButtonTouch : MonoBehaviour
 
 	public void PlaySound()
     {
-        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Button_Touch, this.gameObject);
+        WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Button_Touch);
     }
 }

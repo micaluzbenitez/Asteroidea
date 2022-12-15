@@ -48,7 +48,7 @@ namespace Entities.Player
         {
             if (collision.gameObject.CompareTag(lavaTag))
             {
-                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage, this.gameObject);
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage);
                 Wall wall = collision.gameObject.GetComponent<Wall>();
                 PlayerDamage(wall.GetDamage());
             }
@@ -58,7 +58,7 @@ namespace Entities.Player
         {
             if (collision.gameObject.CompareTag(enemiesTag))
             {
-                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage, this.gameObject);
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage);
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                 PlayerDamage(enemy.GetDamage());
                 enemy.PlaySound();
@@ -70,7 +70,7 @@ namespace Entities.Player
 
             if (collision.gameObject.CompareTag(bulletsTag))
             {
-                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage, this.gameObject);
+                WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Player_Damage);
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
                 PlayerDamage(bullet.Damage);
             }

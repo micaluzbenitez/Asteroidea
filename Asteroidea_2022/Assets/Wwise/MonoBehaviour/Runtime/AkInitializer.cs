@@ -109,6 +109,8 @@ public class AkInitializer : UnityEngine.MonoBehaviour
 			AkSoundEngineController.Instance.LateUpdate();
 	}
 
+	public static AkInitializer GetInstance() => ms_Instance;
+
 #region WwiseMigration
 #if UNITY_EDITOR
 #pragma warning disable 0414 // private field assigned but not used.

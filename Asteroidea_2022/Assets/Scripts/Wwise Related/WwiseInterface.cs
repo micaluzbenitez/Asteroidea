@@ -22,30 +22,30 @@ public class WwiseInterface
         Hit_Fish
     }
 
-    public static void PauseAllSounds(GameObject obj)
+    public static void PauseAllSounds()
     {
-        AkSoundEngine.PostEvent("Stop_SFX_Muteables", obj);
+        AkSoundEngine.PostEvent("Stop_SFX_Muteables", AkInitializer.GetInstance().gameObject);
     }
-    public static void PlayMenuMusic(GameObject obj)
+    public static void PlayMenuMusic()
     {
-        AkSoundEngine.PostEvent("", obj);
+        AkSoundEngine.PostEvent("", AkInitializer.GetInstance().gameObject);
     }
-    public static void PlayGameplayMusic1(GameObject obj)
+    public static void PlayGameplayMusic1()
     {
-        AkSoundEngine.PostEvent("", obj);
+        AkSoundEngine.PostEvent("", AkInitializer.GetInstance().gameObject);
     }
-    public static void PlayGameplayMusic2(GameObject obj)
+    public static void PlayGameplayMusic2()
     {
-        AkSoundEngine.PostEvent("", obj);
+        AkSoundEngine.PostEvent("", AkInitializer.GetInstance().gameObject);
     }
-    public static void PlayGameplayMusic3(GameObject obj)
+    public static void PlayGameplayMusic3()
     {
-        AkSoundEngine.PostEvent("", obj);
+        AkSoundEngine.PostEvent("", AkInitializer.GetInstance().gameObject);
     }
 
 
 
-    public static void ExecuteWwiseEvent(WwiseEvents wwiseEvent, GameObject obj)
+    public static void ExecuteWwiseEvent(WwiseEvents wwiseEvent)
     {
         string eventText = "";
         switch (wwiseEvent)
@@ -92,7 +92,7 @@ public class WwiseInterface
         }
 
         //If (No se esta reproduciendo "eventText")
-        AkSoundEngine.PostEvent(eventText, obj);
+        AkSoundEngine.PostEvent(eventText, AkInitializer.GetInstance().gameObject);
 
     }
 

@@ -88,7 +88,7 @@ namespace Entities.Enemies
         }
         public override void PlaySound()
         {
-            WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Jelly, this.gameObject);
+            WwiseInterface.ExecuteWwiseEvent(WwiseInterface.WwiseEvents.Hit_Jelly);
         }
 
     }

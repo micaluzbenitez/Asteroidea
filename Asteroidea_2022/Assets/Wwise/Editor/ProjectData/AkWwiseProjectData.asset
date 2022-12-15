@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 0e7372c42c5ff24aa595cfe938ab24b9
     GuidInternal: 
-    m_lastTime: -8585305519402804223
+    m_lastTime: -8585305519394775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2beab9713dc0b547b40dcf678a15d3e3
     GuidInternal: 
-    m_lastTime: -8585305519405275015
+    m_lastTime: -8585305519394775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: eafd11fdaa55e94d9fbdbc831ea8d0d9
     GuidInternal: 
-    m_lastTime: -8585305519106055399
+    m_lastTime: -8585305397902001120
     List:
     - name: Main_SoundBank_GamePlay
       guid: a947d137cbf91f4b8dc782b485d3534e
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 6dd67e438611ed438cd252e93499c946
     GuidInternal: 
-    m_lastTime: -8585305519417658691
+    m_lastTime: -8585305386400137571
     List:
     - name: Jellyfish_Movement
       guid: e8a0df452c61cc4baf94bd89ec557ad6
@@ -120,10 +120,30 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Jellyfish_Movement
         ObjectType: 3
         guid: e8a0df452c61cc4baf94bd89ec557ad6
-      Path: Events\Default Work Unit\Jellyfish_Movement
+      Path: Events\Default Work Unit\SFX\Jellyfish_Movement
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music
+      guid: 3aebb591fc4d4840b6cd3ed115a31413
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Music
+        ObjectType: 4
+        guid: 3aebb591fc4d4840b6cd3ed115a31413
+      Path: Events\Default Work Unit\Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -137,10 +157,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_Bombas
         ObjectType: 3
         guid: f2529e423cc30a4aae0382e583b74e64
-      Path: Events\Default Work Unit\Play_Bombas
+      Path: Events\Default Work Unit\SFX\Play_Bombas
       maxAttenuation: 0
       maxDuration: 3.099264
       minDuration: 2.056597
@@ -154,10 +177,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_broke_plataform
         ObjectType: 3
         guid: 45ac1f8dab39164a952049a52fe9c685
-      Path: Events\Default Work Unit\Play_broke_plataform
+      Path: Events\Default Work Unit\SFX\Play_broke_plataform
       maxAttenuation: 0
       maxDuration: 0.470778
       minDuration: 0.332698
@@ -171,10 +197,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_bubles
         ObjectType: 3
         guid: 533af6cb05b7f741b2e740d21f094a8a
-      Path: Events\Default Work Unit\Play_bubles
+      Path: Events\Default Work Unit\SFX\Play_bubles
       maxAttenuation: 0
       maxDuration: 0.798743
       minDuration: 0.526974
@@ -188,10 +217,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_cascarudo
         ObjectType: 3
         guid: ab05bded5e8af443a3a71949d9306775
-      Path: Events\Default Work Unit\Play_cascarudo
+      Path: Events\Default Work Unit\SFX\Play_cascarudo
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -205,10 +237,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_Coins
         ObjectType: 3
         guid: c240450dc5004147a808d3cc4059d9f9
-      Path: Events\Default Work Unit\Play_Coins
+      Path: Events\Default Work Unit\SFX\Play_Coins
       maxAttenuation: 0
       maxDuration: 1.84626
       minDuration: 1.84626
@@ -222,10 +257,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_Damage
         ObjectType: 3
         guid: 1bf462bb83c9b64692f8cf38f2609dcc
-      Path: Events\Default Work Unit\Play_Damage
+      Path: Events\Default Work Unit\SFX\Play_Damage
       maxAttenuation: 0
       maxDuration: 0.1074
       minDuration: 0.067009
@@ -239,10 +277,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_death
         ObjectType: 3
         guid: e3f1873e86e56a42a4e93a981cb1d94b
-      Path: Events\Default Work Unit\Play_death
+      Path: Events\Default Work Unit\SFX\Play_death
       maxAttenuation: 0
       maxDuration: 3.154898
       minDuration: 3.154898
@@ -256,10 +297,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_fish_bite
         ObjectType: 3
         guid: c086e013e0b66647a88efc90d7db479e
-      Path: Events\Default Work Unit\Play_fish_bite
+      Path: Events\Default Work Unit\SFX\Play_fish_bite
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -273,10 +317,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_impact_plataform
         ObjectType: 3
         guid: 173cbb62f910e44cbbb2d95c7cb7a0b1
-      Path: Events\Default Work Unit\Play_impact_plataform
+      Path: Events\Default Work Unit\SFX\Play_impact_plataform
       maxAttenuation: 0
       maxDuration: 0.084305
       minDuration: 0.035446
@@ -290,10 +337,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_jellyfish_impact
         ObjectType: 3
         guid: 67135523ac857d49a48192518289fac7
-      Path: Events\Default Work Unit\Play_jellyfish_impact
+      Path: Events\Default Work Unit\SFX\Play_jellyfish_impact
       maxAttenuation: 0
       maxDuration: 0.683311
       minDuration: 0.683311
@@ -307,13 +357,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Music
+        ObjectType: 4
+        guid: 3aebb591fc4d4840b6cd3ed115a31413
       - ElementName: Play_Juego_Estrella_Musica_Tema1_1
         ObjectType: 3
         guid: b905119a6ec9ae449befe55c5821bca7
-      Path: Events\Default Work Unit\Play_Juego_Estrella_Musica_Tema1_1
+      Path: Events\Default Work Unit\Music\Play_Juego_Estrella_Musica_Tema1_1
       maxAttenuation: 0
-      maxDuration: 50
-      minDuration: 50
+      maxDuration: 0
+      minDuration: 0
     - name: Play_pickup
       guid: c9f7bc8a8455654c8352e63425531b83
       id: 3860455926
@@ -324,13 +377,33 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Play_pickup
         ObjectType: 3
         guid: c9f7bc8a8455654c8352e63425531b83
-      Path: Events\Default Work Unit\Play_pickup
+      Path: Events\Default Work Unit\SFX\Play_pickup
       maxAttenuation: 0
       maxDuration: 1.465378
       minDuration: 1.465378
+    - name: SFX
+      guid: 4874d659073b9742a576ccad6e4e7007
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
+      Path: Events\Default Work Unit\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Starfish_Movements
       guid: 8510ebad6cad3f4ab237c3d6ed3e3621
       id: 1875812120
@@ -341,13 +414,33 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4874d659073b9742a576ccad6e4e7007
       - ElementName: Starfish_Movements
         ObjectType: 3
         guid: 8510ebad6cad3f4ab237c3d6ed3e3621
-      Path: Events\Default Work Unit\Starfish_Movements
+      Path: Events\Default Work Unit\SFX\Starfish_Movements
       maxAttenuation: 0
       maxDuration: 0.188731
       minDuration: 0.094827
+    - name: Stop_SFX_Muteables
+      guid: 851c26e2fcd9034582158fc3af3bb4e7
+      id: 767809362
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6dd67e438611ed438cd252e93499c946
+      - ElementName: Stop_SFX_Muteables
+        ObjectType: 3
+        guid: 851c26e2fcd9034582158fc3af3bb4e7
+      Path: Events\Default Work Unit\Stop_SFX_Muteables
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -360,8 +453,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 7b1ec2c55a046a48adba9793bdaba557
     GuidInternal: 
-    m_lastTime: -8585305519417658691
+    m_lastTime: -8585305507134775808
     List:
+    - name: MusicaVolumen
+      guid: 7b313f8a0bcef34ca06a5852ccb79579
+      id: 3465895069
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7b1ec2c55a046a48adba9793bdaba557
+      - ElementName: MusicaVolumen
+        ObjectType: 13
+        guid: 7b313f8a0bcef34ca06a5852ccb79579
+      Path: Game Parameters\Default Work Unit\MusicaVolumen
     - name: SFXvolume
       guid: 69e11e385851b14b8d9b38126467d74d
       id: 988953028
@@ -388,7 +495,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 02d9c217b79b764096e154f91779a987
     GuidInternal: 
-    m_lastTime: -8585305519403403945
+    m_lastTime: -8585305519394775808
     List:
     - name: Gameplay_Objets
       guid: 89b8b0b85faf554cba3ba8ee6fb55311
@@ -468,7 +575,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 127740e46f98ca40889a3161b9a9763d
     GuidInternal: 
-    m_lastTime: -8585305519403403945
+    m_lastTime: -8585305466454775808
     List:
     - name: Enemies
       guid: 870dde24f7f95a418682da3e0cb282c6
@@ -520,6 +627,88 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: MX
+      guid: 89b12da232f17c4f845fab5b76420e1c
+      id: 1685527054
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 127740e46f98ca40889a3161b9a9763d
+      - ElementName: MX
+        ObjectType: 11
+        guid: 89b12da232f17c4f845fab5b76420e1c
+      Path: Switches\Default Work Unit\MX
+      values:
+      - name: Menu
+        guid: f962e2d6f5a1524ca36329e29a1c7627
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 127740e46f98ca40889a3161b9a9763d
+        - ElementName: MX
+          ObjectType: 11
+          guid: 89b12da232f17c4f845fab5b76420e1c
+        - ElementName: Menu
+          ObjectType: 10
+          guid: f962e2d6f5a1524ca36329e29a1c7627
+      - name: TEMA1
+        guid: 323e07293fa1cd42b9ba64a71b9482aa
+        id: 22743351
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 127740e46f98ca40889a3161b9a9763d
+        - ElementName: MX
+          ObjectType: 11
+          guid: 89b12da232f17c4f845fab5b76420e1c
+        - ElementName: TEMA1
+          ObjectType: 10
+          guid: 323e07293fa1cd42b9ba64a71b9482aa
+      - name: TEMA2
+        guid: bf9a7c75e057e54e8ce33f6abb7c10fd
+        id: 22743348
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 127740e46f98ca40889a3161b9a9763d
+        - ElementName: MX
+          ObjectType: 11
+          guid: 89b12da232f17c4f845fab5b76420e1c
+        - ElementName: TEMA2
+          ObjectType: 10
+          guid: bf9a7c75e057e54e8ce33f6abb7c10fd
+      - name: TEMA3
+        guid: 856aa308479a3942a130e474ce091429
+        id: 22743349
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 127740e46f98ca40889a3161b9a9763d
+        - ElementName: MX
+          ObjectType: 11
+          guid: 89b12da232f17c4f845fab5b76420e1c
+        - ElementName: TEMA3
+          ObjectType: 10
+          guid: 856aa308479a3942a130e474ce091429
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -532,10 +721,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 22b0ef0303bbcc49a6ed5177ceb23f42
     GuidInternal: 
-    m_lastTime: -8585305519402844090
+    m_lastTime: -8585305519394775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000015000000160000001800000019000000
+  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000900000015000000160000001800000019000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
