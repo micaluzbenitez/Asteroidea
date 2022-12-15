@@ -24,7 +24,7 @@ public class WwiseInterface
 
     public static void PauseAllSounds(GameObject obj)
     {
-        AkSoundEngine.PostEvent("", obj);
+        AkSoundEngine.PostEvent("Stop_SFX_Muteables", obj);
     }
     public static void PlayMenuMusic(GameObject obj)
     {
