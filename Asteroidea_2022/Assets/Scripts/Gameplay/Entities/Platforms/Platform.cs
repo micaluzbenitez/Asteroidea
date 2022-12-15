@@ -203,7 +203,7 @@ namespace Entities.Platforms
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player") && breakablePlatform) objectShake?.StartShake();
+            if (collision.gameObject.CompareTag("Player") && breakablePlatform) BreakPlatform();
         }
 
         private void Enable()
