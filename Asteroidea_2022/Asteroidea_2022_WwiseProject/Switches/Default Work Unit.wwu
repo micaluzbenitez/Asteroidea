@@ -34,6 +34,21 @@
 									<Flags>5</Flags>
 								</Point>
 								<Point>
+									<XPos>10.40788</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>29.95781</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>40.22503</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
 									<XPos>100</XPos>
 									<YPos>0</YPos>
 									<Flags>37</Flags>
