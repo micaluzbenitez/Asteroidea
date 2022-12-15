@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\anapi\OneDrive\Escritorio\Asteroidea_2022_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\anapi\OneDrive\Escritorio\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\anapi\OneDrive\Escritorio\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ProjectRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\anapi\OneDrive\Escritorio\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,12 +16,12 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1825057083" Language="SFX" Hash="1382231447">
+		<SoundBank Id="1825057083" Language="SFX" Hash="177882990">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_GamePlay</ObjectPath>
 			<ShortName>Main_SoundBank_GamePlay</ShortName>
 			<Path>Main_SoundBank_GamePlay.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3431618819" Name="Jellyfish_Movement" ObjectPath="\Events\Default Work Unit\Jellyfish_Movement" DurationType="Infinite">
+				<Event Id="3431618819" Name="Jellyfish_Movement" ObjectPath="\Events\Default Work Unit\SFX\Jellyfish_Movement" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="869724118" Language="SFX">
 							<ShortName>medusa.wav</ShortName>
@@ -37,7 +37,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2443709602" Name="Play_Bombas" ObjectPath="\Events\Default Work Unit\Play_Bombas" DurationType="OneShot" DurationMin="2.056597" DurationMax="3.099264">
+				<Event Id="2443709602" Name="Play_Bombas" ObjectPath="\Events\Default Work Unit\SFX\Play_Bombas" DurationType="OneShot" DurationMin="2.056597" DurationMax="3.099264">
 					<IncludedMemoryFiles>
 						<File Id="673283373" Language="SFX">
 							<ShortName>bomb.wav</ShortName>
@@ -49,7 +49,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2493944886" Name="Play_broke_plataform" ObjectPath="\Events\Default Work Unit\Play_broke_plataform" DurationType="OneShot" DurationMin="0.332698" DurationMax="0.470778">
+				<Event Id="2493944886" Name="Play_broke_plataform" ObjectPath="\Events\Default Work Unit\SFX\Play_broke_plataform" DurationType="OneShot" DurationMin="0.332698" DurationMax="0.470778">
 					<IncludedMemoryFiles>
 						<File Id="172605952" Language="SFX">
 							<ShortName>broke_plataform.wav</ShortName>
@@ -65,7 +65,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4115595731" Name="Play_bubles" ObjectPath="\Events\Default Work Unit\Play_bubles" DurationType="OneShot" DurationMin="0.526974" DurationMax="0.798743">
+				<Event Id="4115595731" Name="Play_bubles" ObjectPath="\Events\Default Work Unit\SFX\Play_bubles" DurationType="OneShot" DurationMin="0.526974" DurationMax="0.798743">
 					<IncludedMemoryFiles>
 						<File Id="980605193" Language="SFX">
 							<ShortName>bubles.wav</ShortName>
@@ -73,7 +73,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="660528677" Name="Play_cascarudo" ObjectPath="\Events\Default Work Unit\Play_cascarudo" DurationType="Infinite">
+				<Event Id="660528677" Name="Play_cascarudo" ObjectPath="\Events\Default Work Unit\SFX\Play_cascarudo" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="158985340" Language="SFX">
 							<ShortName>cascarudo.wav</ShortName>
@@ -94,7 +94,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3115138860" Name="Play_Coins" ObjectPath="\Events\Default Work Unit\Play_Coins" DurationType="OneShot" DurationMin="1.84626" DurationMax="1.84626">
+				<Event Id="3115138860" Name="Play_Coins" ObjectPath="\Events\Default Work Unit\SFX\Play_Coins" DurationType="OneShot" DurationMin="1.84626" DurationMax="1.84626">
 					<IncludedMemoryFiles>
 						<File Id="75077757" Language="SFX">
 							<ShortName>pick_coin.wav</ShortName>
@@ -102,7 +102,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="784302017" Name="Play_Damage" ObjectPath="\Events\Default Work Unit\Play_Damage" DurationType="OneShot" DurationMin="0.067009" DurationMax="0.1074">
+				<Event Id="784302017" Name="Play_Damage" ObjectPath="\Events\Default Work Unit\SFX\Play_Damage" DurationType="OneShot" DurationMin="0.067009" DurationMax="0.1074">
 					<IncludedMemoryFiles>
 						<File Id="157275980" Language="SFX">
 							<ShortName>daño00.wav</ShortName>
@@ -114,7 +114,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1172822028" Name="Play_death" ObjectPath="\Events\Default Work Unit\Play_death" DurationType="OneShot" DurationMin="3.154898" DurationMax="3.154898">
+				<Event Id="1172822028" Name="Play_death" ObjectPath="\Events\Default Work Unit\SFX\Play_death" DurationType="OneShot" DurationMin="3.154898" DurationMax="3.154898">
 					<IncludedMemoryFiles>
 						<File Id="794939064" Language="SFX">
 							<ShortName>death.wav</ShortName>
@@ -122,7 +122,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1866806893" Name="Play_fish_bite" ObjectPath="\Events\Default Work Unit\Play_fish_bite" DurationType="Infinite">
+				<Event Id="1866806893" Name="Play_fish_bite" ObjectPath="\Events\Default Work Unit\SFX\Play_fish_bite" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="72936469" Language="SFX">
 							<ShortName>fish_bite .wav</ShortName>
@@ -138,7 +138,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3795799651" Name="Play_impact_plataform" ObjectPath="\Events\Default Work Unit\Play_impact_plataform" DurationType="OneShot" DurationMin="0.035446" DurationMax="0.084305">
+				<Event Id="3795799651" Name="Play_impact_plataform" ObjectPath="\Events\Default Work Unit\SFX\Play_impact_plataform" DurationType="OneShot" DurationMin="0.035446" DurationMax="0.084305">
 					<IncludedMemoryFiles>
 						<File Id="429896064" Language="SFX">
 							<ShortName>impact_plataform.wav</ShortName>
@@ -146,7 +146,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="796436477" Name="Play_jellyfish_impact" ObjectPath="\Events\Default Work Unit\Play_jellyfish_impact" DurationType="OneShot" DurationMin="0.683311" DurationMax="0.683311">
+				<Event Id="796436477" Name="Play_jellyfish_impact" ObjectPath="\Events\Default Work Unit\SFX\Play_jellyfish_impact" DurationType="OneShot" DurationMin="0.683311" DurationMax="0.683311">
 					<IncludedMemoryFiles>
 						<File Id="690782740" Language="SFX">
 							<ShortName>jellyfish_impact.wav</ShortName>
@@ -154,8 +154,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3635214037" Name="Play_Juego_Estrella_Musica_Tema1_1" ObjectPath="\Events\Default Work Unit\Play_Juego_Estrella_Musica_Tema1_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3860455926" Name="Play_pickup" ObjectPath="\Events\Default Work Unit\Play_pickup" DurationType="OneShot" DurationMin="1.465378" DurationMax="1.465378">
+				<Event Id="3635214037" Name="Play_Juego_Estrella_Musica_Tema1_1" ObjectPath="\Events\Default Work Unit\Music\Play_Juego_Estrella_Musica_Tema1_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3860455926" Name="Play_pickup" ObjectPath="\Events\Default Work Unit\SFX\Play_pickup" DurationType="OneShot" DurationMin="1.465378" DurationMax="1.465378">
 					<IncludedMemoryFiles>
 						<File Id="136648624" Language="SFX">
 							<ShortName>pick_coin.wav</ShortName>
@@ -163,7 +163,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1875812120" Name="Starfish_Movements" ObjectPath="\Events\Default Work Unit\Starfish_Movements" DurationType="OneShot" DurationMin="0.094827" DurationMax="0.188731">
+				<Event Id="1875812120" Name="Starfish_Movements" ObjectPath="\Events\Default Work Unit\SFX\Starfish_Movements" DurationType="OneShot" DurationMin="0.094827" DurationMax="0.188731">
 					<IncludedMemoryFiles>
 						<File Id="455091364" Language="SFX">
 							<ShortName>starfish14.wav</ShortName>
@@ -187,6 +187,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="767809362" Name="Stop_SFX_Muteables" ObjectPath="\Events\Default Work Unit\Stop_SFX_Muteables" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="68590635" Language="SFX">

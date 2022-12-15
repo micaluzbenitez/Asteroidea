@@ -27,6 +27,7 @@ namespace AK
         static const AkUniqueID PLAY_JUEGO_ESTRELLA_MUSICA_TEMA1_1 = 3635214037U;
         static const AkUniqueID PLAY_PICKUP = 3860455926U;
         static const AkUniqueID STARFISH_MOVEMENTS = 1875812120U;
+        static const AkUniqueID STOP_SFX_MUTEABLES = 767809362U;
     } // namespace EVENTS
 
     namespace STATES
@@ -58,10 +59,24 @@ namespace AK
             } // namespace SWITCH
         } // namespace ENEMIES
 
+        namespace MX
+        {
+            static const AkUniqueID GROUP = 1685527054U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID TEMA1 = 22743351U;
+                static const AkUniqueID TEMA2 = 22743348U;
+                static const AkUniqueID TEMA3 = 22743349U;
+            } // namespace SWITCH
+        } // namespace MX
+
     } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID MUSICAVOLUMEN = 3465895069U;
         static const AkUniqueID SFXVOLUME = 988953028U;
     } // namespace GAME_PARAMETERS
 

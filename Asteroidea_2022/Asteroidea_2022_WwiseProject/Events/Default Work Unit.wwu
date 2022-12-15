@@ -169,6 +169,20 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Stop_SFX_Muteables" ID="{E2261C85-D9FC-4503-8215-8FC3AF3BB4E7}">
+					<ChildrenList>
+						<Action Name="" ID="{751C1E1D-FC5B-4538-84A8-ED141602F1BF}" ShortID="402646339">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX Muteables" ID="{9A117EF5-890B-420A-BE59-4B713AE95D92}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
