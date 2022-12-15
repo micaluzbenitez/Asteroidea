@@ -10,6 +10,7 @@ public class WwiseInterface
         Player_Movement,
         Player_Damage,
         Player_Death,
+        Platform_Break,
         //Skin_Purchase,
         //Skin_Select,
         Button_Touch,
@@ -43,6 +44,9 @@ public class WwiseInterface
                 break;
             case WwiseEvents.Hit_Fish:
                 eventText = "Play_fish_bite";
+                break;
+            case WwiseEvents.Platform_Break:
+                eventText = "Play_broke_plataform";
                 break;
             case WwiseEvents.Player_Death:
                 eventText = "Play_death";
