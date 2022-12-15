@@ -28,8 +28,14 @@ namespace Menu
         [SerializeField] private string shopPanelName = null;
         [SerializeField] private TMP_Text coins = null;
 
-        [SerializeField]
+        [SerializeField] private Slider sliderMusic = null;
+        [SerializeField] private Slider sliderSFX = null;
 
+        private string musicKey = "music";
+        private string sfxKey = "sfx";
+
+        private SliderRTPC musicRTPC = null;
+        private SliderRTPC sfxRTPC = null;
 
         private CanvasGroup actualPanel = null;
 
@@ -44,8 +50,9 @@ namespace Menu
 
         private void Awake()
         {
+            WwiseInterface.StopGameplayMusic();
 
-        SetProjectVersion();
+            SetProjectVersion();
 
             actualPanel = startingPanel;
 
@@ -67,8 +74,48 @@ namespace Menu
 
         private void Start()
         {
+            StartAudio();
             Time.timeScale = 1;
         }
+
+        private void StartAudio()
+        {
+            musicRTPC = sliderMusic.gameObject.GetComponent<SliderRTPC>();
+            sfxRTPC = sliderSFX.gameObject.GetComponent<SliderRTPC>();
+            LoadAudioPrefs();
+            WwiseInterface.PlayMenuMusic();
+        }
+
+        private void LoadAudioPrefs()
+        {
+            if(PlayerPrefs.HasKey(musicKey))
+            {
+                sliderMusic.value = PlayerPrefs.GetInt(musicKey);
+            }
+            else
+            {
+                PlayerPrefs.SetInt(musicKey, 50);
+            }
+
+            if (PlayerPrefs.HasKey(sfxKey))
+            {
+                sliderSFX.value = PlayerPrefs.GetInt(sfxKey);
+            }
+            else
+            {
+                PlayerPrefs.SetInt(sfxKey, 50);
+            }
+
+            musicRTPC.UpdateRTPC();
+            sfxRTPC.UpdateRTPC();
+        }
+
+        public void SaveAudioPrefs()
+        {
+            PlayerPrefs.SetInt(musicKey, (int)sliderMusic.value);
+            PlayerPrefs.SetInt(sfxKey, (int)sliderSFX.value);
+        }
+
 
         private void SetProjectVersion()
         {

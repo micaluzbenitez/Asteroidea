@@ -145,6 +145,10 @@ namespace Managers
             verticalMaxSpeed = maxVerticalSpeed;
 
             SetPlayerSkin();
+
+            WwiseInterface.StopMenuMusic();
+            WwiseInterface.PlayGameplayMusic();
+
         }
 
         private IEnumerator Start()
@@ -166,6 +170,9 @@ namespace Managers
             timer.ActiveTimer();
 
             VerticalSpeed = startingVerticalSpeed;
+
+
+
         }
 
         private void Update()
