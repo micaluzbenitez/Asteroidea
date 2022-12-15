@@ -22,11 +22,18 @@ namespace AK
         static const AkUniqueID PLAY_DAMAGE = 784302017U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_FISH_BITE = 1866806893U;
+        static const AkUniqueID PLAY_GAMEPLAY1 = 2811753239U;
+        static const AkUniqueID PLAY_GAMEPLAY2 = 2811753236U;
+        static const AkUniqueID PLAY_GAMEPLAY3 = 2811753237U;
         static const AkUniqueID PLAY_IMPACT_PLATAFORM = 3795799651U;
         static const AkUniqueID PLAY_JELLYFISH_IMPACT = 796436477U;
-        static const AkUniqueID PLAY_MX = 2447410425U;
+        static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;
         static const AkUniqueID PLAY_PICKUP = 3860455926U;
         static const AkUniqueID STARFISH_MOVEMENTS = 1875812120U;
+        static const AkUniqueID STOP_GAMEPLAY1 = 3017005269U;
+        static const AkUniqueID STOP_GAMEPLAY2 = 3017005270U;
+        static const AkUniqueID STOP_GAMEPLAY3 = 3017005271U;
+        static const AkUniqueID STOP_MENU_MUSIC = 3945748993U;
         static const AkUniqueID STOP_SFX_MUTEABLES = 767809362U;
     } // namespace EVENTS
 
@@ -65,7 +72,6 @@ namespace AK
 
             namespace SWITCH
             {
-                static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID TEMA1 = 22743351U;
                 static const AkUniqueID TEMA2 = 22743348U;
                 static const AkUniqueID TEMA3 = 22743349U;

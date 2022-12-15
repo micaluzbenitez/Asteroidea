@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\UNTREF-SONIDO\Game Audio\Game Audio\Audio Proyecto Desarrollo\GitHubDesarrollo3\Asteroidea\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\GitHub\Asteroidea_2022\Asteroidea_2022\Asteroidea_2022_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3920710555">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4156053627">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1825057083" Language="SFX" Hash="2625574529">
+		<SoundBank Id="1825057083" Language="SFX" Hash="4238912218">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_GamePlay</ObjectPath>
 			<ShortName>Main_SoundBank_GamePlay</ShortName>
 			<Path>Main_SoundBank_GamePlay.bnk</Path>
@@ -54,7 +54,7 @@
 					<IncludedMemoryFiles>
 						<File Id="278038360" Language="SFX">
 							<ShortName>cascarudo.wav</ShortName>
-							<Path>SFX\cascarudo_06867FEA.wem</Path>
+							<Path>SFX\cascarudo_187439D7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{2D42E339-2292-4CD9-BD93-6F0D5917602F}</DefaultSwitchValue>
@@ -110,6 +110,30 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2811753239" Name="Play_Gameplay1" ObjectPath="\Events\Default Work Unit\Music\Play_Gameplay1" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="374180870" Language="SFX">
+							<ShortName>Cuenta y Tema 1.wav</ShortName>
+							<Path>SFX\Cuenta y Tema 1_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2811753236" Name="Play_Gameplay2" ObjectPath="\Events\Default Work Unit\Music\Play_Gameplay2" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="68590635" Language="SFX">
+							<ShortName>Tema2.wav</ShortName>
+							<Path>SFX\Tema2_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2811753237" Name="Play_Gameplay3" ObjectPath="\Events\Default Work Unit\Music\Play_Gameplay3" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="884117834" Language="SFX">
+							<ShortName>Tema3.wav</ShortName>
+							<Path>SFX\Tema3_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3795799651" Name="Play_impact_plataform" ObjectPath="\Events\Default Work Unit\SFX\Play_impact_plataform" DurationType="OneShot" DurationMin="0.035446" DurationMax="0.084305">
 					<IncludedMemoryFiles>
 						<File Id="429896064" Language="SFX">
@@ -122,59 +146,17 @@
 					<IncludedMemoryFiles>
 						<File Id="690782740" Language="SFX">
 							<ShortName>jellyfish_impact.wav</ShortName>
-							<Path>SFX\jellyfish_impact_52FFECD2.wem</Path>
+							<Path>SFX\jellyfish_impact_9C3B3976.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2447410425" Name="Play_MX" ObjectPath="\Events\Default Work Unit\Play_MX" DurationType="Infinite">
+				<Event Id="2228153899" Name="Play_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Menu_Music" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="68590635" Language="SFX">
-							<ShortName>Tema2.wav</ShortName>
-							<Path>SFX\Tema2_D79FB2B7.wem</Path>
-						</File>
-						<File Id="374180870" Language="SFX">
-							<ShortName>Cuenta y Tema 1.wav</ShortName>
-							<Path>SFX\Cuenta y Tema 1_D79FB2B7.wem</Path>
-						</File>
-						<File Id="619842760" Language="SFX">
-							<ShortName>Transicion agua 2.wav</ShortName>
-							<Path>SFX\Transicion agua 2_D79FB2B7.wem</Path>
-						</File>
 						<File Id="655395521" Language="SFX">
 							<ShortName>Menu.wav</ShortName>
 							<Path>SFX\Menu_D79FB2B7.wem</Path>
 						</File>
-						<File Id="688225567" Language="SFX">
-							<ShortName>Transicion agua 1.wav</ShortName>
-							<Path>SFX\Transicion agua 1_D79FB2B7.wem</Path>
-						</File>
-						<File Id="884117834" Language="SFX">
-							<ShortName>Tema3.wav</ShortName>
-							<Path>SFX\Tema3_D79FB2B7.wem</Path>
-						</File>
 					</IncludedMemoryFiles>
-					<SwitchContainers>
-						<SwitchContainer SwitchValue="{D6E262F9-A1F5-4C52-A363-29E29A1C7627}">
-							<Media>
-								<File Id="655395521"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{29073E32-A13F-42CD-B9BA-64A71B9482AA}">
-							<Media>
-								<File Id="374180870"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{757C9ABF-57E0-4EE5-8CE3-3F6ABB7C10FD}">
-							<Media>
-								<File Id="68590635"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{08A36A85-9A47-4239-A130-E474CE091429}">
-							<Media>
-								<File Id="884117834"/>
-							</Media>
-						</SwitchContainer>
-					</SwitchContainers>
 				</Event>
 				<Event Id="3860455926" Name="Play_pickup" ObjectPath="\Events\Default Work Unit\SFX\Play_pickup" DurationType="OneShot" DurationMin="1.465378" DurationMax="1.465378">
 					<IncludedMemoryFiles>
@@ -204,6 +186,10 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3017005269" Name="Stop_Gameplay1" ObjectPath="\Events\Default Work Unit\Music\Stop_Gameplay1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3017005270" Name="Stop_Gameplay2" ObjectPath="\Events\Default Work Unit\Music\Stop_Gameplay2" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3017005271" Name="Stop_Gameplay3" ObjectPath="\Events\Default Work Unit\Music\Stop_Gameplay3" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3945748993" Name="Stop_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Menu_Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="767809362" Name="Stop_SFX_Muteables" ObjectPath="\Events\Default Work Unit\Stop_SFX_Muteables" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -215,17 +201,9 @@
 					<ShortName>Cuenta y Tema 1.wav</ShortName>
 					<Path>SFX\Cuenta y Tema 1_D79FB2B7.wem</Path>
 				</File>
-				<File Id="619842760" Language="SFX">
-					<ShortName>Transicion agua 2.wav</ShortName>
-					<Path>SFX\Transicion agua 2_D79FB2B7.wem</Path>
-				</File>
 				<File Id="655395521" Language="SFX">
 					<ShortName>Menu.wav</ShortName>
 					<Path>SFX\Menu_D79FB2B7.wem</Path>
-				</File>
-				<File Id="688225567" Language="SFX">
-					<ShortName>Transicion agua 1.wav</ShortName>
-					<Path>SFX\Transicion agua 1_D79FB2B7.wem</Path>
 				</File>
 				<File Id="884117834" Language="SFX">
 					<ShortName>Tema3.wav</ShortName>
@@ -234,18 +212,9 @@
 			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="988953028" Name="SFXvolume" ObjectPath="\Game Parameters\Default Work Unit\SFXvolume"/>
-				<GameParameter Id="1603003027" Name="Metros" ObjectPath="\Game Parameters\Default Work Unit\Metros"/>
 				<GameParameter Id="3465895069" Name="MusicaVolumen" ObjectPath="\Game Parameters\Default Work Unit\MusicaVolumen"/>
 			</GameParameters>
 			<SwitchGroups>
-				<SwitchGroup Id="1685527054" Name="MX" ObjectPath="\Switches\Default Work Unit\MX" GUID="{A22DB189-F132-4F7C-845F-AB5B76420E1C}">
-					<Switches>
-						<Switch Id="2607556080" Name="Menu" ObjectPath="\Switches\Default Work Unit\MX\Menu" GUID="{D6E262F9-A1F5-4C52-A363-29E29A1C7627}"/>
-						<Switch Id="22743351" Name="TEMA1" ObjectPath="\Switches\Default Work Unit\MX\TEMA1" GUID="{29073E32-A13F-42CD-B9BA-64A71B9482AA}"/>
-						<Switch Id="22743348" Name="TEMA2" ObjectPath="\Switches\Default Work Unit\MX\TEMA2" GUID="{757C9ABF-57E0-4EE5-8CE3-3F6ABB7C10FD}"/>
-						<Switch Id="22743349" Name="TEMA3" ObjectPath="\Switches\Default Work Unit\MX\TEMA3" GUID="{08A36A85-9A47-4239-A130-E474CE091429}"/>
-					</Switches>
-				</SwitchGroup>
 				<SwitchGroup Id="2242381963" Name="Enemies" ObjectPath="\Switches\Default Work Unit\Enemies" GUID="{24DE0D87-F9F7-415A-8682-DA3E0CB282C6}">
 					<Switches>
 						<Switch Id="984691642" Name="InGame" ObjectPath="\Switches\Default Work Unit\Enemies\InGame" GUID="{2D42E339-2292-4CD9-BD93-6F0D5917602F}"/>
@@ -254,7 +223,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2607556080" Language="SFX">
+		<SoundBank Id="2607556080" Language="SFX" Hash="2061438220">
 			<ObjectPath>\SoundBanks\Default Work Unit\Menu</ObjectPath>
 			<ShortName>Menu</ShortName>
 			<Path>Menu.bnk</Path>

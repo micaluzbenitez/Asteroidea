@@ -19,7 +19,6 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="InGame" ID="{2D42E339-2292-4CD9-BD93-6F0D5917602F}"/>
-						<CurrentSwitchRef Name="Menu" ID="{D6E262F9-A1F5-4C52-A363-29E29A1C7627}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

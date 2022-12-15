@@ -392,7 +392,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>6</Value>
+								<Value>11</Value>
 							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{C0F2697D-9BB4-43FF-80E1-FB977839FB1D}" ShortID="833426956">
@@ -967,7 +967,6 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="Crab" ID="{80432542-7BB9-4766-BF4B-BE38C5BA1447}" ShortID="359890741">
 									<PropertyList>
-										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 										<Property Name="InitialDelay" Type="Real64">
 											<ValueList>
 												<Value>0.5</Value>
@@ -1002,11 +1001,6 @@
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
-										<Property Name="UseMaxSoundPerInstance" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-5</Value>
@@ -1439,7 +1433,6 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="Fish" ID="{0C31AE23-9486-40FD-8AD1-7FD1EE8203F5}" ShortID="397038789">
 									<PropertyList>
-										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
@@ -1464,11 +1457,6 @@
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
-										<Property Name="UseMaxSoundPerInstance" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

@@ -154,7 +154,110 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Music" ID="{91B5EB3A-4DFC-4048-B6CD-3ED115A31413}" ShortID="352406547"/>
+				<Folder Name="Music" ID="{91B5EB3A-4DFC-4048-B6CD-3ED115A31413}" ShortID="352406547">
+					<ChildrenList>
+						<Event Name="Play_Menu_Music" ID="{94BE31AF-2337-468B-B3C4-69A5B329EC10}">
+							<ChildrenList>
+								<Action Name="" ID="{03A48EC0-A2CE-4BAD-BAD8-52E1F55E4C56}" ShortID="69410102">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu" ID="{984D2CDA-190E-4DCA-854E-C5A1CAF28F62}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Menu_Music" ID="{E830D551-3E15-4361-83B6-8D16C0F77E95}">
+							<ChildrenList>
+								<Action Name="" ID="{86CAD827-976D-4425-8C5B-EAEE331AF9D9}" ShortID="83187045">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu" ID="{984D2CDA-190E-4DCA-854E-C5A1CAF28F62}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Gameplay1" ID="{B0224AED-D3BE-44FB-A768-641EDBFB4411}">
+							<ChildrenList>
+								<Action Name="" ID="{73A1D255-2473-42B9-BE1C-649BABD5DDCC}" ShortID="517460038">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tema 1" ID="{359706FF-F537-45A4-B7C6-26D57939B8A3}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Gameplay2" ID="{E8F6D629-D9B0-43F6-8D26-6225A7FB407F}">
+							<ChildrenList>
+								<Action Name="" ID="{324ABE24-A0D3-43F3-9EF9-39767D9439E2}" ShortID="531696898">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tema 2" ID="{D2822EAC-4A01-4CFF-8E95-73148D7AF995}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Gameplay2" ID="{ECAD89E7-28FD-46CF-A86B-BB4123C9EBB2}">
+							<ChildrenList>
+								<Action Name="" ID="{9A734BFA-9A03-4483-9402-0946C4FFFEAE}" ShortID="987229109">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tema 2" ID="{D2822EAC-4A01-4CFF-8E95-73148D7AF995}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Gameplay1" ID="{4B2DD0EA-3CAB-4BDA-A487-395B6F8812F9}">
+							<ChildrenList>
+								<Action Name="" ID="{CF3125A5-58DC-4D1B-BB6C-C9ED38EF637F}" ShortID="544366885">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tema 1" ID="{359706FF-F537-45A4-B7C6-26D57939B8A3}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Gameplay3" ID="{D38450CF-AE6F-40CC-9630-BEC202FDAF84}">
+							<ChildrenList>
+								<Action Name="" ID="{5A23AAD0-3B3A-4D97-8CA7-85647526EEF7}" ShortID="330619728">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tema 3" ID="{6D362352-A90F-4BDF-9048-78A2BF1B3CCF}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Gameplay3" ID="{2DA34666-AF0F-428A-9240-3B9C291184CF}">
+							<ChildrenList>
+								<Action Name="" ID="{DA06196E-F86F-47B4-8F72-EE5BA89492BE}" ShortID="398716790">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tema 3" ID="{6D362352-A90F-4BDF-9048-78A2BF1B3CCF}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 				<Event Name="Stop_SFX_Muteables" ID="{E2261C85-D9FC-4503-8215-8FC3AF3BB4E7}">
 					<ChildrenList>
 						<Action Name="" ID="{751C1E1D-FC5B-4538-84A8-ED141602F1BF}" ShortID="402646339">
@@ -164,27 +267,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX Muteables" ID="{9A117EF5-890B-420A-BE59-4B713AE95D92}" WorkUnitID="{2625C0D0-7C4D-4513-9D5A-0DEDA714DB7E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_MX" ID="{FE28FC5E-8F2F-48B8-8A13-2FC1B896D2B3}">
-					<ChildrenList>
-						<Action Name="" ID="{EAF38D44-955B-43A0-8222-B51CE5DEAF3A}" ShortID="499391417">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MX" ID="{F16920CA-AB7A-45C4-A63C-22F373396C34}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{9672870D-CD2A-442C-8489-93CE5AC742A9}" ShortID="941638581">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Metros" ID="{683A47C3-DA87-47D7-ADC0-A1E3F1C1A741}" WorkUnitID="{C5C21E7B-045A-486A-ADBA-9793BDABA557}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

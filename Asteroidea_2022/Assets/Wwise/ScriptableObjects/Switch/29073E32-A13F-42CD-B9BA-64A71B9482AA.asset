@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318ea5ac43569184c9f1697ed92e945e, type: 3}
+  m_Name: 29073E32-A13F-42CD-B9BA-64A71B9482AA
+  m_EditorClassIdentifier: 
+  objectName: TEMA1
+  id: 22743351
+  guid: 29073E32-A13F-42CD-B9BA-64A71B9482AA
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 70f793328659c4341bf3543b64e543b1, type: 2}

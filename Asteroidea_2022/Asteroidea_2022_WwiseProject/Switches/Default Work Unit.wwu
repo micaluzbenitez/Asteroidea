@@ -16,7 +16,6 @@
 						<Property Name="UseGameParameter" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Switch Name="Menu" ID="{D6E262F9-A1F5-4C52-A363-29E29A1C7627}"/>
 						<Switch Name="TEMA1" ID="{29073E32-A13F-42CD-B9BA-64A71B9482AA}"/>
 						<Switch Name="TEMA2" ID="{757C9ABF-57E0-4EE5-8CE3-3F6ABB7C10FD}"/>
 						<Switch Name="TEMA3" ID="{08A36A85-9A47-4239-A130-E474CE091429}"/>
@@ -34,23 +33,23 @@
 									<Flags>5</Flags>
 								</Point>
 								<Point>
-									<XPos>10.40788</XPos>
+									<XPos>0.001</XPos>
 									<YPos>1</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>29.95781</XPos>
+									<XPos>40.22403</XPos>
 									<YPos>2</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>40.22503</XPos>
+									<XPos>80.02813</XPos>
 									<YPos>3</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
 									<XPos>100</XPos>
-									<YPos>0</YPos>
+									<YPos>3</YPos>
 									<Flags>37</Flags>
 								</Point>
 							</PointList>

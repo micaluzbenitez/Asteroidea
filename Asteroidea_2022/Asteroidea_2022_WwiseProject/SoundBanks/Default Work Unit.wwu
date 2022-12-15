@@ -5,13 +5,19 @@
 			<ChildrenList>
 				<SoundBank Name="Main_SoundBank_GamePlay" ID="{37D147A9-F9CB-4B1F-8DC7-82B485D3534E}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_Gameplay3" ID="{D38450CF-AE6F-40CC-9630-BEC202FDAF84}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_bubles" ID="{CBF63A53-B705-41F7-B2E7-40D21F094A8A}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_death" ID="{3E87F1E3-E586-426A-A4E9-3A981CB1D94B}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Gameplay3" ID="{2DA34666-AF0F-428A-9240-3B9C291184CF}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Menu_Music" ID="{E830D551-3E15-4361-83B6-8D16C0F77E95}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{437ED66D-1186-43ED-8CD2-52E93499C946}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_cascarudo" ID="{EDBD05AB-8A5E-43F4-A3A7-1949D9306775}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Juego_Estrella_Musica_Tema1_1" ID="{9A1105B9-C96E-44AE-9BEF-E55C5821BCA7}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gameplay2" ID="{E8F6D629-D9B0-43F6-8D26-6225A7FB407F}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gameplay1" ID="{B0224AED-D3BE-44FB-A768-641EDBFB4411}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_SFX_Muteables" ID="{E2261C85-D9FC-4503-8215-8FC3AF3BB4E7}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Menu_Music" ID="{94BE31AF-2337-468B-B3C4-69A5B329EC10}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Damage" ID="{BB62F41B-C983-46B6-92F8-CF38F2609DCC}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Gameplay2" ID="{ECAD89E7-28FD-46CF-A86B-BB4123C9EBB2}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Coins" ID="{0D4540C2-00C5-4741-A808-D3CC4059D9F9}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_fish_bite" ID="{13E086C0-B6E0-4766-A88E-FC90D7DB479E}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_jellyfish_impact" ID="{23551367-85AC-497D-A481-92518289FAC7}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
@@ -20,6 +26,7 @@
 						<ObjectRef Name="Starfish_Movements" ID="{ADEB1085-AD6C-4A3F-B237-C3D6ED3E3621}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}" WorkUnitID="{FE635D71-B4CC-4ABF-AAB3-072CBA869086}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Jellyfish_Movement" ID="{45DFA0E8-612C-4BCC-AF94-BD89EC557AD6}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Gameplay1" ID="{4B2DD0EA-3CAB-4BDA-A487-395B6F8812F9}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_pickup" ID="{8ABCF7C9-5584-4C65-8352-E63425531B83}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_impact_plataform" ID="{62BB3C17-10F9-4CE4-BBB2-D95C7CB7A0B1}" WorkUnitID="{437ED66D-1186-43ED-8CD2-52E93499C946}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
