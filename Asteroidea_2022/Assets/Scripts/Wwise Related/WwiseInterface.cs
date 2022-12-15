@@ -22,25 +22,58 @@ public class WwiseInterface
         Hit_Fish
     }
 
+    private static bool playingMenuMusic = false;
+
+    private static bool playingGameplayMusic = false;
+    private static int gameplayMusicIndex = 0;
+
     public static void PauseAllSounds()
     {
         AkSoundEngine.PostEvent("Stop_SFX_Muteables", AkInitializer.GetInstance().gameObject);
     }
     public static void PlayMenuMusic()
     {
-        AkSoundEngine.PostEvent("", AkInitializer.GetInstance().gameObject);
+        if (!playingMenuMusic)
+        {
+            Debug.Log("Intento correr la musica del menu");
+            AkSoundEngine.PostEvent("Play_Menu_Music", AkInitializer.GetInstance().gameObject);
+            playingMenuMusic = true;
+        }
     }
-    public static void PlayGameplayMusic1()
+    public static void StopMenuMusic()
     {
-        AkSoundEngine.PostEvent("", AkInitializer.GetInstance().gameObject);
+        if (playingMenuMusic)
+        {
+            Debug.Log("Intento parar la musica del menu");
+            AkSoundEngine.PostEvent("Stop_Menu_Music", AkInitializer.GetInstance().gameObject);
+            playingMenuMusic = false;
+        }
     }
-    public static void PlayGameplayMusic2()
+    public static void PlayGameplayMusic()
     {
-        AkSoundEngine.PostEvent("", AkInitializer.GetInstance().gameObject);
+        if (!playingGameplayMusic)
+        {
+            Debug.Log("Intento correr la musica del gameplay");
+            
+            gameplayMusicIndex = Random.Range(1, 4);
+
+            string eventName = "Play_Gameplay" + gameplayMusicIndex.ToString();
+
+            AkSoundEngine.PostEvent(eventName, AkInitializer.GetInstance().gameObject);
+            playingGameplayMusic = true;
+        }
     }
-    public static void PlayGameplayMusic3()
+    public static void StopGameplayMusic()
     {
-        AkSoundEngine.PostEvent("", AkInitializer.GetInstance().gameObject);
+        if (playingGameplayMusic)
+        {
+            Debug.Log("Intento parar la musica del gameplay");
+
+            string eventName = "Stop_Gameplay" + gameplayMusicIndex.ToString();
+
+            AkSoundEngine.PostEvent(eventName, AkInitializer.GetInstance().gameObject);
+            playingGameplayMusic = false;
+        }
     }
 
 
