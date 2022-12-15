@@ -22,6 +22,29 @@ public class WwiseInterface
         Hit_Fish
     }
 
+    public static void PauseAllSounds(GameObject obj)
+    {
+        AkSoundEngine.PostEvent("", obj);
+    }
+    public static void PlayMenuMusic(GameObject obj)
+    {
+        AkSoundEngine.PostEvent("", obj);
+    }
+    public static void PlayGameplayMusic1(GameObject obj)
+    {
+        AkSoundEngine.PostEvent("", obj);
+    }
+    public static void PlayGameplayMusic2(GameObject obj)
+    {
+        AkSoundEngine.PostEvent("", obj);
+    }
+    public static void PlayGameplayMusic3(GameObject obj)
+    {
+        AkSoundEngine.PostEvent("", obj);
+    }
+
+
+
     public static void ExecuteWwiseEvent(WwiseEvents wwiseEvent, GameObject obj)
     {
         string eventText = "";
